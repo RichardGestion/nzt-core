@@ -2095,6 +2095,269 @@ export const BANCO_NZT = {
           'esperar un accidente es inaceptable. El ciberataque al Aeropuerto de Bruselas (2016) y a múltiples aerolíneas (2020-2023) demostró que ' +
           'ciberseguridad es ahora parte integral del SMS.'
       }
+    ],
+
+    /* SEMANA 9/10 — CAT II/III, RVSM, meteorología severa, alta montaña, correo aéreo, muestras biológicas, MRO MoC, reparaciones mayores, Anexo 13 avanzado */
+    9: [
+      {
+        id: 'seg-s9-01',
+        enunciado:
+          'Un piloto se prepara para realizar una aproximación ILS Categoría III (CAT III) con decisión de altura (DH) inferior a 100 pies y RVR ' +
+          '(Runway Visual Range) inferior a 200 metros. Según el Doc 9859 y las regulaciones de aproximaciones de baja visibilidad (LVO - Low ' +
+          'Visibility Operations), cuáles son los requisitos OBLIGATORIOS para que esta operación sea legal y segura:',
+        opciones: {
+          A: 'Solo se requiere que el piloto tenga licencia comercial vigente; la aeronave puede ser cualquier tipo certificado IFR.',
+          B: 'Requiere: (1) aeronave certificada para CAT III con sistemas redundantes (radioaltímetro, piloto automático fail-operational, autopilot coupling), (2) tripulación con calificación CAT III específica y entrenamiento recurrente en simulador, (3) aeropuerto con infraestructura CAT III (ILS de precisión, luces de centro de pista, sistema de guía visual), (4) RVR dentro de mínimos publicados, (5) procedimientos específicos LVO incluyendo checklist de baja visibilidad, y (6) alternativa de desvío disponible.',
+          C: 'Solo requiere que el aeropuerto tenga ILS; la certificación de la aeronave y tripulación es opcional.',
+          D: 'CAT III está prohibida en aviación comercial; solo se permite CAT I con mínimos de 200 pies.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9859 y regulaciones EU-OPS / FAR 121 sobre LVO (Low Visibility Operations): las aproximaciones CAT III son operaciones de ALTA ' +
+          'COMPLEJIDAD que requieren integración de múltiples sistemas certificados: (1) AERONAVE: certificación CAT III específica con sistemas ' +
+          'redundantes (radioaltímetro dual, piloto automático fail-operational o fail-passive, sistemas de acoplamiento automático), (2) TRIPULACIÓN: ' +
+          'calificación CAT III obtenida mediante entrenamiento específico en simulador (incluyendo fallos de sistemas en condiciones CAT III), ' +
+          'recurrente cada 6-12 meses, (3) AEROPUERTO: infraestructura CAT III (ILS Categoría III con señales de alta precisión, luces de centro ' +
+          'de pista de alta intensidad, sistema de guía visual ALSF-2 o equivalente), (4) RVR: dentro de mínimos publicados para la categoría ' +
+          'específica (CAT IIIa: RVR ≥200m, CAT IIIb: RVR ≥75m, CAT IIIc: RVR 0m - no implementada comercialmente), (5) PROCEDIMIENTOS LVO: ' +
+          'checklist específico de baja visibilidad, briefing de aproximación detallado, (6) ALTERNATIVA: aeropuerto de desvío disponible con ' +
+          'condiciones por encima de mínimos. La opción A es peligrosa: ignora certificación de aeronave y tripulación. La opción C es falsa: ' +
+          'certificación es obligatoria. La opción D es falsa: CAT III es estándar en aviación comercial moderna. Accidentes como el Vuelo 1455 ' +
+          'de Southwest Airlines (2000, Little Rock) demostraron consecuencias de operaciones en baja visibilidad sin procedimientos adecuados.'
+      },
+      {
+        id: 'seg-s9-02',
+        enunciado:
+          'Una aerolínea opera vuelos transoceánicos en espacio aéreo RVSM (Reduced Vertical Separation Minimum) donde la separación vertical ' +
+          'entre aeronaves se reduce de 2000 pies a 1000 pies entre FL290 y FL410. Según el Doc 9859 y las regulaciones RVSM (Doc 9574), cuáles ' +
+          'son los requisitos OBLIGATORIOS para operar en espacio aéreo RVSM:',
+        opciones: {
+          A: 'Solo se requiere que el piloto tenga experiencia en vuelos de altitud; la aeronave no necesita certificación especial.',
+          B: 'Requiere: (1) aeronave con certificación RVSM (sistemas de altimetría redundantes y precisos, piloto automático con control de altitud preciso), (2) programa de monitoreo de altura (height monitoring) mediante sistemas como GPS o ADS-B para verificar desempeño de altimetría, (3) tripulación entrenada en procedimientos RVSM específicos (contingencias por fallo de sistemas, reporte de desviaciones de altura), (4) aprobación específica de la autoridad aeronáutica (LOA - Letter of Authorization), y (5) reporte obligatorio de desviaciones de altura superiores a 300 pies.',
+          C: 'RVSM es opcional; las aerolíneas pueden elegir operar con separación de 2000 pies si prefieren.',
+          D: 'Solo requiere aprobación del controlador de tránsito aéreo; la certificación de aeronave es innecesaria.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9859 y Doc 9574 (Manual on a 300m (1000ft) Vertical Separation Minimum Between FL290 and FL410): RVSM es un sistema que DOBLA la ' +
+          'capacidad del espacio aéreo al reducir separación vertical de 2000 pies a 1000 pies, pero requiere requisitos estrictos: (1) CERTIFICACIÓN ' +
+          'DE AERONAVE: sistemas de altimetría redundantes (típicamente 2 o 3 sistemas independientes), piloto automático con precisión de ±65 pies, ' +
+          'sistemas de alerta de desviación de altura, (2) MONITOREO DE ALTURA: programa obligatorio de verificación de desempeño de altimetría ' +
+          'mediante sistemas como GPS, ADS-B, o radares de monitoreo (Height Monitoring Units), (3) ENTRENAMIENTO DE TRIPULACIÓN: procedimientos ' +
+          'específicos RVSM incluyendo contingencias por fallo de sistemas (descenso a FL280 o ascenso a FL430), reporte de desviaciones, comunicación ' +
+          'con ATC, (4) APROBACIÓN REGULATORIA: LOA (Letter of Authorization) de la autoridad aeronáutica tras demostrar cumplimiento, (5) REPORTE ' +
+          'OBLIGATORIO: desviaciones de altura >300 pies deben reportarse para análisis de tendencias. La opción A es peligrosa: ignora certificación ' +
+          'de aeronave. La opción C es falsa: RVSM es obligatorio en la mayoría del espacio aéreo oceánico y continental; operar sin RVSM limita ' +
+          'severamente las rutas disponibles. La opción D es falsa: ATC no puede aprobar sin certificación. Incidentes de pérdida de separación ' +
+          'vertical (AIRPROX) en espacio aéreo RVSM han demostrado que certificación rigurosa es esencial para prevenir colisiones en vuelo.'
+      },
+      {
+        id: 'seg-s9-03',
+        enunciado:
+          'Un vuelo de pasajeros experimenta turbulencia severa inesperada en aire claro (CAT - Clear Air Turbulence) a FL370 sobre el océano, ' +
+          'sin advertencia previa de radar meteorológico (la CAT no es detectable por radar convencional). Según el Doc 9683 y las guías de gestión ' +
+          'de turbulencia, cuál es la estrategia MÁS efectiva para prevenir lesiones de pasajeros y tripulación:',
+        opciones: {
+          A: 'Depender exclusivamente del radar meteorológico para detectar turbulencia y evitarla.',
+          B: 'Estrategia multicapa: (1) uso de reportes PIREP (Pilot Reports) de otras aeronaves para identificar zonas de turbulencia, (2) coordinación con ATC y centros de control para obtener información de turbulencia en ruta (SIGMETs), (3) política de cinturón de seguridad abrochado en todo momento cuando esté sentado (no solo durante turbulencia reportada), (4) entrenamiento de tripulación de cabina en procedimientos de turbulencia severa (asegurarse inmediatamente, servicio de cabina suspendido), y (5) uso de sistemas de detección de turbulencia predictiva (LIDAR, infrarrojo) cuando estén disponibles.',
+          C: 'Volar a altitudes más bajas donde la turbulencia es menos frecuente.',
+          D: 'Evitar vuelos sobre océanos donde la turbulencia es más común.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9683 y guías IATA/ICAO de gestión de turbulencia: la turbulencia, especialmente CAT (Clear Air Turbulence), es una de las principales ' +
+          'causas de lesiones no fatales en aviación comercial. La estrategia MÁS efectiva es MULTICAPA: (1) PIREPs: reportes de pilotos que han ' +
+          'experimentado turbulencia en áreas específicas, compartidos vía ATC y redes de información, (2) SIGMETs: avisos de fenómenos ' +
+          'meteorológicos significativos emitidos por centros de control, (3) CINTURÓN DE SEGURIDAD: política de "seat belt fastened when seated" ' +
+          'en TODO momento, no solo cuando se enciende la señal; esto previene lesiones en turbulencia inesperada, (4) ENTRENAMIENTO DE CABINA: ' +
+          'tripulantes de cabina entrenados para asegurarse INMEDIATAMENTE al primer signo de turbulencia, suspendiendo servicio de cabina, ' +
+          '(5) TECNOLOGÍA: sistemas LIDAR (Light Detection and Ranging) o infrarrojos que detectan CAT con anticipación (aún en desarrollo pero ' +
+          'prometedores). La opción A es insuficiente: radar convencional NO detecta CAT. La opción C es ineficiente: volar bajo aumenta consumo ' +
+          'de combustible y tiempo de vuelo. La opción D es impracticable: evitar océanos elimina rutas transoceánicas. Estadísticas IATA muestran ' +
+          'que ~60 personas resultan heridas anualmente por turbulencia en aviación comercial, la mayoría por no llevar cinturón abrochado.'
+      },
+      {
+        id: 'seg-s9-04',
+        enunciado:
+          'Un avión se aproxima a un aeropuerto de alta montaña (elevación 12,000 pies, como La Paz o Lhasa) en condiciones de alta temperatura ' +
+          '(30°C). El comandante debe considerar los efectos de la altitud densidad (density altitude) en el desempeño de la aeronave. Según el ' +
+          'Doc 9683 y principios de performance de aeronaves, cuáles son los efectos CRÍTICOS de la alta altitud densidad:',
+        opciones: {
+          A: 'La alta altitud densidad mejora el desempeño de la aeronave porque el aire es más delgado y hay menos resistencia.',
+          B: 'La alta altitud densidad (combinación de alta elevación + alta temperatura) reduce drásticamente el desempeño de la aeronave: (1) menor sustentación de las alas (aire menos denso), (2) menor empuje de los motores (menos oxígeno para combustión), (3) menor eficiencia de las hélices, (4) distancias de despegue y aterrizaje significativamente mayores, (5) tasas de ascenso reducidas, (6) posibles limitaciones de peso máximo de despegue (MTOW) que requieren dejar pasajeros o carga en tierra.',
+          C: 'La altitud densidad solo afecta a aeronaves de hélice; los jets modernos no se ven afectados.',
+          D: 'Solo afecta durante el despegue; en crucero y aterrizaje no tiene impacto.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9683 y principios de performance aeronáutica: la altitud densidad (density altitude) es la altitud a la cual la aeronave "siente" ' +
+          'que está operando, basada en la densidad del aire (función de presión, temperatura y humedad). Alta altitud densidad = aire menos denso ' +
+          '= menor desempeño. Efectos críticos: (1) SUSTENTACIÓN REDUCIDA: las alas generan menos sustentación en aire menos denso, requiriendo ' +
+          'mayor velocidad para mantener vuelo, (2) EMPUJE REDUCIDO: motores de turbina y pistón producen menos potencia con menos oxígeno disponible, ' +
+          '(3) HÉLICES MENOS EFICIENTES: hélices "muerden" menos aire, (4) DISTANCIAS MAYORES: despegue y aterrizaje requieren pistas más largas ' +
+          '(en La Paz, pista de 4000m es necesaria para operaciones normales), (5) TASAS DE ASCENSO REDUCIDAS: capacidad de ascenso degradada, ' +
+          'crítico en terreno montañoso, (6) LIMITACIONES DE PESO: MTOW (Maximum Takeoff Weight) debe reducirse significativamente, requiriendo ' +
+          'dejar pasajeros, carga o combustible en tierra. La opción A es falsa: aire delgado REDUCE desempeño. La opción C es falsa: jets son ' +
+          'AFECTADOS severamente (motores de turbina pierden empuje). La opción D es falsa: afecta TODAS las fases del vuelo. Accidentes como el ' +
+          'Vuelo 255 de Northwest Airlines (1987, Detroit, despegue con alta altitud densidad y configuración incorrecta) demostraron consecuencias ' +
+          'catastróficas de subestimar efectos de densidad.'
+      },
+      {
+        id: 'seg-s9-05',
+        enunciado:
+          'Un vuelo experimenta cizalladura de viento (wind shear) severa durante la aproximación final, con cambios bruscos de velocidad del viento ' +
+          'que causan pérdida repentina de sustentación. Según el Doc 9683 y las guías de gestión de wind shear, cuál es la acción CORRECTA de la ' +
+          'tripulación:',
+        opciones: {
+          A: 'Continuar la aproximación y ajustar la velocidad gradualmente para compensar los cambios de viento.',
+          B: 'Ejecutar inmediatamente una aproximación frustrada (go-around) con potencia máxima (TOGA - Takeoff/Go-Around thrust), actitud de nariz arriba específica (típicamente 15-20 grados), y NO intentar recuperar la senda de planeo normal hasta estar fuera de la zona de wind shear; reportar el evento a ATC inmediatamente.',
+          C: 'Reducir potencia para disminuir la velocidad y permitir que la aeronave se estabilice.',
+          D: 'Desplegar flaps adicionales para aumentar sustentación inmediatamente.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9683 y guías de wind shear recovery: la cizalladura de viento (wind shear) es un cambio brusco en velocidad o dirección del viento ' +
+          'que puede causar pérdida repentina de sustentación, especialmente crítico durante aproximación y despegue. La acción CORRECTA es una ' +
+          'RECUPERACIÓN AGRESIVA INMEDIATA: (1) GO-AROUND INMEDIATO: no intentar continuar aproximación; la cizalladura puede causar pérdida de ' +
+          'control, (2) POTENCIA MÁXIMA: aplicar TOGA (Takeoff/Go-Around thrust) para máxima potencia disponible, (3) ACTITUD ESPECÍFICA: nariz ' +
+          'arriba 15-20 grados (según tipo de aeronave) para maximizar sustentación, (4) NO PERSEGUIR SENDA: no intentar recuperar la senda de ' +
+          'planeo normal hasta estar fuera de la zona de wind shear, (5) REPORTE A ATC: informar inmediatamente para advertir a otras aeronaves. ' +
+          'La opción A es PELIGROSA: ajustar gradualmente es insuficiente; la cizalladura requiere acción inmediata. La opción C es catastrófica: ' +
+          'reducir potencia agrava la pérdida de sustentación. La opción D es ineficaz: flaps adicionales aumentan resistencia sin resolver el ' +
+          'problema fundamental. El accidente del Vuelo 191 de Delta Air Lines (1985, Dallas-Fort Worth, 137 muertos) por cizalladura de viento ' +
+          'durante aproximación llevó a desarrollo de sistemas de detección (LLWAS, TDWR) y procedimientos de recuperación agresiva que han prevenido ' +
+          'múltiples accidentes desde entonces.'
+      },
+      {
+        id: 'seg-s9-06',
+        enunciado:
+          'Un expedidor prepara un envío de mercancías peligrosas que será transportado como CORREO AÉREO (air mail) a través de un servicio postal ' +
+          'internacional. Según el Doc 9284 y las regulaciones de la Unión Postal Universal (UPU), cuál es la situación regulatoria CORRECTA:',
+        opciones: {
+          A: 'Las mercancías peligrosas están completamente prohibidas en correo aéreo internacional, con excepciones muy específicas y limitadas (ej: material radiactivo médico bajo ciertas condiciones, muestras biológicas UN 3373).',
+          B: 'Las mercancías peligrosas pueden enviarse por correo aéreo con DGD completa y embalaje UN certificado, igual que carga regular.',
+          C: 'Solo mercancías Clase 9 (misceláneas) están permitidas en correo aéreo; otras clases están prohibidas.',
+          D: 'El correo aéreo está exento de todas las regulaciones de mercancías peligrosas porque es servicio postal.'
+        },
+        respuesta_correcta: 'A',
+        explicacion_nzt:
+          'Doc 9284-AN/905 Cap. 1 y regulaciones UPU (Universal Postal Union): las mercancías peligrosas están GENERALMENTE PROHIBIDAS en correo ' +
+          'aéreo internacional debido a la naturaleza descentralizada del sistema postal (múltiples manipulaciones, falta de control directo, ' +
+          'imposibilidad de verificar declaraciones). EXCEPCIONES MUY ESPECÍFICAS y limitadas incluyen: (1) MATERIAL RADIACTIVO MÉDICO: radiofármacos ' +
+          'para diagnóstico/terapia bajo condiciones estrictas (embalaje Type A, actividad limitada, aprobación de autoridades postales y ' +
+          'aeronáuticas), (2) MUESTRAS BIOLÓGICAS UN 3373: muestras de diagnóstico (sangre, tejidos) para análisis médico, con embalaje triple ' +
+          '(recipiente primario, secundario, exterior) y marcado específico, (3) CIERTAS BATERÍAS DE LITIO: en equipos (no de repuesto) bajo ' +
+          'condiciones específicas, (4) MERCANCÍAS EXCEPTUADAS: cantidades muy pequeñas (ej: perfumes <30ml) según regulaciones nacionales. La opción B ' +
+          'es falsa: correo aéreo NO acepta mercancías peligrosas con DGD regular. La opción C es incorrecta: la prohibición es general, no solo ' +
+          'para ciertas clases. La opción D es falsa: correo aéreo DEBE cumplir regulaciones de mercancías peligrosas; de hecho, las restricciones ' +
+          'son MÁS estrictas que para carga regular. La UPU y OACI coordinan estas regulaciones para prevenir incidentes en la red postal global.'
+      },
+      {
+        id: 'seg-s9-07',
+        enunciado:
+          'Un laboratorio médico envía muestras de sangre humana para análisis de enfermedades infecciosas (no COVID-19) a un centro de investigación ' +
+          'internacional. Las muestras están clasificadas como UN 3373 (Biological substance, Category B). Según el Doc 9284, cuáles son los requisitos ' +
+          'específicos para este envío:',
+        opciones: {
+          A: 'UN 3373 está completamente prohibido en aviación comercial; debe transportarse por courier terrestre exclusivamente.',
+          B: 'UN 3373 (Category B) requiere: (1) embalaje triple (recipiente primario estanco, recipiente secundario estanco con material absorbente suficiente para absorber todo el líquido, embalaje exterior rígido), (2) marcado específico "Biological Substance, Category B" con símbolo UN 3373, (3) NO requiere DGD completa (solo documento simplificado con descripción del contenido), (4) NO requiere etiquetas de Clase 6.2 (infeccioso) porque Category B es de bajo riesgo, (5) límites de cantidad por bulto (típicamente 50ml para líquidos, 50g para sólidos por recipiente primario).',
+          C: 'UN 3373 requiere todas las regulaciones de Clase 6.2 completa (DGD, etiquetas de riesgo, embalaje Type A) porque es material infeccioso.',
+          D: 'UN 3373 está exento de todas las regulaciones porque es material médico.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9284-AN/905 Cap. 6 (Infectious Substances): las sustancias infecciosas se clasifican en DOS categorías: Category A (alto riesgo, ' +
+          'UN 2814/2900) y Category B (bajo riesgo, UN 3373). UN 3373 (Biological substance, Category B) tiene requisitos ESPECÍFICOS más simples ' +
+          'que Category A: (1) EMBALAJE TRIPLE: recipiente primario estanco (tubo de ensayo, vial), recipiente secundario estanco con material ' +
+          'absorbente suficiente para absorber TODO el líquido en caso de fuga, embalaje exterior rígido (caja de cartón, plástico), (2) MARCADO ' +
+          'ESPECÍFICO: "Biological Substance, Category B" con símbolo UN 3373 (rombo con texto), (3) DOCUMENTACIÓN SIMPLIFICADA: NO requiere DGD ' +
+          'completa de mercancías peligrosas, solo documento de transporte con descripción del contenido, (4) SIN ETIQUETAS DE RIESGO: NO requiere ' +
+          'etiquetas de Clase 6.2 porque Category B es de bajo riesgo (no causa enfermedad grave en humanos o animales sanos), (5) LÍMITES DE ' +
+          'CANTIDAD: típicamente 50ml para líquidos, 50g para sólidos por recipiente primario, con límites totales por bulto. La opción A es falsa: ' +
+          'UN 3373 es ampliamente transportado por vía aérea (millones de envíos anuales). La opción C es excesiva: Category B NO requiere regulaciones ' +
+          'completas de Clase 6.2 (esas son para Category A). La opción D es falsa: UN 3373 SÍ está regulado, solo que con requisitos simplificados. ' +
+          'El sistema UN 3373 permite transporte eficiente de muestras médicas manteniendo seguridad adecuada.'
+      },
+      {
+        id: 'seg-s9-08',
+        enunciado:
+          'Un taller de mantenimiento (MRO) recibe una solicitud de una aerolínea para implementar un cambio significativo en el programa de ' +
+          'mantenimiento de su flota: extender los intervalos de inspección C de 6,000 horas a 8,000 horas basándose en datos de confiabilidad. ' +
+          'Según el Doc 9824 y las regulaciones de Management of Change en MRO, cuál es el proceso CORRECTO:',
+        opciones: {
+          A: 'El MRO puede implementar el cambio inmediatamente si los datos de confiabilidad lo justifican; no requiere aprobación regulatoria.',
+          B: 'El cambio requiere: (1) evaluación formal de riesgos del cambio (¿qué componentes podrían fallar antes? ¿qué consecuencias tendría?), (2) análisis de datos de confiabilidad robusto (tendencias de fallas, tasas de remoción, análisis estadístico), (3) aprobación de la autoridad aeronáutica del Estado del Operador (cambio al programa de mantenimiento requiere enmienda al programa aprobado), (4) validación por el fabricante de la aeronave (OEM) o datos de ingeniería independiente, (5) implementación gradual con monitoreo intensificado durante el período de transición, y (6) revisión periódica para confirmar que el cambio no degrada seguridad.',
+          C: 'Solo requiere aprobación del Director de Mantenimiento de la aerolínea; el MRO no tiene rol en la decisión.',
+          D: 'Los cambios al programa de mantenimiento están prohibidos; los intervalos del fabricante son fijos e inmutables.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9824-AN/450 y regulaciones EASA Part-M / FAA 14 CFR 121 Subpart L: los cambios al programa de mantenimiento son Management of Change ' +
+          'crítico que requiere proceso riguroso: (1) EVALUACIÓN DE RIESGOS: análisis formal de qué podría salir mal (¿extensión de intervalo permite ' +
+          'que fallas se desarrollen sin detección? ¿hay componentes con modos de falla no detectados por inspecciones actuales?), (2) ANÁLISIS DE ' +
+          'CONFIABILIDAD ROBUSTO: datos estadísticos de tendencias de fallas, tasas de remoción de componentes, análisis de causas raíz, no solo ' +
+          'promedios simples, (3) APROBACIÓN REGULATORIA: el programa de mantenimiento es un documento APROBADO por la autoridad aeronáutica; cambios ' +
+          'requieren enmienda formal con justificación técnica, (4) VALIDACIÓN OEM o INDEPENDIENTE: el fabricante (Boeing, Airbus) o ingenieros ' +
+          'independientes deben validar que el cambio es técnicamente sólido, (5) IMPLEMENTACIÓN GRADUAL: no cambio abrupto de toda la flota; ' +
+          'implementación por lotes con monitoreo intensificado, (6) REVISIÓN PERIÓDICA: verificar que el cambio no degrada seguridad mediante ' +
+          'SPIs específicos. La opción A es peligrosa: cambios sin aprobación regulatoria son ilegales. La opción C es falsa: MRO tiene rol técnico ' +
+          'crítico. La opción D es falsa: programas de mantenimiento pueden optimizarse con datos de confiabilidad (MSG-3), pero con proceso riguroso. ' +
+          'El accidente del Vuelo 261 de Alaska Airlines (2000) demostró consecuencias de extensión de intervalos de lubricación sin análisis adecuado.'
+      },
+      {
+        id: 'seg-s9-09',
+        enunciado:
+          'Una aerolínea necesita realizar una reparación mayor (major repair) en el larguero principal del ala de una aeronave tras detectar una ' +
+          'grieta. Según el Doc 9824 y las regulaciones de aeronavegabilidad, cuál es el proceso CORRECTO para validar y aprobar esta reparación:',
+        opciones: {
+          A: 'El taller de mantenimiento puede diseñar y aprobar la reparación internamente si tiene ingenieros calificados; no requiere aprobación externa.',
+          B: 'La reparación mayor requiere: (1) datos aprobados para la reparación (del fabricante OEM, de la autoridad aeronáutica, o de una organización de diseño aprobada - DOA), (2) ingenieros calificados que diseñen o validen la reparación según los datos aprobados, (3) ejecución por técnicos certificados con inspección independiente (independent inspection) de puntos críticos, (4) documentación completa en el logbook de la aeronave y registros de mantenimiento, (5) posible inspección por la autoridad aeronáutica antes de regresar al servicio, y (6) seguimiento post-reparación para verificar desempeño.',
+          C: 'Las reparaciones mayores están prohibidas; el componente debe reemplazarse completamente.',
+          D: 'Solo requiere aprobación del piloto al mando antes del siguiente vuelo.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9824-AN/450 y regulaciones EASA Part-21 / FAA 14 CFR 43: las reparaciones mayores (major repairs) son modificaciones que afectan ' +
+          'significativamente la estructura, sistemas o性能 de la aeronave y requieren proceso riguroso: (1) DATOS APROBADOS: la reparación debe ' +
+          'basarse en datos aprobados por la autoridad (SRM - Structural Repair Manual del OEM, ADs, STCs - Supplemental Type Certificates, o ' +
+          'diseño de DOA - Design Organization Approval), NO en diseño ad-hoc del taller, (2) INGENIEROS CALIFICADOS: diseño o validación por ' +
+          'ingenieros con calificaciones específicas (licencia de ingeniero de mantenimiento, experiencia en estructuras), (3) EJECUCIÓN CERTIFICADA: ' +
+          'técnicos con certificaciones específicas (ej: soldadores calificados, técnicos de compuestos), (4) INSPECCIÓN INDEPENDIENTE: un inspector ' +
+          'diferente al ejecutante verifica puntos críticos (inspección de soldaduras, uniones, torques), (5) DOCUMENTACIÓN COMPLETA: registro en ' +
+          'logbook de aeronave, formularios específicos (EASA Form 1, FAA 337), historial de materiales usados, (6) INSPECCIÓN REGULATORIA: en muchos ' +
+          'casos, la autoridad aeronáutica inspecciona antes de regresar al servicio, (7) SEGUIMIENTO POST-REPARACIÓN: inspecciones periódicas para ' +
+          'verificar que la reparación se comporta como esperado. La opción A es peligrosa: diseño interno sin aprobación es ilegal. La opción C es ' +
+          'falsa: reparaciones mayores son estándar y necesarias (reemplazar un larguero completo es económicamente inviable). La opción D es absurda: ' +
+          'el piloto no tiene autoridad para aprobar reparaciones estructurales. El accidente del Vuelo 243 de Aloha Airlines (1988, descompresión ' +
+          'explosiva por reparación deficiente de fuselaje) demostró consecuencias catastróficas de reparaciones sin datos aprobados.'
+      },
+      {
+        id: 'seg-s9-10',
+        enunciado:
+          'Tras un accidente aéreo grave, la Junta de Investigación de Accidentes del Estado del Suceso llega al sitio. Según el Anexo 13 de OACI, ' +
+          'cuáles son las responsabilidades CRÍTICAS del Estado del Suceso respecto a la protección de evidencia y coordinación con la investigación:',
+        opciones: {
+          A: 'El Estado del Suceso puede permitir que la aerolínea retire los restos de la aeronave inmediatamente para limpiar la pista y reanudar operaciones.',
+          B: 'El Estado del Suceso debe: (1) asegurar y preservar el sitio del accidente sin alteraciones (excepto para rescate de víctimas), (2) proteger la evidencia física (restos de aeronave, registradores de vuelo - FDR/CVR, documentación), (3) coordinar con Estados acreditados (Estado de Matrícula, Operador, Diseño, Fabricación) permitiendo su acceso al sitio y evidencia, (4) NO divulgar información de la investigación (especialmente CVR - Cockpit Voice Recorder) hasta que el informe final esté completo o con autorización de los Estados acreditados, (5) facilitar la investigación técnica independiente del proceso legal/punitivo.',
+          C: 'El Estado del Suceso tiene autoridad exclusiva para determinar las causas del accidente; los demás Estados solo observan sin participar.',
+          D: 'La evidencia debe ser entregada inmediatamente a la aerolínea para su análisis interno antes que a la Junta de Investigación.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Anexo 13 de OACI (Aircraft Accident and Incident Investigation): establece responsabilidades críticas del Estado del Suceso para proteger ' +
+          'la integridad de la investigación: (1) ASEGURAR Y PRESERVAR EL SITIO: sin alteraciones excepto para rescate de víctimas y protección de ' +
+          'vidas; los restos NO deben moverse, limpiarse o alterarse hasta que la Junta de Investigación documente todo (fotografías, mediciones, ' +
+          'posición de componentes), (2) PROTEGER EVIDENCIA FÍSICA: restos de aeronave, registradores de vuelo (FDR - Flight Data Recorder, ' +
+          'CVR - Cockpit Voice Recorder), documentación (loadsheet, plan de vuelo, registros de mantenimiento), (3) COORDINAR CON ESTADOS ACREDITADOS: ' +
+          'permitir acceso al sitio y evidencia a representantes del Estado de Matrícula, Operador, Diseño, Fabricación; cada uno designa asesores ' +
+          'técnicos, (4) CONFIDENCIALIDAD: información de la investigación (especialmente CVR) NO debe divulgarse hasta que el informe final esté ' +
+          'completo o con autorización de Estados acreditados; esto protege la independencia de la investigación del proceso legal/punitivo, ' +
+          '(5) INDEPENDENCIA: la investigación técnica debe ser independiente de procesos legales/penales para fomentar transparencia y aprendizaje. ' +
+          'La opción A es ilegal: retirar restos antes de documentación destruye evidencia. La opción C es falsa: investigación es colaborativa con ' +
+          'Estados acreditados. La opción D es peligrosa: la aerolínea tiene conflicto de interés inherente. El accidente del Vuelo 752 de Ukraine ' +
+          'International Airlines (2020, derribado por misil en Irán) demostró controversia cuando Irán no protegó adecuadamente la evidencia ni ' +
+          'coordinó con Estados acreditados, violando el Anexo 13.'
+      }
     ]
   }
 };
