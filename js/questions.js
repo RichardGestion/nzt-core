@@ -578,6 +578,234 @@ export const BANCO_NZT = {
           'como el Vuelo 370 de Malaysia Airlines (2014) demostraron que la asistencia familiar y coordinación de investigación requieren meses de ' +
           'COE activo, no días.'
       }
+    ],
+
+    /* SEMANA 3/10 — Revisión por la dirección, auditorías, FRMS, FORDEC, embalaje UN, riesgos subsidiarios, supervisión, cultura justa, simulacros */
+    3: [
+      {
+        id: 'seg-s3-01',
+        enunciado:
+          'El Safety Manager de una aerolínea prepara la Revisión por la Dirección (Management Review) anual del SMS según el Doc 9859 Cap. 10. ' +
+          'La alta dirección solicita un informe ejecutivo. ¿Cuál de los siguientes conjuntos representa los elementos MÍNIMOS obligatorios que debe incluir la revisión?',
+        opciones: {
+          A: 'Estado de los SPIs, acciones correctivas abiertas, cambios en riesgos operacionales, resultados de auditorías internas, recomendaciones de mejora y recursos necesarios.',
+          B: 'Balance financiero del departamento de seguridad, comparativa con competidores, proyección de ingresos por pasajero-kilómetro.',
+          C: 'Listado de incidentes del año, número de quejas de clientes, horas de vuelo acumuladas por tripulante.',
+          D: 'Estado de las investigaciones de accidentes en curso, sanciones regulatorias recibidas, costos de seguros de flota.'
+        },
+        respuesta_correcta: 'A',
+        explicacion_nzt:
+          'Doc 9859 Cap. 10 (Management Review): establece que la revisión por la dirección debe incluir MÍNIMAMENTE: (1) seguimiento de acciones de revisiones anteriores, ' +
+          '(2) estado de los SPIs y SPTs, (3) resultados de auditorías internas y externas, (4) cambios en riesgos operacionales y factores externos, ' +
+          '(5) estado de acciones correctivas/preventivas, (6) recomendaciones de mejora, (7) recursos necesarios para el SMS. Este proceso es la ' +
+          'piedra angular del componente Safety Assurance del SMS: garantiza que la alta dirección mantiene compromiso activo y asigna recursos apropiados. ' +
+          'La opción B es financiera, no de seguridad. La opción C es operacional, no sistémica. La opción D es reactiva (solo incidentes), mientras ' +
+          'que la revisión debe ser proactiva y holística. Sin esta revisión periódica, el SMS se convierte en un sistema documental sin respaldo ejecutivo, ' +
+          'condición identificada en accidentes como el del Vuelo 5191 de Comair (2006).'
+      },
+      {
+        id: 'seg-s3-02',
+        enunciado:
+          'El Safety Manager de una aerolínea programa una auditoría interna del SMS. Un miembro del equipo pregunta cuál es la diferencia entre una ' +
+          'auditoría interna y una evaluación de riesgos. Según el Doc 9859, la distinción fundamental es:',
+        opciones: {
+          A: 'La auditoría es obligatoria y la evaluación de riesgos es opcional según el Anexo 19.',
+          B: 'La auditoría evalúa el CUMPLIMIENTO del sistema SMS (procesos, documentación, procedimientos), mientras la evaluación de riesgos identifica PELIGROS y evalúa riesgos operacionales específicos.',
+          C: 'La auditoría la realiza personal externo y la evaluación de riesgos la realiza el Safety Manager interno.',
+          D: 'La auditoría es reactiva (analiza incidentes pasados) y la evaluación de riesgos es proactiva (analiza riesgos futuros).'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9859 Cap. 9 y Cap. 5: son procesos COMPLEMENTARIOS pero distintos. La AUDITORÍA INTERNA (Cap. 9) es un proceso sistemático, independiente ' +
+          'y documentado para verificar que el SMS está implementado y mantenido conforme a los requisitos: revisa procedimientos, documentación, registros, ' +
+          'competencia del personal, cumplimiento de políticas. La EVALUACIÓN DE RIESGOS (Cap. 5) identifica peligros específicos (ej: operaciones en nieve, ' +
+          'nuevas rutas) y evalúa el nivel de riesgo asociado usando matrices 5×5 para determinar controles necesarios. Ambas son obligatorias (descarta A). ' +
+          'La auditoría puede ser interna o externa (descarta C). La auditoría puede ser proactiva o reactiva (descarta D). La confusión entre ambos ' +
+          'conceptos es una falla latente común: organizaciones que "auditan" cuando deberían "evaluar riesgos" y viceversa pierden efectividad preventiva.'
+      },
+      {
+        id: 'seg-s3-03',
+        enunciado:
+          'Una aerolínea de carga ha experimentado tres incidentes relacionados con fatiga de tripulaciones en los últimos 6 meses: desviaciones de ' +
+          'altura, pérdida de conciencia situacional durante aproximaciones y errores en listas de verificación. El Safety Manager recomienda implementar ' +
+          'un FRMS (Fatigue Risk Management System) según el Doc 9683. ¿Cuáles son los componentes ESENCIALES que debe incluir el FRMS?',
+        opciones: {
+          A: 'Solo límites regulatorios de tiempo de vuelo y período de descanso según las normas nacionales.',
+          B: 'Política de fatiga, educación y concienciación, sistema de reporte de fatiga, modelado científico de fatiga, investigación de incidentes relacionados con fatiga, y proceso de mejora continua.',
+          C: 'Instalación de cámaras en cabina para monitorear signos de fatiga de los pilotos durante el vuelo.',
+          D: 'Contratación de tripulaciones más jóvenes y reducción de la edad máxima de jubilación a 55 años.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9683 Cap. 11 (FRMS): un Fatigue Risk Management System es un enfoque basado en CIENCIA y DATOS, no solo en cumplimiento regulatorio. ' +
+          'Sus componentes esenciales son: (1) Política de fatiga (compromiso organizacional), (2) Educación y concienciación (capacitación sobre ' +
+          'fisiología del sueño, ritmos circadianos), (3) Sistema de reporte de fatiga (no punitivo, confidencial), (4) Modelado científico de fatiga ' +
+          '(software como SAFTE, FAID que predice niveles de fatiga según horarios), (5) Investigación de incidentes relacionados con fatiga, ' +
+          '(6) Proceso de mejora continua. La opción A es limitada: los límites regulatorios son el PISO, no el techo. La opción C es intrusiva y ' +
+          'no aborda causas raíz. La opción D es discriminatoria y científicamente infundada (la fatiga no se resuelve con edad). El FRMS es el estándar ' +
+          'moderno tras accidentes como el Vuelo 3407 de Colgan Air (2009) donde fatiga fue factor causal primario.'
+      },
+      {
+        id: 'seg-s3-04',
+        enunciado:
+          'Un controlador de tránsito aéreo (ATC) está manejando 12 aeronaves simultáneamente en espacio aéreo de alta densidad. Dos aeronaves entran ' +
+          'en conflicto de separación mientras una tercera reporta emergencia médica. Según los principios de CRM y manejo del estrés operacional del Doc 9683, ' +
+          'la estrategia MÁS efectiva para gestionar esta sobrecarga cognitiva es:',
+        opciones: {
+          A: 'Mantener el control de todas las situaciones simultáneamente sin delegar, confiando en la capacidad multitarea humana.',
+          B: 'Priorizar tareas según criticidad (emergencia > conflicto > tráfico normal), delegar tareas no críticas a otros controladores o asistentes, usar comunicación breve y estructurada, y reconocer límites personales solicitando ayuda cuando sea necesario.',
+          C: 'Desacelerar todas las operaciones y pedir a todas las aeronaves que esperen en holding hasta que la carga de trabajo disminuya.',
+          D: 'Concentrarse exclusivamente en la emergencia médica y dejar que los demás conflictos se resuelvan por sí mismos.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9683 Cap. 7 (Stress and Stress Management): el estrés operacional por sobrecarga cognitiva se gestiona mediante estrategias específicas: ' +
+          '(1) PRIORIZACIÓN: jerarquizar tareas según criticidad (emergencia > conflicto > tráfico normal), (2) DELEGACIÓN: transferir tareas no críticas ' +
+          'a otros controladores, supervisores o asistentes, (3) COMUNICACIÓN ESTRUCTURADA: usar fraseología estándar, breve y clara para reducir carga ' +
+          'cognitiva, (4) RECONOCIMIENTO DE LÍMITES: solicitar ayuda cuando la carga excede la capacidad (no es debilidad, es profesionalismo). La opción A ' +
+          'es peligrosa: la capacidad multitarea humana es limitada y el estrés degrada el desempeño. La opción C es ineficiente: detener todo el tráfico ' +
+          'por una emergencia es excesivo. La opción D es negligente: ignorar conflictos activos puede causar colisiones. El accidente del Vuelo 1907 ' +
+          'de Gol (2006, colisión en vuelo sobre Brasil) demostró que la sobrecarga de controladores sin estrategias de manejo adecuadas causa catástrofes.'
+      },
+      {
+        id: 'seg-s3-05',
+        enunciado:
+          'Durante el despegue, una aeronave bimotor sufre falla del motor derecho a 80 nudos (antes de V1). El comandante debe decidir en segundos ' +
+          'si continuar el despegue o abortar. Según el modelo FORDEC (Facts, Options, Risks, Decision, Execution, Check) del Doc 9683, la aplicación ' +
+          'CORRECTA de este modelo de toma de decisiones bajo presión es:',
+        opciones: {
+          A: 'Facts: falla de motor a 80 kt; Options: abortar o continuar; Risks: abortar puede causar salida de pista, continuar requiere técnica de motor único; Decision: continuar (por encima de V1 no se puede abortar); Execution: aplicar procedimiento de motor único; Check: verificar configuración y performance.',
+          B: 'Facts: falla de motor; Options: ninguna, solo continuar; Risks: no evaluar riesgos para no perder tiempo; Decision: instintiva; Execution: automática; Check: posterior al aterrizaje.',
+          C: 'Facts: analizar todos los parámetros de motor durante 30 segundos; Options: consultar manual completo; Risks: calcular probabilidades estadísticas; Decision: votación de tripulación; Execution: esperar confirmación de torre; Check: documentación posterior.',
+          D: 'Facts: ignorar la falla; Options: pretender que no pasó; Risks: asumir que no hay riesgo; Decision: continuar sin cambios; Execution: normal; Check: reportar en tierra.'
+        },
+        respuesta_correcta: 'A',
+        explicacion_nzt:
+          'Doc 9683 Cap. 8 (Decision Making): FORDEC es un modelo estructurado para toma de decisiones bajo presión en tiempo limitado. Sus fases son: ' +
+          '(1) Facts: identificar hechos objetivos (falla de motor, velocidad 80 kt, antes de V1), (2) Options: generar opciones viables (abortar vs continuar), ' +
+          '(3) Risks: evaluar riesgos de cada opción (abortar: posible salida de pista; continuar: requiere técnica de motor único), (4) Decision: elegir ' +
+          'la opción con menor riesgo residual, (5) Execution: ejecutar la decisión con procedimientos estándar, (6) Check: verificar que la ejecución fue ' +
+          'correcta y el resultado es el esperado. En este caso específico, a 80 kt (antes de V1) AMBOS opciones son viables, pero continuar es preferible ' +
+          'porque abortar a alta velocidad conlleva riesgo de salida de pista. La opción B es incorrecta: FORDEC requiere evaluación de riesgos, no decisión ' +
+          'instintiva. La opción C es impracticable: no hay tiempo para análisis extenso. La opción D es negligencia. FORDEC previene decisiones impulsivas ' +
+          'que han causado accidentes como el Vuelo 1420 de American Airlines (1999, salida de pista por decisión de continuar aproximación inestable).'
+      },
+      {
+        id: 'seg-s3-06',
+        enunciado:
+          'Un expedidor prepara un envío de 50 litros de UN 1230 (metanol, Clase 3, PG II) para transporte aéreo. Utiliza bidones plásticos estándar ' +
+          'de 20 litros comprados en una ferretería local, no certificados UN. Según el Doc 9284-AN/905 Cap. 4, esta práctica es:',
+        opciones: {
+          A: 'Aceptable porque el metanol es una sustancia común y los bidones plásticos son resistentes a alcoholes.',
+          B: 'Inaceptable porque las mercancías peligrosas Clase 3 requieren embalajes certificados UN que hayan superado pruebas de caída, apilamiento, estanqueidad y presión, con marca UN visible.',
+          C: 'Aceptable si el expedidor firma una declaración asumiendo responsabilidad por cualquier incidente.',
+          D: 'Aceptable solo para vuelos nacionales de corta duración; para vuelos internacionales requiere embalaje UN.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9284-AN/905 Cap. 4 (Embalajes): TODAS las mercancías peligrosas (con excepciones muy específicas de cantidades limitadas) requieren ' +
+          'embalajes certificados UN que hayan superado pruebas rigurosas: (1) Prueba de caída desde 1.2m sin fuga, (2) Prueba de apilamiento (soportar ' +
+          'peso equivalente a 3m de altura), (3) Prueba de estanqueidad (presión interna), (4) Prueba de presión (para líquidos). Los embalajes UN llevan ' +
+          'marca visible: símbolo UN, código de tipo (ej: 1H1 para bidón plástico), grupo de embalaje (X, Y, Z según PG), año de fabricación, país de ' +
+          'aprobación. Usar embalajes no certificados (opción A) es ILEGAL y peligroso: pueden fallar bajo presión de altitud (bodega no presurizada ' +
+          'a 8000 ft equivale a presión reducida que expande gases y líquidos). La opción C es inválida: la responsabilidad no se transfiere por firma. ' +
+          'La opción D es falsa: el transporte aéreo SIEMPRE requiere embalaje UN, nacional o internacional. Accidentes como el Vuelo 6 de UPS (2010, ' +
+          'fuego en bodega por baterías de litio en embalajes inadecuados) demuestran consecuencias catastróficas de embalajes no certificados.'
+      },
+      {
+        id: 'seg-s3-07',
+        enunciado:
+          'Un expedidor declara un bulto que contiene UN 2924 (líquido inflamable, tóxico, n.o.s., contiene metanol y acetona). La clasificación correcta ' +
+          'es Clase 3 (inflamable) con riesgo subsidiario Clase 6.1 (tóxico). Según el Doc 9284 Cap. 5 sobre etiquetado, el bulto debe llevar:',
+        opciones: {
+          A: 'Solo la etiqueta de Clase 3 (inflamable) porque es el riesgo principal.',
+          B: 'Solo la etiqueta de Clase 6.1 (tóxico) porque es el riesgo más peligroso para la salud humana.',
+          C: 'Ambas etiquetas: Clase 3 (riesgo principal) y Clase 6.1 (riesgo subsidiario), colocadas adyacentes en el mismo lado del bulto.',
+          D: 'Ninguna etiqueta si el bulto lleva la marca "Líquido inflamable tóxico" escrita en letras grandes.'
+        },
+        respuesta_correcta: 'C',
+        explicacion_nzt:
+          'Doc 9284-AN/905 Cap. 5 (Etiquetado): cuando una mercancía tiene RIESGO SUBSIDIARIO (además del riesgo principal), AMBAS etiquetas son ' +
+          'obligatorias: (1) Etiqueta de riesgo principal (Clase 3, rombo rojo con llama), (2) Etiqueta de riesgo subsidiario (Clase 6.1, rombo blanco ' +
+          'con calavera). Ambas deben colocarse ADYACENTES en el mismo lado del bulto para visibilidad simultánea. El riesgo subsidiario NO es opcional: ' +
+          'proporciona información CRÍTICA para respuesta a emergencias. En caso de fuga o incendio, los respondedores necesitan saber AMBOS riesgos: ' +
+          'inflamabilidad (requiere extintor de espuma/polvo) y toxicidad (requiere equipo de protección respiratoria, evacuación, descontaminación). ' +
+          'La opción A es incorrecta: omite información de toxicidad. La opción B es incorrecta: omite información de inflamabilidad. La opción D es ' +
+          'falsa: las marcas escritas NO sustituyen etiquetas normalizadas internacionalmente (pictogramas universales superan barreras de idioma). ' +
+          'El accidente del Vuelo 1016 de China Airlines (1994) demostró que información incompleta sobre riesgos subsidiarios impide respuesta efectiva.'
+      },
+      {
+        id: 'seg-s3-08',
+        enunciado:
+          'Un supervisor de mantenimiento de línea aprueba la liberación al servicio de una aeronave tras un reemplazo de componente crítico (actuador ' +
+          'de vuelo) firmado por un mecánico junior. El supervisor NO inspeccionó físicamente el trabajo, confiando en la firma del mecánico. ' +
+          'Al día siguiente, durante el vuelo, el actuador falla causando pérdida de control temporal. Según el Doc 9824 Cap. 6, la responsabilidad ' +
+          'del supervisor en este caso es:',
+        opciones: {
+          A: 'Ninguna, porque el mecánico junior es responsable de su propio trabajo y firmó la liberación.',
+          B: 'Responsabilidad directa porque el supervisor DEBE verificar físicamente trabajos críticos antes de aprobar la liberación, independientemente de quién los ejecutó.',
+          C: 'Responsabilidad compartida al 50% con el mecánico junior.',
+          D: 'Responsabilidad solo si el supervisor sabía que el mecánico junior no estaba calificado para esa tarea específica.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9824-AN/450 Cap. 6 (Supervisión de mantenimiento): establece que el supervisor tiene RESPONSABILIDAD DIRECTA de verificar físicamente ' +
+          'trabajos críticos antes de aprobar la liberación de la aeronave. Esta verificación NO es opcional ni delegable: el supervisor debe inspeccionar ' +
+          'físicamente: (1) instalación correcta del componente, (2) torque aplicado según especificación, (3) conexiones eléctricas/hidráulicas seguras, ' +
+          '(4) pruebas funcionales completadas, (5) documentación correcta. Confiar únicamente en la firma del mecánico (incluso experimentado) es una ' +
+          'violación de procedimiento que ha causado accidentes catastróficos. La opción A es falsa: el supervisor es responsable de supervisar, no solo ' +
+          'de firmar. La opción C es incorrecta: la responsabilidad del supervisor es completa, no compartida. La opción D es limitante: el supervisor ' +
+          'debe verificar SIEMPRE, independientemente de la calificación del mecánico. El accidente del Vuelo 261 de Alaska Airlines (2000, pérdida del ' +
+          'estabilizador horizontal) demostró que supervisión deficiente de mantenimiento (falta de inspección física de lubricación) causa catástrofes.'
+      },
+      {
+        id: 'seg-s3-09',
+        enunciado:
+          'Un técnico de mantenimiento comete un error al instalar un componente (conector invertido) durante una inspección C. Al detectar el error ' +
+          'antes de la liberación, el técnico lo reporta voluntariamente al supervisor mediante el sistema de reporte de seguridad (ASR), explicando ' +
+          'que fue un error honesto por fatiga tras turno de 10 horas. Según los principios de Cultura Justa (Just Culture) del Doc 9824 y Doc 9859, ' +
+          'la respuesta organizacional CORRECTA es:',
+        opciones: {
+          A: 'Sancionar disciplinariamente al técnico por el error, independientemente de que lo reportó voluntariamente, para sentar precedente.',
+          B: 'No sancionar al técnico porque fue un error honesto reportado voluntariamente; en su lugar, analizar causas raíz (fatiga, diseño del conector, procedimientos) e implementar mejoras sistémicas.',
+          C: 'Sancionar al técnico pero reducir la pena porque reportó voluntariamente.',
+          D: 'Ignorar el reporte porque el error no tuvo consecuencias operativas.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9824 Cap. 5 y Doc 9859 Cap. 3 (Cultura Justa): distingue claramente entre: (1) Conducta inaceptable (imprudencia deliberada, violaciones ' +
+          'intencionales, negligencia grave) que SÍ merece sanción, y (2) Errores humanos honestos (slips, lapses, mistakes) que NO merecen sanción ' +
+          'cuando son reportados voluntariamente. La respuesta correcta es: NO sancionar errores honestos reportados, sino analizar CAUSAS RAÍZ ' +
+          '(¿por qué ocurrió? fatiga, diseño confuso, procedimiento ambiguo, iluminación deficiente) e implementar MEJORAS SISTÉMICAS (rediseño de ' +
+          'conectores, límites de turno, procedimientos más claros). Sancionar errores reportados (opciones A y C) destruye la cultura de reporte: ' +
+          'el personal deja de reportar por miedo a represalias, y el sistema pierde información preventiva crítica. Ignorar el reporte (opción D) ' +
+          'es negligencia: cada error reportado es una oportunidad de mejora. La Cultura Justa es el pilar del SMS moderno: sin ella, los reportes ' +
+          'voluntarios desaparecen y las fallas latentes se acumulan hasta causar accidentes (lecciones del Vuelo 1455 de Southwest Airlines, 2000).'
+      },
+      {
+        id: 'seg-s3-10',
+        enunciado:
+          'Una aerolínea no ha realizado un simulacro de emergencia aeronáutica (full-scale emergency exercise) en los últimos 18 meses. El Safety ' +
+          'Manager recomienda programar uno inmediatamente. Según el Doc 9859 Cap. 11, las directrices del PRE y el Anexo 14, la frecuencia requerida ' +
+          'y los elementos esenciales del simulacro son:',
+        opciones: {
+          A: 'Simulacro cada 3 años es suficiente; solo debe involucrar al departamento de operaciones de vuelo.',
+          B: 'Simulacro anual obligatorio que involucre TODOS los departamentos clave (operaciones, mantenimiento, SSEI, atención a familiares, comunicación, legal) y autoridades externas (bomberos, policía, hospitales), con evaluación posterior y lecciones aprendidas documentadas.',
+          C: 'Simulacro solo después de cada accidente real, para no gastar recursos innecesariamente.',
+          D: 'Simulacro bianual (cada 2 años) es el estándar internacional; solo debe probar la activación del COE sin ejercicios prácticos de campo.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9859 Cap. 11, directrices del PRE y Anexo 14 (Aeródromos): establecen que los simulacros de emergencia deben ser: (1) FRECUENCIA: al menos ' +
+          'ANUAL (no cada 2-3 años), (2) ALCANCE: full-scale (escala completa) involucrando TODOS los departamentos clave internos (operaciones, ' +
+          'mantenimiento, SSEI, atención a familias, comunicación, legal, recursos humanos) Y autoridades externas (bomberos, policía, hospitales, ' +
+          'autoridad aeronáutica, protección civil), (3) EVALUACIÓN: observadores independientes evalúan desempeño, (4) LECCIONES APRENDIDAS: documentar ' +
+          'fallas detectadas y actualizar el PRE en consecuencia. La opción A es insuficiente: 3 años es demasiado tiempo y solo operaciones es limitado. ' +
+          'La opción C es reactiva y peligrosa: esperar un accidente real para entrenar es negligencia. La opción D es incorrecta: bianual no es el ' +
+          'estándar (es anual) y solo activar COE sin ejercicios de campo no prueba capacidades reales. Simulacros deficientes contribuyeron a respuestas ' +
+          'inadecuadas en accidentes como el Vuelo 1549 de US Airways (2009, "milagro del Hudson") donde la coordinación efectiva fue resultado de ' +
+          'simulacros frecuentes y bien diseñados.'
+      }
     ]
   }
 };
