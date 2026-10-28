@@ -1307,6 +1307,260 @@ export const BANCO_NZT = {
           'La opción D es catastrófica: publicar información incorrecta destruye la credibilidad permanentemente. Casos como el Vuelo 370 de Malaysia ' +
           'Airlines (2014) demostraron que la comunicación deficiente en la era digital multiplica el daño reputacional y el trauma de familias.'
       }
+    ],
+
+    /* SEMANA 6/10 — Business case SMS, ROI, conflictos en cabina, briefing/debriefing, TEM, ULDs, segregación interna, MSG-3, Reliability Program, BCP */
+    6: [
+      {
+        id: 'seg-s6-01',
+        enunciado:
+          'El Director Financiero (CFO) de una aerolínea cuestiona el presupuesto del departamento de seguridad operacional, argumentando que el SMS ' +
+          '"no genera ingresos directos" y propone recortarlo un 30% para mejorar la rentabilidad. El Safety Manager debe justificar la inversión ' +
+          'usando el concepto de "Business Case for Safety" del Doc 9859. La argumentación MÁS robusta se basa en:',
+        opciones: {
+          A: 'La seguridad es un requisito regulatorio obligatorio; no requiere justificación económica.',
+          B: 'El SMS previene costos directos e indirectos de incidentes y accidentes (daños materiales, indemnizaciones, pérdida de reputación, aumento de primas de seguro, costos legales, pérdida de ingresos por desvío de pasajeros), genera retornos tangibles mediante reducción de eventos operacionales, y constituye un diferenciador competitivo que protege el valor de marca a largo plazo.',
+          C: 'La seguridad mejora la moral de los empleados, lo cual es un beneficio intangible suficiente para justificar el presupuesto.',
+          D: 'Invertir en seguridad es una obligación ética que trasciende consideraciones financieras.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9859 Cap. 2 (Business Case for Safety): el SMS debe justificarse económicamente para obtener compromiso sostenido de la alta dirección. ' +
+          'La argumentación robusta integra: (1) COSTOS DIRECTOS del accidente: daños a aeronave (decenas-hundreds de millones USD), indemnizaciones a ' +
+          'víctimas/familias (Convención de Montreal, ~$170K por pasajero sin límite si hay culpa), costos de investigación, multas regulatorias, ' +
+          'aumento de primas de seguro. (2) COSTOS INDIRECTOS (proporción 1:4 a 1:10 según OACI): pérdida de ingresos por flota inmovilizada, desvío ' +
+          'de pasajeros a competidores ("voto con los pies"), costos de recuperación reputacional (campañas publicitarias masivas), despido de personal, ' +
+          'pérdida de contratos corporativos. (3) RETORNOS TANGIBLES del SMS: reducción de eventos operacionales (desvíos, cancelaciones, daños en ' +
+          'rampa), menor prima de seguro por mejor perfil de riesgo, acceso a mercados internacionales que exigen IOSA/SMS maduro. La opción A es ' +
+          'insuficiente: cumplimiento regulatorio no genera presupuesto. Las opciones C y D son válidas pero no convencen a un CFO. Casos como el ' +
+          'accidente del Concorde AF4590 (2000, $150M en costos directos + quiebra operacional) o ValuJet 111 (1996, la aerolínea desapareció) ' +
+          'demuestran que UN accidente puede destruir financieramente a una aerolínea.'
+      },
+      {
+        id: 'seg-s6-02',
+        enunciado:
+          'Una aerolínea implementa un programa de capacitación en CRM durante 2 años, con inversión de $500,000 USD. Al comparar los datos pre y post ' +
+          'implementación, observa reducción del 35% en incidentes operacionales reportados, 40% menos desvíos por errores de tripulación, y disminución ' +
+          'de la prima de seguro en 15% (ahorro anual de $300,000). Según el Doc 9859 y metodologías de ROI de seguridad, el cálculo del retorno sobre ' +
+          'inversión y su interpretación correcta es:',
+        opciones: {
+          A: 'El ROI es negativo porque el CRM no genera ingresos directos; la inversión no se justifica financieramente.',
+          B: 'El ROI debe calcularse sumando ahorros tangibles (reducción de primas, menos desvíos, menos daños en rampa) y dividiendo entre la inversión; con ahorros anuales recurrentes de $300,000+ y reducción de costos operacionales, el ROI típico de programas de seguridad maduros oscila entre 3:1 y 10:1 en horizontes de 3-5 años.',
+          C: 'El ROI solo puede calcularse después de un accidente prevenido, comparando el costo del accidente con la inversión en prevención.',
+          D: 'El ROI es un concepto inaplicable a seguridad operacional porque los accidentes son eventos de baja frecuencia.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9859 y metodologías IATA/ICAO de ROI en seguridad: el cálculo del ROI de programas preventivos se basa en ahorros tangibles recurrentes, ' +
+          'NO en accidentes prevenidos (que son especulativos). Fórmula: ROI = (Beneficios netos / Inversión) × 100. Beneficios incluyen: (1) reducción ' +
+          'de primas de seguro, (2) disminución de costos operacionales (desvíos, cancelaciones, retrasos por errores), (3) reducción de daños en rampa ' +
+          'y mantenimiento no programado, (4) mejora de puntualidad y satisfacción del cliente. Estudios empíricos (FAA, EASA, IATA) muestran que ' +
+          'programas de seguridad maduros generan ROI entre 3:1 y 10:1 en horizontes de 3-5 años. La opción A es falsa: los ahorros operacionales ' +
+          'son ingresos indirectos tangibles. La opción C es metodológicamente incorrecta: no se puede medir prevención de eventos que no ocurrieron. ' +
+          'La opción D es falsa: aunque los accidentes son raros, los incidentes y eventos operacionales son frecuentes y medibles. El ROI de seguridad ' +
+          'es el argumento definitivo ante juntas directivas y comités financieros.'
+      },
+      {
+        id: 'seg-s6-03',
+        enunciado:
+          'Durante un vuelo, el comandante y el primer oficial tienen un desacuerdo técnico sobre la mejor estrategia de desvío meteorológico. La ' +
+          'discusión escala y el comandante dice: "Aquí se hace lo que yo digo, soy el PIC". El FO se cierra en silencio. Según los modelos de gestión ' +
+          'de conflictos del Doc 9683 y el modelo DESC, la acción CORRECTA del FO y del comandante para resolver el conflicto sin comprometer la ' +
+          'seguridad es:',
+        opciones: {
+          A: 'El FO debe acatar la decisión del comandante sin cuestionar; la jerarquía de cabina es absoluta.',
+          B: 'El FO debe usar el modelo DESC (Describe, Express, Suggest, Consequences) para comunicar su preocupación de manera asertiva pero respetuosa, mientras el comandante debe reconocer su error de "rank pulling" y volver a abrir la discusión técnica basada en hechos objetivos.',
+          C: 'Ambos deben posponer la discusión hasta el aterrizaje para evitar distracciones durante el vuelo.',
+          D: 'El FO debe solicitar intervención del sobrecargo principal como mediador.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9683 Cap. 6 (Conflict Management): los conflictos técnicos en cabina son NORMALES y saludables cuando se gestionan apropiadamente. El ' +
+          'modelo DESC proporciona una estructura asertiva para el FO: (1) DESCRIBE: "Capitán, veo que propones desviar por ruta X", (2) EXPRESS: "Estoy ' +
+          'preocupado porque el radar muestra células tormentosas en esa trayectoria", (3) SUGGEST: "Sugiero considerar ruta Y que evita el sistema ' +
+          'convectivo", (4) CONSEQUENCES: "Si entramos en las células, podríamos enfrentar turbulencia severa y daño estructural". Simultáneamente, ' +
+          'el comandante debe reconocer el "rank pulling" (invocar autoridad jerárquica en lugar de argumentos técnicos) como un ERROR de CRM y volver ' +
+          'a abrir la discusión basada en HECHOS, no en jerarquía. La opción A es peligrosa: acatamiento ciego ha causado accidentes (Tenerife 1977). ' +
+          'La opción C es impracticable: decisiones críticas no pueden posponerse. La opción D es incorrecta: el sobrecargo no es mediador de ' +
+          'conflictos técnicos de vuelo. El modelo DESC es estándar en entrenamiento CRM moderno y ha prevenido numerosos incidentes al permitir ' +
+          'comunicación asertiva sin confrontación personal.'
+      },
+      {
+        id: 'seg-s6-04',
+        enunciado:
+          'Una aerolínea implementa el programa LOSA (Line Operations Safety Audit) como parte de su garantía de seguridad (Safety Assurance). Según ' +
+          'el Doc 9859 y las directrices de IATA LOSA, cuáles son las características CLAVE que distinguen LOSA de una auditoría operacional tradicional:',
+        opciones: {
+          A: 'LOSA es una auditoría sorpresa sin aviso previo a la tripulación, con inspectores encubiertos.',
+          B: 'LOSA es una observación sistemática NO PUNITIVA y CONFIDENCIAL de operaciones de línea regulares, realizada por observadores entrenados que registran amenazas, errores y gestión de errores (TEM - Threat and Error Management) sin identificar a las tripulaciones individuales, con propósito exclusivamente de mejora sistémica.',
+          C: 'LOSA evalúa el cumplimiento regulatorio y puede resultar en sanciones a tripulaciones que no cumplen procedimientos.',
+          D: 'LOSA es un examen práctico para certificar a nuevos pilotos antes de volar como PIC.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9859 Cap. 9 e IATA LOSA Program: LOSA (Line Operations Safety Audit) es un programa de observación con características únicas: (1) NO ' +
+          'PUNITIVO: la información recopilada NO puede usarse para acciones disciplinarias contra tripulaciones individuales, (2) CONFIDENCIAL: los ' +
+          'datos se anonimizan y agregan; nunca se identifica a una tripulación específica, (3) OBSERVACIÓN NATURAL: los observadores viajan como ' +
+          'pasajeros adicionales en el jump seat, sin interferir con operaciones, (4) ENFOQUE TEM: registra sistemáticamente AMENAZAS (threats - ' +
+          'condiciones externas que aumentan complejidad), ERRORES (actions/inactions de la tripulación que desvían de la intención) y GESTIÓN DE ' +
+          'ERRORES (cómo la tripulación detecta y mitiga errores), (5) PROPÓSITO SISTÉMICO: identificar patrones organizacionales, no evaluar ' +
+          'individuos. La opción A es contraria a LOSA: requiere consentimiento informado de la tripulación. La opción C es auditoría tradicional, ' +
+          'no LOSA. La opción D es incorrecta: LOSA no evalúa ni certifica. LOSA ha transformado la seguridad operacional al revelar amenazas ' +
+          'sistémicas invisibles a otros métodos (ej: problemas recurrentes en aproximaciones a aeropuertos específicos).'
+      },
+      {
+        id: 'seg-s6-05',
+        enunciado:
+          'Una aerolínea multinacional opera con tripulaciones donde el idioma oficial de comunicación en cabina es el inglés, pero muchos pilotos ' +
+          'no son hablantes nativos. Durante un vuelo, se detecta que las comunicaciones con ATC tienen malentendidos frecuentes, y dentro de la ' +
+          'cabina hay confusión sobre las llamadas estándar (callouts). Según el Doc 9683 y el Anexo 10 sobre competencia lingüística, las acciones ' +
+          'CORRECTAS son:',
+        opciones: {
+          A: 'Exigir que todos los pilotos sean hablantes nativos de inglés mediante contratación selectiva.',
+          B: 'Implementar el marco OACI de competencia lingüística (nivel mínimo 4 operativo, renovación cada 3 años), usar fraseología estándar estrictamente (evitar lenguaje coloquial), reforzar briefings con clarificación explícita de tareas, y permitir "communication clarification requests" sin estigma para asegurar comprensión mutua.',
+          C: 'Permitir que cada tripulante hable en su idioma nativo dentro de la cabina para evitar estrés.',
+          D: 'Sustituir las comunicaciones verbales con sistemas de texto digital entre tripulantes.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9683 Cap. 5 y Anexo 10 (Aeronautical Telecommunications, Vol. II): OACI establece el marco de competencia lingüística (Language ' +
+          'Proficiency Requirements, LPR) obligatorio desde 2008: (1) NIVEL MÍNIMO: nivel 4 (Operational) en las seis habilidades (pronunciación, ' +
+          'estructura, vocabulario, fluidez, comprensión, interacción), con renovación periódica (cada 3 años para nivel 4, cada 6 para nivel 5, ' +
+          'permanente para nivel 6 experto), (2) FRASEOLOGÍA ESTÁNDAR: uso estricto de la fraseología del Anexo 10 y Doc 4444 (PANS-ATM), evitando ' +
+          'lenguaje coloquial, jerga o modismos que pueden confundir a no-nativos, (3) BRIEFINGS REFORZADOS: clarificación explícita de tareas y ' +
+          'expectativas, con preguntas de verificación, (4) CLARIFICATION REQUESTS: cultura donde preguntar "¿puedes repetir?" o "¿quieres decir X?" ' +
+          'es bienvenido, no estigmatizado. La opción A es discriminación ilegal e impracticable. La opción C viola la regulación: idioma común ' +
+          'obligatorio. La opción D es irrealista y elimina la redundancia de comunicación verbal. Accidentes como el de Tenerife 1977 (583 muertes) ' +
+          'y Avianca 052 (1990, 73 muertes por falta de combustible) demostraron que malentendidos lingüísticos y fraseología deficiente causan ' +
+          'catástrofes.'
+      },
+      {
+        id: 'seg-s6-06',
+        enunciado:
+          'Un ULD (Unit Load Device - contenedor de carga) tipo LD3 contiene 3 bultos: (1) UN 1824 (hidróxido de sodio solución, Clase 8 corrosivo), ' +
+          '(2) UN 1993 (líquido inflamable n.o.s., Clase 3), y (3) UN 2814 (sustancia infecciosa que afecta a humanos, Clase 6.2). Los tres bultos ' +
+          'están correctamente embalados y etiquetados individualmente. Según el Doc 9284 Cap. 7 sobre segregación dentro de ULDs, esta combinación ' +
+          'es:',
+        opciones: {
+          A: 'Aceptable porque los bultos están correctamente embalados individualmente y el ULD es una unidad cerrada.',
+          B: 'Inaceptable: las tres sustancias tienen incompatibilidades críticas entre sí (corrosivo + inflamable + infeccioso) y NO pueden compartir ULD bajo ninguna circunstancia, requiriendo segregación física obligatoria en ULDs separados y posiblemente en diferentes bodegas.',
+          C: 'Aceptable si el ULD tiene ventilación adecuada y se transporta solo en avión de carga.',
+          D: 'Aceptable si el comandante del vuelo firma una exención especial.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9284-AN/905 Cap. 7 Tabla 7-2-1 (Segregation between packages): la combinación Clase 8 (corrosivo) + Clase 3 (inflamable) + Clase 6.2 ' +
+          '(infeccioso) tiene múltiples incompatibilidades: (1) Corrosivos + inflamables: pueden reaccionar generando calor, gases inflamables o ' +
+          'ignición espontánea, (2) Corrosivos + infecciosos: pueden degradar el embalaje de sustancias infecciosas liberando patógenos, (3) ' +
+          'Inflamables + infecciosos: riesgo de incendio que libera patógenos al ambiente. La tabla de segregación PROHÍBE combinar estas clases en ' +
+          'el MISMO ULD, incluso si los bultos individuales están correctamente embalados. Además, muchas combinaciones requieren separación en ' +
+          'DIFERENTES bodegas (ej: clase 6.2 aislada de Clase 3 y Clase 8). La opción A es peligrosa: el embalaje individual no exime de segregación. ' +
+          'La opción C es falsa: la ventilación no mitiga reacciones químicas entre clases incompatibles. La opción D es ilegal: el comandante NO ' +
+          'puede firmar exenciones de segregación; son requisitos técnicos regulatorios. El accidente del Vuelo 111 de ValuJet (1996, 110 muertes) ' +
+          'mostró consecuencias catastróficas de carga peligrosa mal segregada (generadores de oxígeno Clase 5.1 cerca de materiales combustibles).'
+      },
+      {
+        id: 'seg-s6-07',
+        enunciado:
+          'Un expedidor prepara un envío de mercancías peligrosas en un ULD tipo AKE (contenedor de bodega inferior). Dentro del ULD hay 15 bultos ' +
+          'con mercancías compatibles entre sí según la tabla de segregación, pero la aerolínea rechaza el ULD alegando que "la carga no está ' +
+          'correctamente distribuida y asegurada dentro del contenedor". Según el Doc 9284 y las regulaciones de carga aérea, el problema técnico ' +
+          'es:',
+        opciones: {
+          A: 'Un ULD con mercancías peligrosas debe tener solo 1 bulto por contenedor; 15 bultos excede el límite.',
+          B: 'Dentro de un ULD, los bultos de mercancías peligrosas deben estar correctamente posicionados para prevenir movimiento durante el vuelo, con materiales de relleno (dunnage) apropiados, orientación específica según flechas de "This Way Up", y separación de bultos incompatibles incluso dentro del mismo contenedor.',
+          C: 'Los ULDs solo pueden contener mercancías peligrosas si son Clase 9 (misceláneas); otras clases están prohibidas.',
+          D: 'El rechazo es arbitrario; si los bultos son compatibles, pueden colocarse en cualquier posición dentro del ULD.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9284-AN/905 Cap. 7 (Loading and Segregation) y regulaciones IATA DGR: dentro de un ULD, los bultos de mercancías peligrosas deben ' +
+          'cumplir requisitos estrictos de estiba: (1) PREVENCIÓN DE MOVIMIENTO: uso de materiales de relleno (dunnage), redes, correas y separadores ' +
+          'para evitar desplazamiento durante aceleraciones del vuelo (despegue, turbulencia, aterrizaje), (2) ORIENTACIÓN CORRECTA: bultos con ' +
+          'flechas "This Way Up" (este lado arriba) deben mantener la orientación específica, especialmente líquidos con cierre superior, (3) ' +
+          'SEPARACIÓN INTERNA: incluso dentro del mismo ULD, mercancías incompatibles requieren separación (ej: oxidantes de inflamables, tóxicos de ' +
+          'alimentos), (4) ACCESIBILIDAD: bultos que puedan requerir inspección deben ser accesibles, (5) COMPATIBILIDAD CON OTRA CARGA: mercancías ' +
+          'peligrosas NO deben estibarse junto a alimentos, material vivo (AVI) o productos farmacéuticos incompatibles. La opción A es falsa: no ' +
+          'hay límite de bultos por ULD, solo compatibilidad. La opción C es incorrecta: todas las clases pueden transportarse en ULDs si cumplen ' +
+          'segregación. La opción D es peligrosa: estiba incorrecta causa fugas, derrames y reacciones. El accidente del Vuelo 6 de UPS (2010, ' +
+          'Dubai, carga de litio) mostró consecuencias de carga mal estibada.'
+      },
+      {
+        id: 'seg-s6-08',
+        enunciado:
+          'Una aerolínea opera una flota de aeronaves Boeing 737NG y está revisando su programa de mantenimiento. El Director de Mantenimiento ' +
+          'propone migrar de un programa de mantenimiento basado en tiempo (intervalos fijos por horas de vuelo o ciclos) a un programa basado en ' +
+          'MSG-3 (Maintenance Steering Group - 3rd Task Force). Según el Doc 9824 y las prácticas modernas de mantenimiento aeronáutico, la filosofía ' +
+          'central de MSG-3 es:',
+        opciones: {
+          A: 'Reemplazar todos los componentes en intervalos fijos para garantizar cero fallas, independientemente de su condición real.',
+          B: 'Aplicar un proceso sistemático y basado en evidencia para asignar tareas de mantenimiento según el modo de falla real de cada componente: tareas on-condition (monitoreo de condición), condition-monitoring (análisis de tendencias), hard-time (reemplazo programado solo cuando hay justificación técnica), y failure-finding (detección de fallas ocultas), optimizando seguridad y costo.',
+          C: 'Realizar mantenimiento solo cuando el componente falla (run-to-failure), eliminando toda tarea preventiva.',
+          D: 'Duplicar los intervalos de mantenimiento para reducir costos, asumiendo que los componentes modernos son más confiables.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9824-AN/450 y MSG-3 (Maintenance Steering Group - 3rd Task Force): MSG-3 es la metodología estándar moderna para desarrollar programas ' +
+          'de mantenimiento de aeronaves. Su filosofía central es un proceso sistemático basado en EVIDENCIA para asignar tareas de mantenimiento ' +
+          'específicas según el MODO DE FALLA de cada componente: (1) ON-CONDITION: componentes con degradación medible (ej: neumáticos, frenos) ' +
+          'se reemplazan cuando alcanzan límite específico, no en tiempo fijo, (2) CONDITION-MONITORING: análisis continuo de tendencias (ej: aceite, ' +
+          'vibraciones) para detectar degradación temprana, (3) HARD-TIME: reemplazo programado solo cuando hay justificación técnica (ej: fallas ' +
+          'ocultas con consecuencia de seguridad), (4) FAILURE-FINDING: inspecciones para detectar fallas ocultas (ej: sistemas de respaldo). MSG-3 ' +
+          'optimiza seguridad (mantiene confiabilidad) y costo (evita tareas innecesarias). La opción A es mantenimiento tradicional no MSG-3. La ' +
+          'opción C es peligrosa: run-to-failure solo aplica a componentes sin consecuencia de seguridad. La opción D es arbitraria: duplicar ' +
+          'intervalos sin evidencia degrada seguridad. MSG-3 surgió en los 1980s (Boeing 757/767) y redujo tareas de mantenimiento en 40-60% sin ' +
+          'comprometer seguridad, revolucionando la industria.'
+      },
+      {
+        id: 'seg-s6-09',
+        enunciado:
+          'El departamento de ingeniería de mantenimiento de una aerolínea implementa un Reliability Program (Programa de Confiabilidad) según el ' +
+          'Doc 9824. El Safety Manager pregunta cómo este programa se relaciona con el SMS. La respuesta CORRECTA es:',
+        opciones: {
+          A: 'El Reliability Program es un sistema independiente que solo monitorea desempeño técnico de componentes, sin conexión con el SMS.',
+          B: 'El Reliability Program es un componente operativo del Safety Assurance del SMS: monitorea indicadores de desempeño de mantenimiento (tasas de remoción de componentes, retrasos por mantenimiento, fallas repetitivas, desvíos), establece umbrales de alarma (alert thresholds) que disparan investigaciones proactivas cuando los indicadores exceden límites estadísticos, y genera acciones correctivas para prevenir degradación de la seguridad operacional.',
+          C: 'El Reliability Program solo es obligatorio para aerolíneas con más de 50 aeronaves; aerolíneas pequeñas están exentas.',
+          D: 'El Reliability Program reemplaza al SMS en organizaciones de mantenimiento.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9824-AN/450 Cap. 8 (Reliability Program): el Reliability Program es un componente operativo crítico del Safety Assurance del SMS, no ' +
+          'un sistema independiente. Funciones clave: (1) MONITOREO CONTINUO: indicadores como tasas de remoción de componentes, retrasos por ' +
+          'mantenimiento (Mx delays), fallas repetitivas (repeat items), desvíos técnicos, AOG (Aircraft on Ground) events, (2) UMBRALES DE ALARMA ' +
+          '(alert thresholds): límites estadísticos (típicamente 2-3 sigma sobre la media móvil) que, al ser excedidos, disparan investigación ' +
+          'proactiva, (3) INVESTIGACIÓN DE TENDENCIAS: análisis de causa raíz de degradaciones, (4) ACCIONES CORRECTIVAS: ajustes al programa de ' +
+          'mantenimiento, capacitación, cambios procedimentales. La opción A es falsa: el Reliability Program es INTEGRAL al SMS. La opción C es ' +
+          'incorrecta: todas las organizaciones de mantenimiento certificadas (EASA Part-145, FAA 14 CFR 145) deben tenerlo, independiente del ' +
+          'tamaño. La opción D es falsa: complementa, no reemplaza al SMS. El Reliability Program es el "sistema nervioso" del mantenimiento moderno: ' +
+          'detecta degradaciones antes de que causen accidentes. Su ausencia fue factor causal en accidentes como el Vuelo 261 de Alaska Airlines ' +
+          '(2000, falta de monitoreo de desgaste del estabilizador horizontal).'
+      },
+      {
+        id: 'seg-s6-10',
+        enunciado:
+          'Seis meses después de un accidente aéreo grave, la aerolínea ha estabilizado la respuesta inmediata (asistencia familiar, investigación ' +
+          'técnica), pero enfrenta una crisis de reputación, pérdida de cuota de mercado y deserción de clientes corporativos. El CEO pregunta al ' +
+          'Safety Manager qué plan debe activarse. Según el PRE moderno y las guías IATA de gestión post-accidente, el plan apropiado es:',
+        opciones: {
+          A: 'Plan de marketing agresivo con descuentos para recuperar pasajeros.',
+          B: 'Business Continuity Plan (BCP) específico post-accidente que integre: (1) estrategia de comunicación de recuperación con transparencia sobre lecciones aprendidas y cambios implementados, (2) programa de apoyo psicológico continuo a empleados y familias, (3) revisión profunda de procedimientos operacionales con validación externa, (4) iniciativas de reconstrucción de confianza con clientes clave, y (5) monitoreo continuo de indicadores reputacionales.',
+          C: 'Cerrar rutas no rentables para reducir exposición financiera.',
+          D: 'Esperar que el tiempo cure la reputación sin acción proactiva.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'PRE moderno y guías IATA/ICAO de gestión post-accidente: la Fase de Recuperación (Recovery Phase) requiere un Business Continuity Plan ' +
+          '(BCP) específico que integre múltiples dimensiones: (1) COMUNICACIÓN DE RECUPERACIÓN: transparencia sobre lecciones aprendidas de la ' +
+          'investigación, cambios implementados, validación externa de mejoras (no silencio ni defensiva), (2) APOYO PSICOLÓGICO SOSTENIDO: empleados ' +
+          '(tripulantes, rampa, directivos) y familias requieren apoyo a largo plazo (síndrome post-traumático puede manifestarse meses después), ' +
+          '(3) REVISIÓN PROCEDIMENTAL PROFUNDA: no solo cambios cosméticos sino rediseño basado en causa raíz, con validación por terceros ' +
+          'independientes, (4) RECONSTRUCCIÓN DE CONFIANZA: iniciativas específicas con clientes corporativos (briefings técnicos, visitas a centros ' +
+          'de operaciones, demostración de mejoras), (5) MONITOREO REPUTACIONAL: tracking de percepción pública, sentimiento en redes, cuota de ' +
+          'mercado. La opción A (marketing agresivo) puede ser contraproducente: descuentos masivos sugieren desesperación. La opción C (cerrar ' +
+          'rutas) no aborda la causa reputacional. La opción D (esperar) garantiza pérdida sostenida: la reputación no se recupera sola. Casos como ' +
+          'Japan Airlines tras el accidente del Vuelo 123 (1985, 520 muertes) y Qantas tras el Vuelo 32 (2010, A380 con falla de motor) demostraron ' +
+          'que BCPs efectivos permiten recuperación completa de reputación y rentabilidad en 1-3 años.'
+      }
     ]
   }
 };
