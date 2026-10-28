@@ -1561,6 +1561,268 @@ export const BANCO_NZT = {
           'Japan Airlines tras el accidente del Vuelo 123 (1985, 520 muertes) y Qantas tras el Vuelo 32 (2010, A380 con falla de motor) demostraron ' +
           'que BCPs efectivos permiten recuperación completa de reputación y rentabilidad en 1-3 años.'
       }
+    ],
+
+    /* SEMANA 7/10 — Fusiones, reestructuraciones, DODAR, TEM avanzado, resiliencia, baterías en equipaje, dispositivos médicos, ADs, SBs, Anexo 13 */
+    7: [
+      {
+        id: 'seg-s7-01',
+        enunciado:
+          'Dos aerolíneas competidoras anuncian su fusión para formar el mayor grupo aéreo de la región. El Safety Manager de la aerolínea absorbente ' +
+          'identifica que la aerolínea absorbida tiene: (1) cultura de seguridad más punitiva, (2) procedimientos operacionales diferentes, ' +
+          '(3) flota distinta (Airbus vs Boeing), (4) SPIs inferiores. Según el Doc 9859 Cap. 6 sobre Management of Change, cuál es el enfoque ' +
+          'CORRECTO para integrar los dos SMS:',
+        opciones: {
+          A: 'Imponer inmediatamente el SMS de la aerolínea absorbente a toda la organización fusionada, eliminando los procedimientos de la absorbida.',
+          B: 'Realizar una evaluación formal de riesgos de la fusión, establecer un equipo de integración de seguridad (Safety Integration Team) con representantes de ambas organizaciones, armonizar procedimientos críticos gradualmente respetando las mejores prácticas de cada cultura, y monitorear SPIs de ambas poblaciones por separado durante el período de transición.',
+          C: 'Mantener dos SMS separados operando en paralelo indefinidamente para evitar conflictos culturales.',
+          D: 'Postergar la integración del SMS hasta que la fusión comercial y operativa esté completamente consolidada (2-3 años después).'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9859 Cap. 6 (Management of Change) aplica con máxima prioridad a fusiones/adquisiciones: una fusión es uno de los cambios organizacionales ' +
+          'MÁS críticos para la seguridad operacional. El enfoque correcto requiere: (1) EVALUACIÓN FORMAL DE RIESGOS: identificar peligros específicos ' +
+          'de la integración (choque cultural, procedimientos incompatibles, confusión de roles, fatiga por cambio), (2) SAFETY INTEGRATION TEAM: ' +
+          'equipo dedicado con Safety Managers y líderes de AMBAS organizaciones, no imposición unilateral, (3) ARMONIZACIÓN GRADUAL: procedimientos ' +
+          'críticos (SOPs, MEL, CRM, reportes) convergen basándose en mejores prácticas, no en jerarquía corporativa, (4) MONITOREO PARALELO: SPIs ' +
+          'segregados durante 12-24 meses para detectar problemas específicos de cada población, (5) CULTURA JUSTA UNIFICADA: reemplazar cultura ' +
+          'punitiva por cultura justa en toda la organización fusionada. La opción A es peligrosa: imposición causa resistencia y ocultamiento de ' +
+          'errores. La opción C es insostenible: dos SMS paralelos crean confusión regulatoria. La opción D es negligente: el SMS debe integrarse ' +
+          'ANTES, no después de la operación. La fusión American Airlines-US Airways (2013) demostró que integración SMS exitosa requiere 3-5 años ' +
+          'de trabajo sistemático, no imposición ni postergación.'
+      },
+      {
+        id: 'seg-s7-02',
+        enunciado:
+          'Una aerolínea enfrenta una reestructuración financiera severa que implica reducción del 20% de personal, cierre de bases de mantenimiento ' +
+          'y congelación de entrenamiento recurrente. El Safety Manager alerta a la alta dirección sobre riesgos sistémicos. Según el Doc 9859 y las ' +
+          'lecciones aprendidas de la industria, cuál es el enfoque CORRECTO para mantener la seguridad durante la reestructuración:',
+        opciones: {
+          A: 'La reestructuración financiera es responsabilidad exclusiva del CFO; el Safety Manager no debe interferir en decisiones de negocio.',
+          B: 'Realizar evaluación de riesgos específica de la reestructuración, proteger áreas críticas de seguridad (entrenamiento recurrente, supervisión de mantenimiento, cultura de reporte), implementar SPIs de vigilancia intensificada durante el período de transición, y asegurar que recortes no afecten funciones safety-critical.',
+          C: 'Aplicar recortes lineales del 20% a todos los departamentos incluyendo seguridad operacional, por equidad organizacional.',
+          D: 'Suspender temporalmente el SMS durante la reestructuración para reducir carga administrativa y reactivarlo después.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9859 y lecciones de accidentes post-reestructuración (ValuJet 1996, Air Midwest 2003, Colgan Air 2009): la reestructuración financiera ' +
+          'es un cambio organizacional de ALTO RIESGO que ha causado múltiples accidentes. El Safety Manager tiene responsabilidad activa de: ' +
+          '(1) EVALUACIÓN DE RIESGOS específica de la reestructuración (¿qué áreas se debilitan? ¿qué capacidades se pierden?), (2) PROTECCIÓN ' +
+          'EXPLÍCITA de áreas safety-critical: entrenamiento recurrente, supervisión de mantenimiento, análisis de datos, cultura de reporte, (3) ' +
+          'SPIs DE VIGILANCIA INTENSIFICADA: monitoreo reforzado de indicadores sensibles (fatiga, errores, violaciones) durante transición, ' +
+          '(4) LÍNEAS ROJAS: funciones de seguridad NO recortables (Safety Manager independiente, reportes directos a CEO). La opción A es falsa: ' +
+          'el Safety Manager tiene responsabilidad legal de alertar sobre riesgos sistémicos. La opción C es negligencia: recortes lineales degradan ' +
+          'desproporcionadamente áreas críticas. La opción D es ilegal: el SMS no puede suspenderse; es requisito regulatorio continuo. ValuJet ' +
+          'colapsó tras recortes en supervisión de mantenimiento; Air Midwest tras subcontratación masiva sin supervisión; Colgan Air tras reducción ' +
+          'de entrenamiento por costos. Todos demostraron que seguridad NO es variable ajustable.'
+      },
+      {
+        id: 'seg-s7-03',
+        enunciado:
+          'Durante un vuelo transatlántico, el comandante recibe múltiples alertas simultáneas: falla del sistema hidráulico verde, indicación de ' +
+          'combustible baja en tanque izquierdo, y una solicitud médica de desvío por pasajero con infarto. Debe tomar decisiones bajo alta carga ' +
+          'cognitiva y tiempo limitado. Según el modelo DODAR del Doc 9683, la aplicación CORRECTA de este modelo estructurado de toma de decisiones ' +
+          'en emergencia es:',
+        opciones: {
+          A: 'D (Diagnosis) - Diagnosticar todas las fallas en detalle; O (Options) - Listar todas las opciones posibles sin priorizar; D (Decide) - Elegir al azar; A (Assign) - Asignar tareas sin briefing; R (Review) - Revisar solo si hay tiempo.',
+          B: 'D (Diagnosis) - Diagnosticar el problema principal de manera concisa; O (Options) - Identificar opciones viables; D (Decide) - Elegir la mejor opción basada en riesgos y recursos; A (Assign) - Asignar tareas específicas a miembros de la tripulación con briefing claro; R (Review) - Revisar continuamente la decisión y ajustar si la situación cambia.',
+          C: 'D (Decide) - Decidir inmediatamente sin análisis; O (Obey) - Obedecer procedimientos sin cuestionar; D (Delegate) - Delegar todas las decisiones; A (Accept) - Aceptar consecuencias; R (Report) - Reportar después del aterrizaje.',
+          D: 'D (Deny) - Negar la emergencia; O (Operate) - Operar normalmente; D (Delay) - Retrasar decisiones; A (Avoid) - Evitar pensar en el problema; R (Rest) - Descansar y esperar que se resuelva solo.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9683 (modelos de toma de decisiones en emergencia): DODAR es un modelo estructurado para decisiones críticas bajo presión, ' +
+          'ampliamente usado en aviación europea y Commonwealth: (1) DIAGNOSIS — Identificar concisamente el problema principal sin entrar en ' +
+          'análisis paralizante ("tenemos falla hidráulica verde + combustible bajo + emergencia médica"), (2) OPTIONS — Generar opciones viables ' +
+          'sin enumerar todas las teóricas ("continuar, desviar a Azores, desviar a Lisboa, desviar a Santa María"), (3) DECIDE — Elegir la mejor ' +
+          'opción basada en evaluación rápida de riesgos y recursos disponibles ("desviar a Lajes, Azores: pista larga, SSEI, hospital"), ' +
+          '(4) ASSIGN — Asignar tareas específicas con briefing claro al FO y sobrecargos ("tú manejas comunicaciones ATC, yo vuelo la aeronave, ' +
+          'sobrecargo prepara emergencia médica"), (5) REVIEW — Revisión continua: la decisión NO es fija, se ajusta según evoluciona la situación. ' +
+          'La opción A es caricaturización absurda del modelo. La opción C confunde DODAR con otro modelo. La opción D es negligencia. DODAR complementa ' +
+          'a FORDEC (usado más en Europa continental) y provee estructura cuando el tiempo es limitado. El accidente del Vuelo 236 de Air Transat ' +
+          '(2001, planeo sin combustible sobre Atlántico hasta Azores) mostró aplicación ejemplar de DODAR por el comandante Robert Piché.'
+      },
+      {
+        id: 'seg-s7-04',
+        enunciado:
+          'El Safety Manager de una aerolínea implementa un programa TEM (Threat and Error Management) basado en datos de LOSA. Identifica que en ' +
+          'aeropuertos de alta montaña con aproximaciones no-precisión (NPA), las tripulaciones cometen errores recurrentes de estabilización en ' +
+          'aproximación. Según el modelo TEM del Doc 9683, cuál es el análisis CORRECTO de esta situación:',
+        opciones: {
+          A: 'Los errores son responsabilidad exclusiva de las tripulaciones; se resuelven con sanciones y reentrenamiento individual.',
+          B: 'Las aproximaciones NPA en alta montaña constituyen una AMENAZA sistémica (threat) que aumenta la complejidad operacional; los errores de estabilización son consecuencia de esta amenaza y requieren mitigaciones sistémicas: entrenamiento específico en simulador, procedimientos de estabilización reforzados, posiblemente restricción de operaciones NPA en condiciones marginales y preferencia por aproximaciones de precisión (APV/RNP AR).',
+          C: 'El modelo TEM no aplica a aproximaciones; solo es relevante para fase de crucero.',
+          D: 'Los errores recurrentes indican que los pilotos no están calificados y deben ser despedidos.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9683 Cap. 9 (TEM - Threat and Error Management): el modelo TEM distingue tres categorías: (1) AMENAZAS (Threats): eventos o condiciones ' +
+          'EXTERNAS a la tripulación que aumentan complejidad (meteorología adversa, terreno complejo, aeropuertos con aproximaciones difíciles, ' +
+          'ATC congestionado, fallas de sistemas), (2) ERRORES (Errors): acciones u omisiones de la TRIPULACIÓN que desvían de la intención ' +
+          '(configuración incorrecta, navegación errónea, comunicación deficiente), (3) ESTADOS INDESEADOS (UAS - Undesired Aircraft States): ' +
+          'condiciones resultantes de errores mal gestionados (desviaciones de senda, velocidad incorrecta). El análisis correcto identifica que ' +
+          'aeropuertos de alta montaña con NPA son AMENAZAS sistémicas que predisponen a errores recurrentes. La mitigación NO es punitiva (opción A, D) ' +
+          'sino sistémica: entrenamiento específico, procedimientos reforzados, criterios de estabilización estrictos (" stabilized approach criteria" ' +
+          'a 1000 ft IMC / 500 ft VMC), y posiblemente evitar NPA en condiciones marginales usando APV o RNP AR. La opción C es falsa: TEM aplica a ' +
+          'TODAS las fases del vuelo; de hecho, aproximación y aterrizaje concentran la mayoría de amenazas y errores. El accidente del Vuelo 1572 ' +
+          'de American Airlines (1995, aproximación NPA en Cali con terreno montañoso, 160 muertos) es caso paradigmático de amenaza sistémica mal ' +
+          'gestionada.'
+      },
+      {
+        id: 'seg-s7-05',
+        enunciado:
+          'Una aerolínea ha experimentado varios incidentes graves en los últimos 2 años sin que se materializara un accidente. El Safety Manager ' +
+          'quiere entender por qué la organización ha sido "resiliente" frente a estas fallas. Según el concepto de Resiliencia Operacional del ' +
+          'Doc 9859 y las teorías modernas de Safety-II (Hollnagel), cuál es la característica CLAVE de una organización resiliente:',
+        opciones: {
+          A: 'Una organización resiliente es aquella que NO experimenta incidentes ni errores gracias a procedimientos perfectos.',
+          B: 'Una organización resiliente es aquella que anticipa amenazas, monitorea proactivamente indicadores de degradación, responde efectivamente a eventos inesperados, y APRENDE de incidentes y cuasi-accidentes para adaptarse y mejorar continuamente el sistema, reconociendo que el error humano es inevitable pero las fallas catastróficas son prevenibles mediante múltiples capas defensivas.',
+          C: 'Una organización resiliente es aquella que sobrevive accidentes catastróficos sin quebrar financieramente.',
+          D: 'Una organización resiliente es aquella que tiene cero violaciones de procedimientos documentadas.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9859 y teoría Safety-II (Erik Hollnagel): la resiliencia operacional es la CAPACIDAD de un sistema para: (1) ANTICIPAR amenazas ' +
+          'emergentes (no solo reaccionar a eventos pasados), (2) MONITOREAR proactivamente indicadores de degradación (leading indicators, tendencias), ' +
+          '(3) RESPONDER efectivamente a eventos inesperados (adaptación en tiempo real), (4) APRENDER de incidentes y cuasi-accidentes (no solo de ' +
+          'accidentes) para mejorar el sistema. Safety-II contrasta con Safety-I (enfoque tradicional): Safety-I pregunta "¿qué salió mal?" y busca ' +
+          'culpables; Safety-II pregunta "¿qué salió bien y por qué?" y estudia cómo los operadores se adaptan exitosamente a condiciones complejas. ' +
+          'La resiliencia reconoce que el error humano es INEVITABLE (no se puede eliminar) pero las fallas catastróficas son PREVENIBLES mediante ' +
+          'múltiples capas defensivas (modelo Swiss Cheese) y capacidad de recuperación. La opción A es falsa: cero incidentes es imposible y sugiere ' +
+          'ocultamiento. La opción C confunde resiliencia operacional con resiliencia financiera. La opción D es falsa: cero violaciones sugiere ' +
+          'cultura punitiva que oculta desviaciones. Organizaciones resilientes como Qantas (cero fatalidades en era jet desde 1951) demuestran que ' +
+          'la seguridad sostenible requiere aprendizaje continuo, no perfección ilusoria.'
+      },
+      {
+        id: 'seg-s7-06',
+        enunciado:
+          'Un pasajero aborda un vuelo internacional llevando en su equipaje de mano: (1) una laptop con batería de litio iónico de 90 Wh, ' +
+          '(2) un power bank (batería portátil) de 25,000 mAh (~92 Wh) no instalado, y (3) un cigarrillo electrónico con baterías de repuesto. ' +
+          'Según el Doc 9284 y las regulaciones sobre mercancías peligrosas en equipaje de pasajeros, cuál es la situación regulatoria CORRECTA:',
+        opciones: {
+          A: 'Todos los dispositivos están permitidos sin restricciones en equipaje de mano o facturado.',
+          B: 'La laptop y el power bank están permitidos en equipaje de mano pero PROHIBIDOS en equipaje facturado (las baterías de litio de repuesto y power banks SIEMPRE deben ir en cabina para detección temprana de incendio); el cigarrillo electrónico también va en cabina; las baterías de repuesto deben estar protegidas contra cortocircuito (embalaje individual).',
+          C: 'Todos los dispositivos deben ir en equipaje facturado porque son potencialmente peligrosos en cabina.',
+          D: 'Están prohibidos en cualquier tipo de equipaje; el pasajero debe enviarlos por carga aérea con DGD completa.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9284-AN/905 Tabla 8-1 (Provisions for dangerous goods carried by passengers or crew): las regulaciones sobre baterías de litio en ' +
+          'equipaje son ESPECÍFICAS y críticas tras múltiples incidentes: (1) LAPTOP (≤100 Wh): permitida en equipaje de mano Y facturado, pero ' +
+          'preferentemente en mano para detección temprana de thermal runaway, (2) POWER BANKS y BATERÍAS DE REPUESTO: SIEMPRE en equipaje de mano, ' +
+          'NUNCA facturado (bodega es inaccesible durante vuelo; incendio en bodega no puede extinguirse), (3) PROTECCIÓN CONTRA CORTOCIRCUITO: baterías ' +
+          'de repuesto deben estar en embalaje original, con terminales tapados con cinta, o en bolsa individual para prevenir contacto con objetos ' +
+          'metálicos (llaves, monedas) que causen cortocircuito, (4) LÍMITES: baterías ≤100 Wh sin aprobación; 100-160 Wh con aprobación de la ' +
+          'aerolínea; >160 Wh PROHIBIDAS en equipaje de pasajeros (solo como carga con DGD). La opción A es falsa: hay restricciones específicas. ' +
+          'La opción C es PELIGROSA: facturar baterías de litio de repuesto es prohibición absoluta tras accidentes como el Vuelo 111 de UPS (2010, ' +
+          'Dubai, 2 pilotos muertos por fuego de carga de litio en bodega). La opción D es excesiva: están permitidas con restricciones. Incidentes ' +
+          'recurrentes (Hawaiian Airlines 2023, Korean Air 2019) demostraron que fuego de baterías en cabina puede extinguirse con procedimientos ' +
+          'adecuados (bolsas de contención de fuego), mientras que en bodega es incontrolable.'
+      },
+      {
+        id: 'seg-s7-07',
+        enunciado:
+          'Un pasajero con enfermedad respiratoria crónica necesita viajar con su CPAP (Continuous Positive Airway Pressure) portátil y un ' +
+          'concentrador de oxígeno portátil (POC). Ambos dispositivos tienen baterías de litio. Según el Doc 9284 y las políticas típicas de ' +
+          'aerolíneas sobre dispositivos médicos electrónicos portátiles (PMED), cuál es el procedimiento CORRECTO:',
+        opciones: {
+          A: 'Los dispositivos médicos están completamente prohibidos en vuelos comerciales por riesgo de incendio.',
+          B: 'El pasajero debe facturar los dispositivos por seguridad.',
+          C: 'Los PMED están permitidos en cabina con aprobación previa de la aerolínea, con baterías suficientes para 150% de la duración del vuelo (incluyendo retrasos), protección contra cortocircuito, y notificación al comandante mediante NOTOC si las baterías exceden ciertos límites; algunos POCs requieren certificación específica de la FAA/EASA para uso en vuelo.',
+          D: 'Solo pueden usarse si el pasajero viaja en clase ejecutiva o primera.'
+        },
+        respuesta_correcta: 'C',
+        explicacion_nzt:
+          'Doc 9284-AN/905 Tabla 8-1 y regulaciones FAA 14 CFR 121.574 / EASA CAT.IDE.A: los PMED (Portable Medical Electronic Devices) incluyendo ' +
+          'CPAP, POC, nebulizadores tienen regulación específica que balancea seguridad operacional con acceso médico: (1) APROBACIÓN PREVIA: ' +
+          'obligatoria, con verificación de que el dispositivo es compatible con operación en aeronave (no interfiere con sistemas), (2) BATERÍAS ' +
+          'SUFICIENTES: mínimo 150% de la duración programada del vuelo (ej: vuelo de 8h requiere 12h de batería) para cubrir retrasos y desvíos, ' +
+          '(3) PROTECCIÓN: baterías de repuesto protegidas contra cortocircuito, (4) NOTOC: si las baterías exceden ciertos límites (típicamente ' +
+          '>100 Wh o >8g de litio), se notifica al comandante, (5) CERTIFICACIÓN: muchos POCs requieren etiqueta "This device conforms to RTCA ' +
+          'DO-160" o aprobación específica FAA/EASA que certifica seguridad para uso en vuelo. La opción A es falsa y discriminatoria: pacientes ' +
+          'tienen derecho a viajar con dispositivos médicos. La opción B es peligrosa: facturar PMED priva al pasajero de terapia vital. La opción D ' +
+          'es discriminatoria: el acceso a PMED no depende de clase de servicio. El Vuelo 780 de Cathay Pacific (2010) mostró la importancia de ' +
+          'políticas claras para PMED cuando un pasajero requirió oxígeno suplementario en emergencia.'
+      },
+      {
+        id: 'seg-s7-08',
+        enunciado:
+          'El fabricante Boeing emite un Airworthiness Directive (AD) urgente tras detectar una falla potencial en el actuador del estabilizador ' +
+          'horizontal de la flota 737 MAX. El AD establece: "Cumplimiento obligatorio dentro de 500 horas de vuelo o 3 meses, lo que ocurra primero, ' +
+          'mediante inspección específica y reemplazo si aplica". Según el Doc 9824 y las regulaciones de aeronavegabilidad, el carácter jurídico ' +
+          'y las consecuencias del incumplimiento de este AD son:',
+        opciones: {
+          A: 'El AD es una recomendación del fabricante; el operador puede decidir si cumplirlo o no según su propio análisis técnico.',
+          B: 'El AD es un documento regulatorio VINCULANTE emitido por la autoridad aeronáutica del Estado de Diseño (FAA en este caso) y adoptado por el Estado del Operador; el incumplimiento dentro del plazo establecido invalida el Certificado de Aeronavegabilidad de la aeronave, constituye infracción regulatoria grave y puede resultar en inmovilización (grounding) de la flota, sanciones económicas y responsabilidad penal en caso de accidente.',
+          C: 'El AD solo aplica a aerolíneas con más de 10 aeronaves; operadores pequeños están exentos.',
+          D: 'El AD aplica solo a aeronaves nuevas; aeronaves con más de 10 años están exentas.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9824-AN/450 y regulaciones FAA 14 CFR 39 / EASA Part-M M.A.301: los Airworthiness Directives (ADs) son DOCUMENTOS REGULATORIOS ' +
+          'VINCULANTES emitidos por la autoridad aeronáutica del Estado de Diseño (FAA para Boeing, EASA para Airbus) cuando se identifica una ' +
+          'condición insegura en un producto aeronáutico. Características: (1) OBLIGATORIEDAD: cumplimiento mandatorio dentro del plazo establecido, ' +
+          'no es opcional, (2) ADOPCIÓN: el Estado del Operador adopta automáticamente los ADs del Estado de Diseño (convenios bilaterales), ' +
+          '(3) CONSECUENCIAS DEL INCUMPLIMIENTO: aeronave NO aeronavegable, Certificado de Aeronavegabilidad inválido, infracción regulatoria grave, ' +
+          'grounding de flota, multas, y responsabilidad penal si ocurre accidente relacionado. La opción A es falsa: AD NO es recomendación, es ' +
+          'obligación legal. La opción C es falsa: ADs aplican a TODOS los operadores sin excepción de tamaño. La opción D es falsa: ADs aplican a ' +
+          'toda la flota afectada sin importar antigüedad. El accidente del Vuelo 261 de Alaska Airlines (2000, 88 muertos por falla del estabilizador ' +
+          'horizontal) ocurrió tras incumplimiento de ADs relacionados con lubricación del jackscrew. Tras los accidentes del 737 MAX (Lion Air 2018, ' +
+          'Ethiopian 2019), las autoridades emitieron ADs de grounding mundial que inmovilizaron la flota global por 20 meses.'
+      },
+      {
+        id: 'seg-s7-09',
+        enunciado:
+          'El fabricante Airbus emite un Service Bulletin (SB) para la flota A320 que recomienda una inspección de los cables del sistema fly-by-wire ' +
+          'cada 10,000 horas de vuelo, tras detectar degradación prematura en algunas aeronaves. El SB NO ha sido convertido en Airworthiness Directive ' +
+          '(AD) por la autoridad aeronáutica. Según el Doc 9824 y las prácticas de mantenimiento, cuál es el carácter del SB y la acción CORRECTA ' +
+          'del operador:',
+        opciones: {
+          A: 'El SB es irrelevante porque no tiene fuerza regulatoria; puede ignorarse sin consecuencias.',
+          B: 'El SB es una recomendación técnica del fabricante que, aunque no tiene fuerza regulatoria directa, debe evaluarse formalmente por el departamento de ingeniería del operador; si el análisis de riesgo indica que la condición afecta la seguridad operacional, debe implementarse voluntariamente o solicitarse a la autoridad su conversión a AD.',
+          C: 'El SB es obligatorio de cumplimiento inmediato como si fuera un AD.',
+          D: 'El SB solo aplica a aeronaves aún en garantía del fabricante.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9824-AN/450 y prácticas de mantenimiento: los Service Bulletins (SBs) son documentos del FABRICANTE (no de la autoridad) que contienen ' +
+          'mejoras, inspecciones o modificaciones recomendadas. Características: (1) NO VINCULANTES LEGALMENTE: a diferencia de los ADs, los SBs no ' +
+          'son regulatorios por sí mismos, (2) EVALUACIÓN FORMAL OBLIGATORIA: el departamento de ingeniería del operador DEBE evaluar cada SB ' +
+          'mediante análisis de riesgo (¿afecta seguridad? ¿afecta confiabilidad? ¿hay tendencia de fallas?), (3) IMPLEMENTACIÓN VOLUNTARIA: si el ' +
+          'análisis indica impacto en seguridad, el operador implementa el SB voluntariamente como buena práctica operacional, (4) CONVERSIÓN A AD: ' +
+          'si múltiples operadores reportan la condición o hay evidencia de riesgo sistémico, la autoridad puede convertir el SB en AD (haciéndolo ' +
+          'obligatorio). La opción A es negligente: ignorar SBs ha causado accidentes (Alaska Airlines 261 ignoró SBs de lubricación antes del AD). ' +
+          'La opción C es falsa: SBs no son obligatorios hasta convertirse en AD. La opción D es falsa: SBs aplican a toda la flota sin importar ' +
+          'garantía. La distinción SB/AD es fundamental: SBs son mejoras proactivas del fabricante, ADs son correcciones regulatorias obligatorias. ' +
+          'Operadores maduros implementan SBs críticos antes de que se conviertan en ADs, demostrando gestión proactiva de seguridad.'
+      },
+      {
+        id: 'seg-s7-10',
+        enunciado:
+          'Ocurre un accidente aéreo grave con víctimas de múltiples nacionalidades en el territorio del Estado X, operado por una aerolínea del ' +
+          'Estado Y, fabricado en el Estado Z. Según el Anexo 13 de OACI (Aircraft Accident and Incident Investigation), cuál es la asignación ' +
+          'CORRECTA de roles y responsabilidades en la investigación:',
+        opciones: {
+          A: 'El Estado de Matrícula tiene responsabilidad exclusiva de la investigación; los demás Estados solo observan.',
+          B: 'El Estado del Suceso (donde ocurrió el accidente) es responsable de iniciar y liderar la investigación, pero DEBE invitar a participar como acreditados: al Estado de Matrícula, al Estado del Operador, al Estado de Diseño y al Estado de Fabricación; la aerolínea participa como asesora técnica pero NO lidera la investigación (para evitar conflicto de intereses); el informe final lo publica el Estado del Suceso con comentarios de los demás Estados acreditados.',
+          C: 'La aerolínea afectada lidera la investigación porque tiene acceso directo a los datos de vuelo y la tripulación.',
+          D: 'La OACI directamente investiga todos los accidentes internacionales; los Estados solo proporcionan apoyo logístico.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Anexo 13 de OACI (Aircraft Accident and Incident Investigation): establece el marco internacional de investigación de accidentes basado ' +
+          'en el principio de que el objetivo NO es determinar culpa sino PREVENIR futuros accidentes. Asignación de roles: (1) ESTADO DEL SUCESO ' +
+          '(donde ocurrió el accidente): responsable PRIMARIO de iniciar y liderar la investigación, nombrar Investigador a Cargo (IIC), asegurar ' +
+          'el sitio, recolectar evidencia, (2) ESTADOS ACREDITADOS obligatorios: Estado de Matrícula (registro de la aeronave), Estado del Operador ' +
+          '(aerolínea), Estado de Diseño (donde se diseñó), Estado de Fabricación (donde se construyó); cada uno designa un Accredited Representative ' +
+          'con asesores técnicos, (3) AEROLÍNEA: participa como asesora técnica pero NO lidera (conflicto de intereses evidente), (4) OTROS ESTADOS: ' +
+          'pueden participar si tienen interés especial (víctimas de su nacionalidad, etc.), (5) INFORME FINAL: publicado por el Estado del Suceso ' +
+          'con comentarios de Estados acreditados, usualmente en 12 meses (o reporte preliminar si se extiende). La opción A es falsa: investigación ' +
+          'es colaborativa. La opción C es peligrosa: la aerolínea tiene conflicto de interés inherente. La opción D es falsa: OACI NO investiga ' +
+          'accidentes; solo establece estándares (a menos que el Estado del Suceso delegue expresamente). Casos paradigmáticos: accidente del Vuelo 370 ' +
+          'de Malaysia Airlines (2014, Malasia lideró con Australia, China, EE.UU., Reino Unido), Vuelo 447 de Air France (2009, Brasil lideró con ' +
+          'Francia, EE.UU.). El Anexo 13 protege la independencia de la investigación del proceso legal/punitivo para fomentar transparencia.'
+      }
     ]
   }
 };
