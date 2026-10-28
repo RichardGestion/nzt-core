@@ -806,6 +806,254 @@ export const BANCO_NZT = {
           'inadecuadas en accidentes como el Vuelo 1549 de US Airways (2009, "milagro del Hudson") donde la coordinación efectiva fue resultado de ' +
           'simulacros frecuentes y bien diseñados.'
       }
+    ],
+
+    /* SEMANA 4/10 — Análisis de datos, benchmarking, comunicación closed-loop, CRM multicultural, liderazgo, cantidades limitadas, prohibiciones, rotables, trazabilidad, coordinación multi-agencia */
+    4: [
+      {
+        id: 'seg-s4-01',
+        enunciado:
+          'El Safety Manager de una aerolínea analiza los SPIs de los últimos 24 meses y observa que la tasa de reportes de desviaciones de altura ' +
+          '(altitude deviations) ha aumentado gradualmente de 0.8 a 1.4 por cada 1000 horas de vuelo, sin que ninguna desviación haya causado un incidente. ' +
+          'Según el Doc 9859 Cap. 8 sobre análisis proactivo de datos de seguridad, la acción CORRECTA es:',
+        opciones: {
+          A: 'Ignorar la tendencia porque ninguna desviación ha causado incidente, por lo que no hay riesgo real.',
+          B: 'Aplicar análisis estadístico de tendencias con límites de control (statistical process control) para detectar que el aumento es significativo, investigar causas raíz (entrenamiento, procedimientos, espacio aéreo) e implementar acciones correctivas ANTES de que ocurra un incidente.',
+          C: 'Esperar a que ocurra un incidente con consecuencias para justificar una investigación formal.',
+          D: 'Reducir el umbral de reporte para que menos desviaciones sean registradas y la tendencia parezca estable.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9859 Cap. 8 (Safety Data Analysis): el análisis proactivo de datos de seguridad utiliza métodos estadísticos (statistical process control, ' +
+          'SPC) con límites de control superior/inferior para detectar desviaciones significativas de la línea base ANTES de que se conviertan en ' +
+          'incidentes o accidentes. Un aumento de 0.8 a 1.4 por 1000h (75% de incremento) es estadísticamente significativo y representa una señal de ' +
+          'alerta temprana (early warning signal). La acción correcta es: (1) confirmar significancia estadística, (2) investigar causas raíz ' +
+          '(¿entrenamiento deficiente? ¿procedimientos ambiguos? ¿cambios en espacio aéreo? ¿fatiga?), (3) implementar acciones correctivas proactivas. ' +
+          'La opción A es negligencia: las desviaciones sin consecuencias son cuasi-accidentes que revelan fallas latentes. La opción C es reactiva: ' +
+          'esperar un accidente es contrario al principio proactivo del SMS. La opción D es manipulación de datos: reducir el umbral de reporte oculta ' +
+          'el problema en lugar de resolverlo. El análisis proactivo de tendencias es lo que distingue un SMS maduro de uno reactivo.'
+      },
+      {
+        id: 'seg-s4-02',
+        enunciado:
+          'Una aerolínea regional compara sus SPIs (tasa de incidentes por 1000 horas, tasa de reportes voluntarios, completitud de auditorías) con ' +
+          'datos agregados de IATA (International Air Transport Association) y estadísticas de OACI para aerolíneas de tamaño similar. El Director ' +
+          'Comercial pregunta para qué sirve esta comparación. Según el Doc 9859, el propósito principal del benchmarking internacional es:',
+        opciones: {
+          A: 'Competir comercialmente con otras aerolíneas mostrando mejores indicadores de seguridad en campañas de marketing.',
+          B: 'Cumplir un requisito regulatorio obligatorio de la autoridad aeronáutica nacional.',
+          C: 'Identificar brechas de desempeño respecto a estándares internacionales, aprender mejores prácticas de la industria y establecer objetivos realistas basados en datos comparativos.',
+          D: 'Justificar recortes presupuestarios en el departamento de seguridad si los indicadores son mejores que el promedio.'
+        },
+        respuesta_correcta: 'C',
+        explicacion_nzt:
+          'Doc 9859 Cap. 8 (Benchmarking): el benchmarking internacional de SPIs tiene tres propósitos principales: (1) IDENTIFICAR BRECHAS: comparar ' +
+          'el desempeño propio con estándares de la industria revela áreas donde la aerolínea está por debajo del promedio (ej: tasa de reportes ' +
+          'voluntarios baja sugiere cultura de seguridad débil), (2) APRENDER MEJORES PRÁCTICAS: estudiar cómo aerolíneas líderes logran mejores ' +
+          'indicadores permite adoptar procedimientos probados, (3) ESTABLECER OBJETIVOS REALISTAS: los SPTs deben basarse en datos comparativos, ' +
+          'no en aspiraciones arbitrarias. La opción A es incorrecta: el benchmarking es una herramienta de mejora interna, no de marketing (publicar ' +
+          'SPIs comparativos puede ser contraproducente). La opción B es falsa: el benchmarking es voluntario y proactivo, no un requisito regulatorio. ' +
+          'La opción D es perversa: mejores indicadores no justifican recortes; al contrario, requieren inversión sostenida. Organizaciones como IATA ' +
+          '(IOSA) y OACI (USOAP) proveen datos agregados que permiten benchmarking anónimo y confidencial entre pares.'
+      },
+      {
+        id: 'seg-s4-03',
+        enunciado:
+          'Durante la transferencia de turno en una torre de control, el controlador saliente informa al entrante: "Tráfico 1 en aproximación pista 27, ' +
+          'tráfico 2 en espera, viento 270/10". El controlador entrante asume que entendió correctamente pero no repite la información. Cinco minutos ' +
+          'después, autoriza al tráfico 2 a ingresar a la pista 27 mientras el tráfico 1 está en corta final, causando una incursión de pista. ' +
+          'Según los principios de comunicación efectiva del Doc 9683, la técnica que habría prevenido este error es:',
+        opciones: {
+          A: 'Comunicación closed-loop con readback y hearback: el receptor repite la información recibida (readback) y el emisor verifica que la repetición es correcta (hearback), cerrando el ciclo de comprensión mutua.',
+          B: 'Hablar más fuerte y más lento durante la transferencia de turno.',
+          C: 'Usar terminología técnica más compleja para ser más preciso.',
+          D: 'Documentar toda la información por escrito en lugar de comunicarla verbalmente.'
+        },
+        respuesta_correcta: 'A',
+        explicacion_nzt:
+          'Doc 9683 Cap. 5 (Communication): la comunicación closed-loop (circuito cerrado) con readback/hearback es la técnica fundamental para prevenir ' +
+          'malentendidos en aviación. El proceso es: (1) Emisor transmite mensaje, (2) Receptor repite el mensaje con sus propias palabras o fraseología ' +
+          'estándar (READBACK), (3) Emisor escucha la repetición y verifica que es correcta (HEARBACK), (4) Si hay discrepancia, se corrige inmediatamente. ' +
+          'En este caso, si el controlador entrante hubiera hecho readback ("Tráfico 1 en corta final pista 27, tráfico 2 en espera, NO autorizado a ' +
+          'pista"), el saliente habría detectado cualquier malentendido. La opción B es insuficiente: volumen y velocidad no garantizan comprensión. ' +
+          'La opción C es contraproducente: terminología compleja aumenta carga cognitiva y riesgo de error. La opción D es impracticable en tiempo ' +
+          'real: la documentación escrita complementa pero no sustituye la comunicación verbal verificada. La fraseología estándar de OACI (Anexo 10) ' +
+          'y el readback obligatorio son requisitos regulatorios precisamente porque previenen incursiones de pista como la del Vuelo 1907 de Gol (2006).'
+      },
+      {
+        id: 'seg-s4-04',
+        enunciado:
+          'Una aerolínea internacional opera con tripulaciones multiculturales. En un vuelo, el comandante es de una cultura de alta distancia de poder ' +
+          '(high power distance, donde la jerarquía es rígida y cuestionar al superior es tabú), mientras el primer oficial es de una cultura de baja ' +
+          'distancia de poder (donde el cuestionamiento constructivo es normal). Durante la aproximación, el comandante comete un error que el FO ' +
+          'detecta pero no se atreve a cuestionar por respeto cultural. Según el Doc 9683 sobre CRM multicultural, el desafío principal y la solución son:',
+        opciones: {
+          A: 'El desafío es el idioma; la solución es exigir que todos hablen inglés nativo.',
+          B: 'El desafío es la experiencia técnica; la solución es emparejar tripulaciones con niveles de experiencia similares.',
+          C: 'El desafío es la edad; la solución es evitar mezclar tripulantes jóvenes con veteranos.',
+          D: 'El desafío es que las diferencias culturales en distancia de poder inhiben la asertividad del FO; la solución es entrenamiento CRM específico que establezca normas explícitas de comunicación asertiva independientemente de la cultura, y que el comandante fomente activamente el cuestionamiento.'
+        },
+        respuesta_correcta: 'D',
+        explicacion_nzt:
+          'Doc 9683 Cap. 6 (CRM Multicultural): las dimensiones culturales de Hofstede (distancia de poder, individualismo/colectivismo, evitación de ' +
+          'incertidumbre) afectan profundamente la comunicación en cabina. En culturas de ALTA distancia de poder (Asia Oriental, Medio Oriente, ' +
+          'América Latina), cuestionar al superior es culturalmente inaceptable, lo que inhibe la asertividad del FO incluso cuando detecta errores ' +
+          'críticos. La solución requiere: (1) Entrenamiento CRM específico que reconozca estas diferencias y establezca NORMAS EXPLÍCITAS: "en esta ' +
+          'cabina, la seguridad supera la jerarquía cultural", (2) El comandante debe FOMENTAR ACTIVAMENTE el cuestionamiento: "FO, necesito que me ' +
+          'alertes de cualquier desviación, sin excepción", (3) Briefings que definan roles y expectativas de comunicación antes de cada vuelo. ' +
+          'Las opciones A, B y C identifican desafíos incorrectos: el idioma es secundario (fraseología estándar lo resuelve), la experiencia no es ' +
+          'el problema, la edad es irrelevante. El accidente del Vuelo 801 de Korean Air (1997, Guam) es el caso paradigmático: el FO y el ingeniero ' +
+          'de vuelo detectaron el error del comandante pero no lo cuestionaron asertivamente por distancia de poder cultural, causando 228 fatalidades.'
+      },
+      {
+        id: 'seg-s4-05',
+        enunciado:
+          'Dos comandantes con estilos de liderazgo opuestos operan la misma ruta. El Comandante A es autoritario: toma todas las decisiones sin ' +
+          'consultar, no acepta cuestionamientos, y la tripulación permanece pasiva. El Comandante B es facilitador: realiza briefings participativos, ' +
+          'solicita activamente opiniones del FO y sobrecargo, y agradece los cuestionamientos. Según el Doc 9683 sobre liderazgo en cabina, ' +
+          'cuál estilo es MÁS efectivo para la seguridad operacional y por qué:',
+        opciones: {
+          A: 'El Comandante A, porque la autoridad clara y sin cuestionamientos permite decisiones rápidas en emergencias.',
+          B: 'El Comandante B, porque el liderazgo facilitador maximiza los recursos de la tripulación (CRM): la participación activa detecta errores tempranamente, mejora la conciencia situacional compartida y crea un clima donde el personal reporta preocupaciones sin miedo.',
+          C: 'Ambos son igualmente efectivos; el estilo de liderazgo es una preferencia personal sin impacto en seguridad.',
+          D: 'El Comandante A en emergencias y el Comandante B en operaciones normales; debe alternarse según la fase del vuelo.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9683 Cap. 6 (Leadership): el liderazgo facilitador (participativo) es significativamente MÁS efectivo para la seguridad operacional que ' +
+          'el autoritario. Razones: (1) DETECCIÓN TEMPRANA DE ERRORES: cuando el FO y sobrecargos participan activamente, múltiples pares de ojos ' +
+          'monitorean la operación, detectando errores que el comandante solo no vería, (2) CONCIENCIA SITUACIONAL COMPARTIDA: briefings participativos ' +
+          'aseguran que toda la tripulación tiene el mismo modelo mental de la situación, (3) CLIMA DE REPORTE: agradecer cuestionamientos crea confianza ' +
+          'para reportar preocupaciones sin miedo a represalias, (4) GESTIÓN DE CARGA DE TRABAJO: delegar y consultar distribuye carga cognitiva. ' +
+          'La opción A es un mito peligroso: en emergencias, el liderazgo facilitador NO es lento; al contrario, una tripulación entrenada en participación ' +
+          'responde más rápido porque ya tiene modelo mental compartido. La opción C es falsa: el estilo de liderazgo tiene impacto medible en seguridad. ' +
+          'La opción D es incorrecta: alternar estilos crea inconsistencia y confusión. Estudios de CRM (Helmreich, NASA) demuestran que tripulaciones ' +
+          'con liderazgo facilitador tienen tasas de error significativamente menores.'
+      },
+      {
+        id: 'seg-s4-06',
+        enunciado:
+          'Un expedidor prepara un envío de 30 ml de UN 1266 (perfumery products, Clase 3, PG III) por vía aérea. Declara el envío como "cantidades ' +
+          'limitadas" (limited quantities, Y344). Según el Doc 9284 Cap. 5 sobre cantidades limitadas, cuáles requisitos se EXIMEN y cuáles se MANTIENEN:',
+        opciones: {
+          A: 'Se eximen TODOS los requisitos: no necesita marcado, etiquetado ni documentación alguna.',
+          B: 'Se mantienen TODOS los requisitos completos como si fuera mercancía peligrosa plena.',
+          C: 'Se eximen la Declaración de Mercancías Peligrosas completa (DGD) y algunas etiquetas de riesgo, pero se MANTIENEN el marcado con símbolo "Y" (limited quantities), embalaje interno certificado, límites de cantidad por bulto, y notificación básica al operador.',
+          D: 'Se exime solo el embalaje certificado; se mantienen DGD completa y todas las etiquetas.'
+        },
+        respuesta_correcta: 'C',
+        explicacion_nzt:
+          'Doc 9284-AN/905 Cap. 5 (Limited Quantities): las cantidades limitadas son un régimen de EXENCIÓN PARCIAL para envíos pequeños de mercancías ' +
+          'peligrosas de bajo riesgo. Lo que se EXIME: (1) DGD completa (se acepta notificación simplificada), (2) algunas etiquetas de riesgo (solo ' +
+          'marca "Y" de limited quantities), (3) ciertos requisitos de embalaje exterior. Lo que se MANTIENE: (1) Marcado con símbolo "Y" (rombo con ' +
+          'letra Y indicando limited quantities), (2) Embalaje interno certificado y compatible con la sustancia, (3) Límites estrictos de cantidad ' +
+          'por bulto interior y exterior (ej: 30 ml por recipiente interno, 1 L por bulto exterior para Y344), (4) Notificación básica al operador ' +
+          'aéreo. La opción A es falsa: NO es exención total. La opción B es falsa: NO mantiene todos los requisitos (sería mercancía plena). La opción D ' +
+          'es invertida: el embalaje interno certificado se MANTIENE, no se exime. El régimen de cantidades limitadas balancea seguridad con practicidad ' +
+          'comercial: permite envío de pequeños volúmenes (muestras, productos de consumo) sin burocracia completa, pero mantiene controles esenciales. ' +
+          'Exceder los límites de cantidad invalida la exención y convierte el envío en mercancía peligrosa plena con todos sus requisitos.'
+      },
+      {
+        id: 'seg-s4-07',
+        enunciado:
+          'Un operador de carga aérea recibe una solicitud para transportar en avión de PASAJEROS: (1) explosivos División 1.1 (UN 0081, explosive, ' +
+          'blasting, type B), (2) material radiactivo especial (UN 2915, radioactive material, Type B(M) package), y (3) pintura UN 1263 Clase 3. ' +
+          'Según el Doc 9284 y el Anexo 18 sobre mercancías prohibidas, cuáles de estos envíos están PROHIBIDOS en avión de pasajeros:',
+        opciones: {
+          A: 'Los tres están prohibidos en avión de pasajeros sin excepción.',
+          B: 'Ninguno está prohibido; todos pueden transportarse con embalaje adecuado y DGD completa.',
+          C: 'Solo el explosivo División 1.1 está prohibido; el radiactivo y la pintura están permitidos con restricciones.',
+          D: 'El explosivo División 1.1 y el material radiactivo Type B(M) están prohibidos en avión de pasajeros (salvo exenciones estatales muy específicas); la pintura Clase 3 está permitida con embalaje UN, DGD y NOTOC.'
+        },
+        respuesta_correcta: 'D',
+        explicacion_nzt:
+          'Doc 9284-AN/905 Cap. 1 y Anexo 18: establecen prohibiciones específicas por tipo de aeronave. (1) EXPLOSIVOS División 1.1 (riesgo de explosión ' +
+          'masiva): PROHIBIDOS en avión de pasajeros en casi todas las circunstancias; solo某些 Divisiones 1.4 (riesgo menor) están permitidas con ' +
+          'restricciones. (2) MATERIAL RADIACTIVO Type B(M) (paquetes que requieren aprobación especial multilateral): PROHIBIDOS en pasajeros salvo ' +
+          'exenciones estatales específicas (ej: material médico urgente sin alternativa). (3) PINTURA UN 1263 Clase 3: PERMITIDA en pasajeros con ' +
+          'embalaje UN certificado, DGD completa, etiquetas Clase 3 y NOTOC al comandante. La opción A es excesiva: la pintura está permitida. La opción B ' +
+          'es peligrosa: ignora prohibiciones de explosivos 1.1 y radiactivos B(M). La opción C es incompleta: omite que el radiactivo B(M) también está ' +
+          'prohibido. Las prohibiciones existen porque ciertos riesgos (explosión masiva, radiación no contenida) son inaceptables en cabinas con ' +
+          'pasajeros sin capacidad de evacuación rápida. El accidente del Vuelo 111 de ValuJet (1996, fuego por generadores de oxígeno mal declarados) ' +
+          'demostró consecuencias de transportar materiales prohibidos/mal clasificados en pasajeros.'
+      },
+      {
+        id: 'seg-s4-08',
+        enunciado:
+          'Un componente rotable (Integrated Drive Generator, IDG) es removido de una aeronave por falla y enviado a un taller de reparación certificado ' +
+          '(MRO). Tras la reparación, el MRO retorna el componente. Según el Doc 9824 y regulaciones de aeronavegabilidad (EASA Part-145 / FAA 14 CFR ' +
+          '145), cuáles documentos y condiciones son OBLIGATORIOS para que el componente pueda ser reinstalado en una aeronave:',
+        opciones: {
+          A: 'Solo la factura comercial del MRO y el número de serie del componente.',
+          B: 'Solo la firma del mecánico que reinstala, asumiendo responsabilidad personal.',
+          C: 'El componente puede reinstalarse si parece estar en buenas condiciones visuales, sin documentación.',
+          D: 'Certificado de liberación al servicio (EASA Form 1 o FAA 8130-3) emitido por el MRO certificado, trazabilidad completa del historial de mantenimiento del componente (work orders, pruebas realizadas, modificaciones aplicadas), y verificación de que el componente no excede límites de vida útil (life limits).'
+        },
+        respuesta_correcta: 'D',
+        explicacion_nzt:
+          'Doc 9824-AN/450 y EASA Part-145 / FAA 14 CFR 145: los componentes rotables (reparables y reutilizables: IDG, actuadores, bombas hidráulicas, ' +
+          'aviónica) requieren documentación rigurosa para reinstalación: (1) CERTIFICADO DE LIBERACIÓN AL SERVICIO: EASA Form 1 (Europa) o FAA 8130-3 ' +
+          '(EE.UU.), emitido por el MRO certificado, que atesta que la reparación se realizó conforme a datos aprobados y el componente es aeronavegable, ' +
+          '(2) TRAZABILIDAD COMPLETA: historial de work orders, pruebas funcionales realizadas, modificaciones/service bulletins aplicados, componentes ' +
+          'internos reemplazados, (3) VERIFICACIÓN DE LIFE LIMITS: muchos componentes tienen límites de vida (horas, ciclos, calendario) que NO se ' +
+          'reinician con la reparación; el historial debe demostrar que no están excedidos. La opción A es insuficiente: la factura no certifica ' +
+          'aeronavegabilidad. La opción B es ilegal: la firma personal no sustituye certificación del MRO. La opción C es peligrosa: la inspección ' +
+          'visual no detecta fallas internas. La trazabilidad de rotables es crítica: componentes sin historial (clandestinos, robados, reparados ' +
+          'ilegalmente) han causado accidentes como el Vuelo 5281 de Air Midwest (2003, actuador de elevador reparado incorrectamente).'
+      },
+      {
+        id: 'seg-s4-09',
+        enunciado:
+          'Un almacén de repuestos recibe un lote de sensores de presión (P/N 123-456) de un proveedor nuevo con precio 60% menor al del distribuidor ' +
+          'autorizado. Al inspeccionar, el inspector nota que los certificados de conformidad tienen formato ligeramente diferente al esperado y ' +
+          'números de serie que no coinciden con el rango del fabricante. Sospecha que pueden ser componentes no aprobados (Suspected Unapproved ' +
+          'Parts, SUP). Según el Doc 9824 y directrices de OACI/FAA sobre SUP, la acción CORRECTA es:',
+        opciones: {
+          A: 'Instalar los componentes porque el precio bajo es una oportunidad de ahorro y parecen funcionar en pruebas de banco.',
+          B: 'Cuarentena inmediata del lote (no instalar), notificación a la autoridad aeronáutica nacional y al fabricante, investigación del origen del proveedor, y verificación de autenticidad mediante el fabricante antes de cualquier decisión de uso.',
+          C: 'Vender el lote a otra organización para recuperar la inversión.',
+          D: 'Instalar solo en aeronaves de entrenamiento, no en aeronaves de transporte comercial.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9824-AN/450 y directrices OACI/FAA sobre Suspected Unapproved Parts (SUP): los componentes no aprobados (falsificados, robados, reparados ' +
+          'ilegalmente, excedidos de vida útil revendidos como nuevos) son una amenaza crítica de seguridad. El protocolo ante sospecha es: (1) CUARENTENA ' +
+          'INMEDIATA: aislar el lote, NO instalar ningún componente, (2) NOTIFICACIÓN: informar a la autoridad aeronáutica nacional y al fabricante ' +
+          'original (para verificar autenticidad de números de serie y certificados), (3) INVESTIGACIÓN: rastrear origen del proveedor, cadena de ' +
+          'custodia, documentación, (4) VERIFICACIÓN: solo el fabricante puede confirmar autenticidad; si se confirma SUP, el lote debe destruirse o ' +
+          'devolverse, NUNCA instalarse. Señales de alerta de SUP: precio anormalmente bajo, certificados con formato inconsistente, números de serie ' +
+          'fuera de rango, proveedores sin certificación trazable. La opción A es negligencia criminal. La opción C es ilegal y éticamente inaceptable ' +
+          '(transfiere el riesgo a otros). La opción D es falsa: los SUP están prohibidos en TODA aeronave, incluyendo entrenamiento. Componentes SUP ' +
+          'causaron el accidente del Vuelo 5281 de Air Midwest (2003) y son objetivo de programas internacionales de vigilancia (FAA SUP Program, ' +
+          'EASA Safety Directive).'
+      },
+      {
+        id: 'seg-s4-10',
+        enunciado:
+          'Tras un accidente aéreo con múltiples víctimas en las inmediaciones de un aeropuerto internacional, el PRE activa el COE. En el sitio del ' +
+          'accidente convergen: SSEI (Servicio de Salvamento y Extinción de Incendios), paramédicos y hospitales, policía, funerarias, protección ' +
+          'civil y equipos de investigación. Según el Doc 9859 Cap. 11, el Anexo 14 y la estructura del PRE, la coordinación efectiva de estas ' +
+          'múltiples agencias requiere:',
+        opciones: {
+          A: 'Que cada agencia opere independientemente sin coordinación central, para no perder tiempo en reuniones.',
+          B: 'Que la aerolínea asuma el control total de todas las agencias externas incluyendo policía y hospitales.',
+          C: 'Un centro de comando en sitio (on-scene command post) designado por la autoridad del aeródromo que integre SSEI, médicos, policía y protección civil bajo un sistema de comando de incidentes (ICS), con acuerdos pre-establecidos (MOU) con hospitales, funerarias y autoridades, y enlace directo con el COE de la aerolínea.',
+          D: 'Que el COE de la aerolínea controle remotamente todas las operaciones de sitio sin presencia física de coordinadores.'
+        },
+        respuesta_correcta: 'C',
+        explicacion_nzt:
+          'Doc 9859 Cap. 11, Anexo 14 (Aeródromos, Cap. 9 Emergency Planning) y estructura del PRE: la coordinación multi-agencia efectiva requiere: ' +
+          '(1) CENTRO DE COMANDO EN SITIO (on-scene command post): estructura física en el lugar del accidente donde un comandante de incidentes ' +
+          '(designado por la autoridad del aeródromo, típicamente el jefe SSEI o autoridad aeronáutica) coordina TODAS las agencias, (2) SISTEMA DE ' +
+          'COMANDO DE INCIDENTES (ICS): metodología estandarizada (origen FEMA/NIMS) que define roles, cadena de mando, span of control y comunicación ' +
+          'unificada entre agencias heterogéneas, (3) ACUERDOS PRE-ESTABLECIDOS (MOU/Memorandum of Understanding): convenios firmados ANTES del accidente ' +
+          'con hospitales (capacidad de trauma, triage), funerarias (manejo de restos), policía (seguridad perimetral, control de acceso), protección ' +
+          'civil (evacuación, albergues), (4) ENLACE COE-SITIO: un liaison officer conecta el COE de la aerolínea (asistencia familiar, comunicación) ' +
+          'con el comando en sitio (rescate, investigación). La opción A es caótica: sin coordinación central las agencias duplican esfuerzos o dejan ' +
+          'vacíos. La opción B es ilegal: la aerolínea NO controla policía ni hospitales (son autoridades estatales). La opción D es impracticable: ' +
+          'el control remoto sin presencia física pierde conciencia situacional. La respuesta efectiva al Vuelo 1549 de US Airways (2009, Hudson) ' +
+          'demostró coordinación ICS ejemplar entre SSEI, guardacostas, hospitales y autoridades.'
+      }
     ]
   }
 };
