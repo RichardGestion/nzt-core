@@ -316,6 +316,267 @@ export const BANCO_NZT = {
           'embalaje UN NO exime de la segregación: el embalaje previene fugas, pero no reacciones químicas entre sustancias incompatibles en caso de ' +
           'fuga simultánea. La segregación obligatoria implica: (1) no compartir ULD, (2) no ubicar en ULDs adyacentes, y (3) mantener distancia ' +
           'mínima especificada en bodega (típicamente 3 metros para esta combinación). La opción D (1 metro) es insuficiente según la tabla oficial.'
+      },
+      {
+        id: 'seg-s1-10',
+        enunciado:
+          'Un operador de carga aérea recibe para el mismo vuelo dos bultos: uno Clase 5.1 (oxidante, UN 1479, perclorato de potasio) y otro Clase 3 ' +
+          '(líquido inflamable, UN 1263, pintura). Ambos están correctamente embalados en embalajes UN, marcados y etiquetados. ' +
+          'Según la tabla de segregación del Doc 9284-AN/905, la acción obligatoria es:',
+        opciones: {
+          A: 'Segregación obligatoria: no pueden cargarse en el mismo ULD ni en ULDs adyacentes, manteniendo distancia mínima en bodega.',
+          B: 'Se pueden cargar en el mismo ULD sin segregación al ser bultos individuales correctamente embalados.',
+          C: 'Solo se requiere segregación si el avión es de pasajeros; en carguero no hay restricción.',
+          D: 'Requieren al menos 1 metro de separación horizontal dentro del mismo ULD.'
+        },
+        respuesta_correcta: 'A',
+        explicacion_nzt:
+          'Doc 9284-AN/905 Tabla de Segregación 7-2-1: la incompatibilidad entre Clase 5.1 (oxidante) y Clase 3 (inflamable) requiere segregación de ' +
+          'máximo nivel. La mezcla de oxidantes con inflamables puede producir ignición espontánea, reacciones violentas o explosiones que han causado ' +
+          'accidentes catastróficos en aviación (Vuelo 111 de ValuJet, 1996: fuego en bodega por generadores de oxígeno mal segregados). El correcto ' +
+          'embalaje UN NO exime de la segregación: el embalaje previene fugas, pero no reacciones químicas entre sustancias incompatibles en caso de ' +
+          'fuga simultánea. La segregación obligatoria implica: (1) no compartir ULD, (2) no ubicar en ULDs adyacentes, y (3) mantener distancia ' +
+          'mínima especificada en bodega (típicamente 3 metros para esta combinación). La opción D (1 metro) es insuficiente según la tabla oficial.'
+      }
+    ],
+
+    /* SEMANA 2/10 — SPIs/SPTs, CRM, NOTOC, MEL/CDL, liberación, PRE fase gestión */
+    2: [
+      {
+        id: 'seg-s2-01',
+        enunciado:
+          'El Safety Manager de una aerolínea regional está diseñando el panel de indicadores de seguridad (SPIs) para el próximo trimestre. ' +
+          'Debe seleccionar indicadores que permitan DETECTAR riesgos ANTES de que ocurran incidentes (indicadores proactivos/leading indicators). ' +
+          'Según el Doc 9859 Cap. 8, cuál de los siguientes conjuntos representa MEJOR indicadores proactivos:',
+        opciones: {
+          A: 'Tasa de incidentes reportados, número de accidentes, severidad de eventos, costos de seguros.',
+          B: 'Porcentaje de completitud de auditorías internas, tasa de reportes voluntarios de seguridad, cumplimiento de entrenamiento recurrente, resultados de inspecciones de rampa.',
+          C: 'Número de quejas de pasajeros, retrasos operacionales, cancelaciones de vuelos, desviaciones meteorológicas.',
+          D: 'Horas de vuelo acumuladas, utilization rate de la flota, factor de carga, ingresos por pasajero-kilómetro.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9859 Cap. 8 (Safety Performance Indicators): distingue entre indicadores reactivos (lagging) que miden resultados pasados (accidentes, incidentes) ' +
+          'e indicadores proactivos (leading) que miden la salud del sistema preventivo. La opción B contiene exclusivamente indicadores proactivos: ' +
+          '(1) completitud de auditorías = capacidad de detección, (2) reportes voluntarios = cultura de seguridad activa, (3) entrenamiento = competencia ' +
+          'preventiva, (4) inspecciones de rampa = vigilancia operacional. La opción A es reactiva (mide fallas ya ocurridas). Las opciones C y D son ' +
+          'indicadores operacionales/financieros que NO miden seguridad operacional. Un SMS maduro prioriza leading indicators para intervenir antes ' +
+          'de que las fallas latentes se conviertan en accidentes.'
+      },
+      {
+        id: 'seg-s2-02',
+        enunciado:
+          'Tras analizar los SPIs del último año, el Safety Manager identifica que la tasa de reportes voluntarios de seguridad (ASR) ha disminuido ' +
+          'un 40% en los últimos 6 meses. El Director de Operaciones propone establecer un Safety Performance Target (SPT) de "incrementar los reportes ' +
+          'en un 200% para el próximo trimestre". Según el Doc 9859 y el principio ALARP, esta meta es:',
+        opciones: {
+          A: 'Apropiada porque refleja ambición y compromiso con la mejora continua.',
+          B: 'Inapropiada porque un incremento del 200% en 3 meses no es razonablemente practicable y puede generar reportes ficticios o de baja calidad.',
+          C: 'Apropiada siempre que se acompañe de incentivos económicos por reporte.',
+          D: 'Inapropiada porque los SPTs solo deben establecerse para indicadores reactivos (accidentes/incidentes).'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9859 Cap. 8 (Safety Performance Targets): los SPTs deben ser SMART (Specific, Measurable, Achievable, Relevant, Time-bound) y respetar ' +
+          'el principio ALARP (As Low As Reasonably Practicable). Un incremento del 200% en 3 meses viola el criterio "Achievable": es estadísticamente ' +
+          'improbable y puede generar consecuencias no deseadas: (1) reportes ficticios para cumplir la cuota, (2) reportes de baja calidad sin valor ' +
+          'analítico, (3) desincentivación del personal al ver la meta como irreal. La caída del 40% sugiere un problema de cultura o confianza que ' +
+          'requiere diagnóstico antes de establecer metas. Un SPT realista sería: "Identificar causa raíz de la caída en 30 días y establecer plan de ' +
+          'acción correctivo con meta incremental del 20% en el siguiente trimestre". Los incentivos económicos (opción C) pueden corromper la cultura ' +
+          'justa al convertir reportes en transacciones comerciales.'
+      },
+      {
+        id: 'seg-s2-03',
+        enunciado:
+          'Una aerolínea adquiere una nueva flota de aeronaves turbohélice para reemplazar sus jets regionales. Este cambio organizacional implica: ' +
+          'nuevos procedimientos operacionales, diferente perfil de mantenimiento, reentrenamiento de tripulaciones y técnicos, y ajustes en la ' +
+          'infraestructura de tierra. Según el Doc 9859 Cap. 6 (Management of Change), la acción OBLIGATORIA antes de implementar el cambio es:',
+        opciones: {
+          A: 'Notificar a la Autoridad Aeronáutica Nacional y esperar aprobación formal.',
+          B: 'Realizar una evaluación formal de riesgos del cambio y documentar las mitigaciones requeridas antes de la implementación.',
+          C: 'Capacitar a todo el personal afectado y luego implementar gradualmente.',
+          D: 'Realizar un análisis costo-beneficio financiero y obtener aprobación del consejo directivo.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9859 Cap. 6 (Management of Change): cualquier cambio organizacional que afecte la seguridad operacional (nueva flota, fusión, reestructuración, ' +
+          'nuevas rutas) requiere una evaluación formal de riesgos ANTES de la implementación. Esta evaluación debe: (1) identificar nuevos peligros, ' +
+          '(2) evaluar riesgos asociados, (3) definir controles y mitigaciones, (4) validar que el riesgo residual sea ALARP. La notificación a la ' +
+          'autoridad (opción A) puede ser requerida regulatoriamente pero NO sustituye la evaluación interna de riesgos. La capacitación (opción C) es ' +
+          'una mitigación, no un sustituto de la evaluación. El análisis financiero (opción D) es necesario para viabilidad comercial pero no aborda ' +
+          'riesgos de seguridad. Casos como el accidente del Vuelo 5191 de Comair (2006) demostraron que cambios organizacionales sin evaluación de ' +
+          'riesgos (cambio de terminal sin actualización de procedimientos) causan accidentes catastróficos.'
+      },
+      {
+        id: 'seg-s2-04',
+        enunciado:
+          'Durante la aproximación final en condiciones de baja visibilidad, el comandante decide continuar el aterrizaje a pesar de que la velocidad ' +
+          'está 20 nudos por encima de Vref y la senda de planeo está alta. El primer oficial (FO) reconoce la situación insegura pero duda en ' +
+          'cuestionar al comandante. Según los principios de CRM (Crew Resource Management) del Doc 9683, la acción CORRECTA del FO es:',
+        opciones: {
+          A: 'Mantener silencio y confiar en la experiencia del comandante, asumiendo que tiene información no compartida.',
+          B: 'Usar comunicación asertiva estructurada (modelo PACE: Probe, Alert, Challenge, Emergency Warning) para expresar preocupación y, si es necesario, tomar control de la aeronave.',
+          C: 'Sugerir tímidamente que "tal vez deberíamos considerar una ida al aire" sin insistir si el comandante no responde.',
+          D: 'Documentar la preocupación en el logbook de vuelo después del aterrizaje para análisis posterior.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9683 Cap. 6 (Crew Resource Management): el CRM establece que la comunicación asertiva es una responsabilidad de seguridad, no una opción. ' +
+          'El modelo PACE (Probe, Alert, Challenge, Emergency Warning) proporciona una estructura escalonada: (1) Probe: "Capitán, estamos 20 nudos ' +
+          'rápidos y altos en la senda", (2) Alert: "Esta aproximación no es estable, recomiendo ida al aire", (3) Challenge: "Capitán, debo insistir ' +
+          'en ida al aire por seguridad", (4) Emergency Warning: si el comandante no responde, el FO DEBE tomar control de la aeronave. La opción A ' +
+          '(silencio) es deferencia jerárquica que ha causado accidentes (Tenerife 1977, Korean Air 801). La opción C (sugerencia tímida) es insuficiente. ' +
+          'La opción D (documentar después) es inútil si ya ocurrió el accidente. El CRM moderno elimina la jerarquía en cabina cuando la seguridad está ' +
+          'en juego: el FO tiene autoridad y obligación de intervenir.'
+      },
+      {
+        id: 'seg-s2-05',
+        enunciado:
+          'Un cuasi-accidente (near miss) ocurre cuando una aeronave casi colisiona con un vehículo de servicio en la pista durante operaciones de ' +
+          'baja visibilidad. La investigación revela: (1) el controlador de torre no verificó visualmente la pista antes de autorizar el despegue, ' +
+          '(2) el conductor del vehículo ingresó a la pista sin autorización por confusión en las frecuencias de radio, (3) el sistema de detección ' +
+          'de incursiones en pista (RIM) estaba desactivado por mantenimiento, y (4) la aerolínea no había actualizado los procedimientos de ' +
+          'operaciones en baja visibilidad tras un cambio regulatorio reciente. Según el modelo Swiss Cheese de Reason ampliado en el Doc 9683, ' +
+          'la clasificación MÁS precisa de este evento es:',
+        opciones: {
+          A: 'Falla activa múltiple: error del controlador + error del conductor.',
+          B: 'Falla latente organizacional con cuatro capas defensivas comprometidas: supervisión (controlador), procedimientos (conductor), tecnología (RIM), gestión del cambio (aerolínea).',
+          C: 'Error humano inevitable debido a condiciones de baja visibilidad que exceden las capacidades humanas.',
+          D: 'Violación de procedimientos por parte del conductor del vehículo, siendo los demás factores contribuyentes menores.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9683 Cap. 2 (Modelo de Reason ampliado): el modelo Swiss Cheese describe accidentes como alineación de agujeros en múltiples capas ' +
+          'defensivas. En este caso hay CUATRO capas fallidas: (1) Capa de supervisión: controlador no verifica visualmente (falla de vigilancia activa), ' +
+          '(2) Capa de procedimientos: conductor ingresa sin autorización por confusión de frecuencias (procedimiento de comunicación deficiente), ' +
+          '(3) Capa tecnológica: sistema RIM desactivado (falla de barrera automatizada), (4) Capa de gestión del cambio: aerolínea no actualiza ' +
+          'procedimientos tras cambio regulatorio (falla latente organizacional). Clasificar solo como "falla activa" (opción A) o "violación" (opción D) ' +
+          'es reduccionista: oculta las fallas sistémicas que permitieron que errores individuales se convirtieran en cuasi-accidente. La opción C ' +
+          '(error inevitable) es falsa: las cuatro capas defensivas deberían haber prevenido el evento independientemente de la visibilidad. El SMS ' +
+          'exige tratar cuasi-accidentes con la misma seriedad que accidentes consumados.'
+      },
+      {
+        id: 'seg-s2-06',
+        enunciado:
+          'Un avión de carga transporta 15 bultos de mercancías peligrosas Clase 8 (corrosivos, UN 1823, hidróxido de sodio sólido). El expedidor ' +
+          'proporciona la Declaración de Mercancías Peligrosas (DGD) correctamente cumplimentada. El agente de carga prepara el NOTOC (Notification ' +
+          'to Pilot in Command) pero omite incluir la ubicación exacta de los bultos en la bodega principal (posiciónULD). Según el Doc 9284 y ' +
+          'el Anexo 18, esta omisión es:',
+        opciones: {
+          A: 'Un error menor que no afecta la seguridad porque el comandante ya tiene la DGD con la descripción de las mercancías.',
+          B: 'Una violación crítica porque el NOTOC debe incluir la ubicación exacta para que la tripulación pueda responder adecuadamente en caso de emergencia (fuga, incendio).',
+          C: 'Aceptable si el vuelo es de corta duración (menos de 2 horas) y las condiciones meteorológicas son favorables.',
+          D: 'Solo requerido si las mercancías son de Clase 1 (explosivos) o Clase 7 (radiactivas); para Clase 8 es opcional.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9284-AN/905 Cap. 7 y Anexo 18: el NOTOC (Notification to Pilot in Command) es un documento CRÍTICO que debe incluir: (1) descripción ' +
+          'de las mercancías peligrosas, (2) cantidad, (3) ubicación EXACTA en la aeronave (posición de bodega, número de ULD), (4) información de ' +
+          'respuesta a emergencias. La ubicación exacta es esencial porque en caso de fuga, incendio o reacción química, la tripulación debe saber ' +
+          'dónde está el peligro para: (a) activar sistemas de extinción específicos, (b) aislar la zona afectada, (c) ejecutar procedimientos de ' +
+          'aterrizaje de emergencia considerando la ubicación del riesgo. Omitir la ubicación (opción A) es una violación crítica, no un error menor. ' +
+          'La duración del vuelo (opción C) no exime del NOTOC: una fuga puede ocurrir en cualquier momento. La clase de mercancía (opción D) tampoco: ' +
+          'TODAS las mercancías peligrosas requieren NOTOC completo. Accidentes como el Vuelo 111 de ValuJet (1996) demostraron que la falta de ' +
+          'información precisa sobre ubicación de mercancías peligrosas impide respuesta efectiva de emergencia.'
+      },
+      {
+        id: 'seg-s2-07',
+        enunciado:
+          'Un expedidor presenta una Declaración de Mercancías Peligrosas (DGD) para UN 1263 (pintura, Clase 3) con los siguientes datos: ' +
+          '"UN 1263, Paint, 3, PG II, 200 L, Cargo Aircraft Only". El agente de carga revisa la DGD y detecta que falta el nombre técnico correcto ' +
+          '(debería ser "UN 1263, Paint, 3, PG II, 200 L, Cargo Aircraft Only" con el nombre técnico entre paréntesis si aplica) y no incluye el ' +
+          'número de teléfono de emergencia del expedidor. Según el Doc 9284, la acción CORRECTA es:',
+        opciones: {
+          A: 'Aceptar la DGD porque la información esencial (UN number, clase, cantidad) está presente y los errores son menores.',
+          B: 'Rechazar la DGD y solicitar corrección porque el teléfono de emergencia es obligatorio para respuesta a incidentes; el nombre técnico puede omitirse si no aplica.',
+          C: 'Aceptar la DGD pero añadir manualmente el teléfono de emergencia del agente de carga como sustituto.',
+          D: 'Rechazar la DGD porque cualquier error, por menor que sea, invalida completamente el documento.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9284-AN/905 Cap. 5 (Requisitos de la DGD): establece qué información es OBLIGATORIA y qué errores son aceptables. El teléfono de emergencia ' +
+          'del expedidor (24/7) es OBLIGATORIO porque en caso de incidente durante el transporte, los respondedores de emergencia necesitan contacto ' +
+          'inmediato con alguien que conozca las propiedades de la mercancía y pueda asesorar sobre mitigación. Sin este teléfono, la respuesta a ' +
+          'emergencias se retrasa o es inadecuada. El nombre técnico (entre paréntesis) solo es obligatorio para ciertas mercancías con nombres ' +
+          'genéricos (ej: "UN 1993, Flammable liquid, n.o.s., (contains Xylene and Toluene)"). Para "UN 1263, Paint" el nombre técnico NO es requerido ' +
+          'porque "Paint" es suficientemente específico. La opción A es incorrecta: omitir el teléfono es un error mayor, no menor. La opción C es ' +
+          'incorrecta: el agente de carga NO puede sustituir el teléfono del expedidor (el agente no conoce las propiedades químicas específicas). ' +
+          'La opción D es excesiva: errores menores (formato, orden) no invalidan la DGD si la información esencial está presente.'
+      },
+      {
+        id: 'seg-s2-08',
+        enunciado:
+          'Una aeronave tiene una MEL (Minimum Equipment List) activa que permite operar con un generador eléctrico inoperativo bajo ciertas ' +
+          'condiciones: (1) vuelo diurno VMC, (2) no operar en espacio aéreo RVSM, (3) duración máxima de vuelo 3 horas, (4) no transportar ' +
+          'mercancías peligrosas que requieran sistemas de detección de humo en bodega. El despachador de vuelo programa un vuelo nocturno IFR ' +
+          'de 4 horas con carga peligrosa Clase 9 (baterías de litio). Según el Doc 9824 y las regulaciones de despacho, esta operación es:',
+        opciones: {
+          A: 'Aceptable porque la MEL permite la operación con generador inoperativo y el despachador tiene autoridad para aprobar excepciones.',
+          B: 'Inaceptable porque viola TRES condiciones de la MEL simultáneamente (nocturno, duración >3h, mercancías peligrosas); el vuelo debe cancelarse o repararse el generador.',
+          C: 'Aceptable si el comandante acepta el riesgo y firma una exención de responsabilidad.',
+          D: 'Aceptable si se notifica a la autoridad aeronáutica y se obtiene aprobación especial por escrito.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9824-AN/450 y regulaciones de despacho (FAR 91.213, EU-OPS): la MEL (Minimum Equipment List) es un documento REGULATORIO VINCULANTE, ' +
+          'no una sugerencia. Las condiciones de la MEL son CUMULATIVAS: deben cumplirse TODAS simultáneamente. En este caso se violan TRES condiciones: ' +
+          '(1) vuelo nocturno (MEL exige diurno VMC), (2) duración 4 horas (MEL limita a 3h), (3) mercancías peligrosas Clase 9 (MEL prohíbe si ' +
+          'requieren detección de humo). El despachador NO tiene autoridad para aprobar excepciones (opción A): solo puede aplicar la MEL tal como ' +
+          'está escrita. El comandante NO puede aceptar el riesgo (opción C): la MEL es regulatoria, no contractual. La autoridad aeronáutica NO ' +
+          'aprueba excepciones operativas (opción D): la MEL ya fue aprobada por la autoridad y no puede modificarse caso por caso. Operar violando ' +
+          'la MEL es una infracción regulatoria grave que invalida el seguro de la aeronave y expone a responsabilidad penal en caso de accidente. ' +
+          'La única opción legal es: reparar el generador ANTES del vuelo o cancelar el vuelo.'
+      },
+      {
+        id: 'seg-s2-09',
+        enunciado:
+          'Un mecánico de línea (AMT) está realizando una inspección de tránsito (transit check) en una aeronave que debe partir en 45 minutos. ' +
+          'Detecta una fuga menor de fluido hidráulico en una tubería del sistema de frenos, pero la fuga está dentro de los límites permitidos ' +
+          'por el AMM (Aircraft Maintenance Manual) y no requiere acción inmediata. Sin embargo, el mecánico decide NO documentar la observación ' +
+          'en el logbook técnico porque "no es importante y retrasaría el vuelo". Según el Doc 9824 y los principios de cultura de seguridad, ' +
+          'esta acción se clasifica como:',
+        opciones: {
+          A: 'Decisión técnica apropiada porque la fuga está dentro de límites y documentarla generaría retrasos innecesarios.',
+          B: 'Violación de procedimiento porque TODAS las observaciones técnicas deben documentarse en el logbook, independientemente de su criticidad, para mantener trazabilidad histórica y permitir análisis de tendencias.',
+          C: 'Error de juicio menor que puede corregirse en la próxima inspección programada.',
+          D: 'Decisión aceptable si el mecánico informa verbalmente al siguiente turno y obtiene su acuerdo.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9824-AN/450 Cap. 5 (Documentación de mantenimiento): establece que TODAS las observaciones técnicas, independientemente de su criticidad, ' +
+          'deben documentarse en el logbook técnico. Las razones son: (1) Trazabilidad histórica: permite identificar tendencias (una "fuga menor" ' +
+          'repetitiva puede indicar degradación progresiva), (2) Análisis de confiabilidad: los datos del logbook alimentan programas de mantenimiento ' +
+          'predictivo, (3) Responsabilidad legal: el logbook es un documento legal que demuestra que el mantenimiento se realizó conforme a norma, ' +
+          '(4) Continuidad operacional: el siguiente técnico necesita el historial completo para tomar decisiones informadas. La opción A es incorrecta: ' +
+          '"dentro de límites" no significa "no documentar". La opción C subestima la gravedad: omitir documentación es una violación, no un error menor. ' +
+          'La opción D es incorrecta: la comunicación verbal NO sustituye la documentación formal. Esta práctica de "no documentar lo menor" es una ' +
+          'violación rutinaria que erosiona la cultura de seguridad y ha contribuido a accidentes (Alaska Airlines Vuelo 261, 2000: falta de documentación ' +
+          'de desgaste progresivo del estabilizador horizontal).'
+      },
+      {
+        id: 'seg-s2-10',
+        enunciado:
+          'Tras un accidente aéreo con múltiples víctimas, el Centro de Operaciones de Emergencia (COE) de la aerolínea ha estado operativo durante ' +
+          '72 horas coordinando: rescate de sobrevivientes, identificación de víctimas, asistencia a familiares, comunicación con medios, investigación ' +
+          'técnica y coordinación con autoridades. El Director de Crisis considera desactivar el COE porque "la fase inmediata ya pasó y las operaciones ' +
+          'normales deben reanudarse". Según el PRE (Plan de Respuesta ante Emergencias) y el Doc 9859, la decisión CORRECTA es:',
+        opciones: {
+          A: 'Desactivar el COE inmediatamente porque la fase inmediata (salvar vidas) ya terminó y mantenerlo operativo es costoso e innecesario.',
+          B: 'Transicionar a la Fase de Gestión sostenida con un COE reducido pero activo, manteniendo coordinación de asistencia familiar, investigación y comunicación hasta que se complete la recuperación.',
+          C: 'Desactivar el COE y transferir todas las responsabilidades al departamento de relaciones públicas para manejar la comunicación con medios.',
+          D: 'Mantener el COE en modo completo indefinidamente hasta que la autoridad aeronáutica publique el informe final del accidente.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9859 Cap. 11 y estructura del PRE: establecen TRES fases secuenciales de respuesta a emergencias: (1) Fase Inmediata (0-24h): salvar ' +
+          'vidas, activar COE completo, coordinar SSEI, (2) Fase de Gestión (24h-semanas): COE reducido pero activo para asistencia familiar continua, ' +
+          'coordinación con investigación técnica (Anexo 13), comunicación con medios, apoyo psicológico a empleados, gestión legal, (3) Fase de ' +
+          'Recuperación (semanas-meses): transición gradual a normalidad, lecciones aprendidas, revisión de procedimientos. Desactivar el COE tras ' +
+          '72h (opción A) es prematuro: la asistencia familiar, investigación y comunicación requieren coordinación sostenida. Transferir a RRPP ' +
+          '(opción C) es incorrecto: la comunicación técnica debe ser coordinada por el COE, no por marketing. Mantener COE completo indefinidamente ' +
+          '(opción D) es ineficiente: el COE debe escalar según la fase. El PRE exige transición estructurada, no desactivación abrupta. Accidentes ' +
+          'como el Vuelo 370 de Malaysia Airlines (2014) demostraron que la asistencia familiar y coordinación de investigación requieren meses de ' +
+          'COE activo, no días.'
       }
     ]
   }
