@@ -1054,6 +1054,259 @@ export const BANCO_NZT = {
           'el control remoto sin presencia física pierde conciencia situacional. La respuesta efectiva al Vuelo 1549 de US Airways (2009, Hudson) ' +
           'demostró coordinación ICS ejemplar entre SSEI, guardacostas, hospitales y autoridades.'
       }
+    ],
+
+    /* SEMANA 5/10 — SMS entre organizaciones, contratistas, conciencia situacional, automatización, error vs diseño, ERG, FOD, control de herramientas, comunicación de crisis */
+    5: [
+      {
+        id: 'seg-s5-01',
+        enunciado:
+          'Una aerolínea contrata a un agente de handling en tierra (GH) en un aeropuerto internacional para sus operaciones. El GH tiene su propio SMS, ' +
+          'pero una auditoría del Safety Manager de la aerolínea detecta que los reportes voluntarios de seguridad del personal del GH no fluyen a la aerolínea, ' +
+          'y los SPIs del GH son desconocidos para el operador aéreo. Según el Doc 9859 Cap. 4 sobre SMS entre organizaciones, la responsabilidad del ' +
+          'operador aéreo respecto a sus contratistas es:',
+        opciones: {
+          A: 'Ninguna: el GH es una entidad legal independiente y su SMS es responsabilidad exclusiva del GH.',
+          B: 'El operador aéreo debe asegurar que sus contratistas tengan un SMS implementado, que exista una interfaz clara de comunicación de seguridad bidireccional, y debe monitorear el desempeño de seguridad del contratista mediante auditorías y KPIs compartidos.',
+          C: 'El operador aéreo solo debe exigir cumplimiento de las normas locales, sin requerir un SMS formal.',
+          D: 'El operador aéreo debe asumir la operación directa de todos los servicios de tierra para eliminar la dependencia de terceros.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9859 Cap. 4 (Interface between SMS of different organizations): cuando un operador aéreo externaliza servicios críticos (handling, ' +
+          'mantenimiento, catering, combustible), la responsabilidad de seguridad NO se externaliza. El operador aéreo DEBE: (1) Asegurar que el ' +
+          'contratista tenga SMS implementado proporcional a su tamaño/complejidad, (2) Establecer INTERFAZ SMS documentada: canales de reporte ' +
+          'bidireccional, reuniones periódicas de coordinación, intercambio de SPIs, (3) Incluir cláusulas de seguridad en contratos (derecho a ' +
+          'auditar, requisitos de reporte), (4) Monitorear desempeño del contratista mediante auditorías y KPIs compartidos. La opción A es falsa: ' +
+          'la responsabilidad final de seguridad sigue siendo del operador aéreo aunque el servicio sea externalizado. La opción C es insuficiente: ' +
+          'cumplimiento local no sustituye SMS sistemático. La opción D es impracticable: ningún operador global opera todos sus servicios directamente. ' +
+          'El accidente del Vuelo 9046 de Spanair (2008, Madrid-Barajas) demostró fallas de interfaz entre operador, handling y mantenimiento que ' +
+          'contribuyeron al despegue con configuración incorrecta de flaps.'
+      },
+      {
+        id: 'seg-s5-02',
+        enunciado:
+          'Dos aerolíneas forman una alianza estratégica y comparten rutas mediante acuerdos de código compartido (codeshare). La aerolínea A tiene ' +
+          'un SMS maduro con certificaciones IOSA, mientras la aerolínea B tiene un SMS en desarrollo con deficiencias documentadas. La aerolínea A ' +
+          'vende boletos en vuelos operados por la aerolínea B. Según el Doc 9859 y las regulaciones de códigoshare, la aerolínea A debe:',
+        opciones: {
+          A: 'Asumir que la responsabilidad de seguridad es exclusiva de la aerolínea B como operador real del vuelo.',
+          B: 'Realizar due diligence de seguridad de la aerolínea B, auditar periódicamente su SMS, y asegurar que el nivel de seguridad del vuelo codeshare sea equivalente al estándar propio antes de continuar la asociación.',
+          C: 'Limitar la venta de boletos codeshare a rutas domésticas de bajo riesgo.',
+          D: 'Transferir la responsabilidad legal al pasajero mediante cláusulas en el contrato de transporte.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9859 y regulaciones EU-OPS / FAR 121 sobre codeshare: la aerolínea que comercializa un vuelo codeshare (aunque no lo opere) mantiene ' +
+          'responsabilidad de seguridad hacia sus pasajeros. Debe: (1) DUE DILIGENCE: evaluar el SMS de la aerolínea operadora antes del acuerdo, ' +
+          'revisando certificaciones IOSA, auditorías de autoridad, SPIs, cultura de seguridad, (2) AUDITORÍA PERIÓDICA: verificar que el nivel de ' +
+          'seguridad se mantiene mediante auditorías propias o de terceros independientes, (3) EQUIVALENCIA: asegurar que el estándar de seguridad ' +
+          'del codeshare sea equivalente al propio; si no, suspender el acuerdo. La opción A es una falacia legal y ética: el pasajero compró un ' +
+          'boleto de A y A es responsable. La opción C es insuficiente: el riesgo no depende solo de la ruta sino de la madurez del SMS. La opción D ' +
+          'es inválida: la responsabilidad de seguridad no es transferible contractualmente. El accidente del Vuelo 5966 de Chalk\'s Ocean Airways ' +
+          '(2005, codeshare con operador deficiente) demostró que la due diligence es obligatoria, no opcional.'
+      },
+      {
+        id: 'seg-s5-03',
+        enunciado:
+          'Un piloto experimentado vuela una aproximación ILS en condiciones meteorológicas buenas. Durante la aproximación, se enfoca tanto en el ' +
+          'director de vuelo (Flight Director) y el piloto automático que deja de monitorear los instrumentos básicos de actitud, velocidad y altitud. ' +
+          'La aeronave desciende por debajo de la senda de planeo sin que el piloto lo perciba hasta que suena la alerta "GLIDESLOPE". Según el modelo ' +
+          'de conciencia situacional (SA) de Endsley del Doc 9683, este caso representa:',
+        opciones: {
+          A: 'Falla del Nivel 3 de SA (proyección futura): el piloto percibió los datos pero no pudo predecir la desviación.',
+          B: 'Pérdida del Nivel 1 de SA (percepción de elementos del entorno): el piloto no percibió las señales críticas porque su atención estaba fijada en la automatización, ignorando instrumentos primarios.',
+          C: 'Falla del Nivel 2 de SA (comprensión): percibió los datos pero no los comprendió correctamente.',
+          D: 'Error técnico del sistema automático, no del piloto.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9683 y modelo de Endsley (1995): la Conciencia Situacional (SA) tiene TRES niveles jerárquicos: (1) Nivel 1 — PERCEPCIÓN de elementos ' +
+          'relevantes del entorno (instrumentos, alertas, tráfico), (2) Nivel 2 — COMPRENSIÓN de su significado (interpretación de los datos percibidos), ' +
+          '(3) Nivel 3 — PROYECCIÓN de estados futuros (anticipación de consecuencias). En este caso, el piloto perdió el Nivel 1: no percibió que la ' +
+          'aeronave estaba descendiendo bajo la senda porque su atención estaba CAPTURADA por el Flight Director (fenómeno de "attention narrowing" o ' +
+          '"cognitive tunneling"). La automatización puede degradar el Nivel 1 de SA cuando el piloto confía excesivamente en ella y deja de escanear ' +
+          'instrumentos primarios ("cross-check"). Esto ha causado accidentes como el Vuelo 72 de Qantas (2008, pérdida de SA por automatización ' +
+          'errónea) y el Vuelo 214 de Asiana (2013, enfoque excesivo en Flight Director ignorando velocidad). El CRM moderno exige "scan pattern" ' +
+          'disciplinado y mantener al piloto "in the loop" incluso con automatización activada.'
+      },
+      {
+        id: 'seg-s5-04',
+        enunciado:
+          'Un piloto de aerolínea con 15,000 horas de vuelo opera exclusivamente aeronaves con automatización avanzada (fly-by-wire, auto-throttle, ' +
+          'auto-land). Durante un entrenamiento en simulador, se le presenta una falla simultánea del piloto automático y del auto-throttle en condiciones ' +
+          'IMC (Instrument Meteorological Conditions). El piloto muestra degradación significativa en habilidades de vuelo manual: incapacidad para ' +
+          'mantener trayectoria ILS, control de velocidad inestable, y tendencia a sobrecontrolar. Según el Doc 9683 sobre complacencia por automatización, ' +
+          'este fenómeno se conoce como:',
+        opciones: {
+          A: 'Error basado en reglas (rule-based mistake): aplicó una regla incorrecta por falta de conocimiento.',
+          B: 'Violación de procedimiento por exceso de confianza.',
+          C: 'Degradación de habilidades por complacencia de automatización (automation complacency) y pérdida de práctica de vuelo manual, requiriendo entrenamiento recurrente específico en vuelo manual y manejo de sistemas degradados.',
+          D: 'Fatiga cognitiva por exceso de horas de vuelo.'
+        },
+        respuesta_correcta: 'C',
+        explicacion_nzt:
+          'Doc 9683 Cap. 12 (Automation and Human Performance): la "automation complacency" (complacencia por automatización) es un fenómeno documentado ' +
+          'donde los pilotos que operan regularmente con automatización avanzada experimentan degradación de habilidades de vuelo manual por falta de ' +
+          'práctica. Consecuencias: (1) Pérdida de competencia en vuelo manual básico (raw data flying), (2) Sobrecarga cognitiva cuando la automatización ' +
+          'falla, (3) Tendencia a sobrecontrolar o sub-controlar la aeronave, (4) Confusión sobre el modo de automatización activo ("mode confusion"). ' +
+          'La mitigación requiere: (a) entrenamiento recurrente específico en vuelo manual, (b) práctica periódica en simulador con sistemas degradados, ' +
+          '(c) política de vuelo manual en condiciones apropiadas (VFR, baja densidad de tráfico). La opción A es incorrecta: no es falta de conocimiento ' +
+          'sino pérdida de competencia. La opción B es falsa: no es violación intencional. La opción D es irrelevante: el fenómeno ocurre incluso sin ' +
+          'fatiga. Accidentes como el Vuelo 447 de Air France (2009, AF447 sobre Atlántico) y el Vuelo 214 de Asiana (2013, San Francisco) son casos ' +
+          'paradigmáticos de degradación por automatización excesiva.'
+      },
+      {
+        id: 'seg-s5-05',
+        enunciado:
+          'En una aerolínea se han detectado repetidos errores de pilotos al configurar el panel de control de vuelo (FCU/Mode Control Panel): ' +
+          'confunden el botón de selección de altitud con el de velocidad vertical, introduciendo valores incorrectos que causan desviaciones. El ' +
+          'Safety Manager analiza la interfaz humano-máquina y propone acciones. Según los principios de factores humanos del Doc 9683, la estrategia ' +
+          'MÁS efectiva para prevenir estos errores es:',
+        opciones: {
+          A: 'Intensificar el entrenamiento de los pilotos con simulacros adicionales y sanciones por errores repetidos.',
+          B: 'Añadir listas de verificación más extensas para forzar la verificación antes de cada entrada.',
+          C: 'Rediseñar la interfaz humano-máquina aplicando principios de ergonomía cognitiva: diferenciar claramente los controles (forma, tamaño, posición, color), proporcionar feedback inmediato (visual, táctil, auditivo) y diseñar para prevenir errores en lugar de detectarlos tardíamente.',
+          D: 'Reemplazar pilotos con sistemas completamente automatizados que eliminen la intervención humana.'
+        },
+        respuesta_correcta: 'C',
+        explicacion_nzt:
+          'Doc 9683 Cap. 13 (Human-Machine Interface): los principios modernos de factores humanos priorizan el REDISEÑO DE LA INTERFAZ sobre el ' +
+          'entrenamiento o las sanciones. Estrategia jerárquica de control de errores (Hierarchy of Controls): (1) ELIMINAR el error mediante diseño ' +
+          '(poka-yoke, a prueba de errores), (2) PREVENIR el error con feedback inmediato y diferenciación clara, (3) DETECTAR el error rápidamente, ' +
+          '(4) MITIGAR las consecuencias. En este caso, la estrategia óptima es: rediseñar el FCU para que los botones de altitud y velocidad vertical ' +
+          'tengan formas, tamaños y ubicaciones claramente diferenciadas (diseño a prueba de confusión), agregar feedback táctil/visual al presionar ' +
+          'cada botón, y proporcionar alertas inmediatas ante entradas anómalas. La opción A (entrenamiento/sanciones) ataca al síntoma, no la causa ' +
+          'raíz del diseño deficiente. La opción B (más listas) añade carga cognitiva sin resolver el problema fundamental. La opción D (eliminación ' +
+          'del piloto) es irrealista y no aborda el problema del diseño actual. El accidente del Vuelo 655 de Iran Air (1988, USS Vincennes) y del ' +
+          'Vuelo 965 de American Airlines (1995, Cali) demostraron que interfaces confusas causan errores catastróficos que el entrenamiento solo ' +
+          'no puede prevenir.'
+      },
+      {
+        id: 'seg-s5-06',
+        enunciado:
+          'Durante una fuga de líquido inflamable Clase 3 (UN 1203, gasolina) en la bodega de una aeronave en tierra, el personal de SSEI y handling ' +
+          'necesita actuar rápidamente para prevenir ignición y proteger al personal. Consultan el ERG (Emergency Response Guidebook). Según el ERG ' +
+          '(Guía 128 - Líquidos inflamables - No polares, no miscibles en agua), la acción INMEDIATA prioritaria es:',
+        opciones: {
+          A: 'Aplicar espuma formadora de película acuosa (AFFF) directamente sobre el líquido derramado antes de cualquier otra acción.',
+          B: 'Aislar inmediatamente el área en todas las direcciones (distancia inicial mínima 50 metros), evacuar al personal no esencial, eliminar todas las fuentes de ignición, y ventilar el área antes de intervenir.',
+          C: 'Lavar con agua abundante el derrame para diluir el producto y prevenir ignición.',
+          D: 'Esperar la llegada de un experto químico antes de tomar cualquier acción.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'ERG (Emergency Response Guidebook, DOT/TC, actualizado bianualmente) Guía 128 para líquidos inflamables no polares (gasolina, tolueno, ' +
+          'hexano): establece la secuencia de acciones inmediatas: (1) AISLAR el área en todas las direcciones (50 m mínimo en derrames pequeños, ' +
+          'hasta 800 m en derrames grandes según cantidad), (2) EVACUAR personal no esencial fuera del perímetro, (3) ELIMINAR fuentes de ignición ' +
+          '(equipos eléctricos, motores, cigarrillos, estática), (4) VENTILAR el área para dispersar vapores inflamables (la gasolina tiene límite ' +
+          'inferior de explosividad 1.4%, fácilmente alcanzable en espacios cerrados). La opción A es incorrecta como PRIMERA acción: la espuma se ' +
+          'aplica DESPUÉS de aislar y eliminar ignición; aplicarla primero expone al personal a vapores. La opción C es PELIGROSA: el agua NO diluye ' +
+          'gasolina (no es miscible) y puede esparcir el derrame. La opción D es negligente: esperar al experto permite que la situación escale a ' +
+          'incendio/explosión. El ERG es una herramienta de PRIMEROS MINUTOS que permite respuesta inmediata informada mientras llegan equipos ' +
+          'especializados. Su uso sistemático en aviación previene tragedias como el incendio del Vuelo 111 de ValuJet (1996).'
+      },
+      {
+        id: 'seg-s5-07',
+        enunciado:
+          'En un aeropuerto, un camión que transporta UN 1017 (cloro, gas tóxico y corrosivo, Clase 2.3 con riesgo subsidiario 8) sufre un accidente ' +
+          'con fuga en la plataforma, a 300 metros de la terminal de pasajeros. El SSEI activa el PRE. Según el ERG (Guía 125 - Gases corrosivos / ' +
+          'tóxicos), las distancias de aislamiento y evacuación recomendadas son:',
+        opciones: {
+          A: 'Aislamiento inicial de 30 metros en todas las direcciones, sin evacuación necesaria.',
+          B: 'Aislamiento inicial de 150 metros en todas las direcciones en derrame pequeño, o hasta 800 metros en caso de fuga masiva o incendio, con evacuación de personas a favor del viento hacia terreno elevado.',
+          C: 'Evacuación solo de la terminal de pasajeros; el área exterior no requiere aislamiento.',
+          D: 'Solo se requiere protección respiratoria del personal de primera respuesta; no se necesita evacuación de terceros.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'ERG Guía 125 (Gases corrosivos/tóxicos - Cloro): el cloro (UN 1017) es un gas extremadamente tóxico (LC50 baja) y corrosivo que forma ' +
+          'nubes densas que se desplazan a nivel del suelo. Distancias recomendadas: (1) AISLAMIENTO INICIAL: 150 metros en todas direcciones para ' +
+          'derrame pequeño de cilindros, hasta 800 metros para fuga masiva de tanques o si hay incendio (el calor aumenta la presión y tasa de fuga), ' +
+          '(2) EVACUACIÓN: en dirección CONTRARIA al viento (hacia arriba, "upwind") y hacia terreno elevado (el cloro es más denso que el aire y ' +
+          'se acumula en zonas bajas), (3) PROTECCIÓN: equipo SCBA (Self-Contained Breathing Apparatus) obligatorio para respondedores, NO mascarillas ' +
+          'de filtro simples. La opción A (30m) es letalmente insuficiente. La opción C es falsa: la plataforma también debe aislarse. La opción D ' +
+          'es negligente: terceros a favor del viento están expuestos a concentraciones tóxicas. Incidentes históricos (Granville, Louisiana 2020, ' +
+          'fuga de cloro de tren con 800+ evacuados) demuestran que estas distancias NO son exageración: el cloro puede causar edema pulmonar y ' +
+          'muerte a concentraciones tan bajas como 30 ppm con exposición prolongada.'
+      },
+      {
+        id: 'seg-s5-08',
+        enunciado:
+          'Durante una inspección rutinaria previa al despegue, el piloto detecta un objeto extraño (FOD - Foreign Object Debris) en la pista: un ' +
+          'tornillo de 3 cm. Al reportarlo, se activa una inspección de la pista que encuentra otros 7 objetos (tapas de botella, piedras, un clip). ' +
+          'El Safety Manager investiga y descubre que vehículos de mantenimiento habían estado trabajando cerca sin control de herramientas. Según ' +
+          'el Doc 9824 y las prácticas de gestión de FOD, el programa preventivo MÁS efectivo debe incluir:',
+        opciones: {
+          A: 'Inspección visual diaria de la pista por el personal de operaciones antes del primer vuelo.',
+          B: 'Programa integral que combine: (1) control estricto de herramientas (shadow boards, inventario pre/post trabajo), (2) limpieza sistemática de rampas y áreas de mantenimiento, (3) inspecciones periódicas de pistas con barredoras magnéticas y personal dedicado, (4) cultura de reporte no punitivo de FOD, y (5) análisis de tendencias para identificar fuentes.',
+          C: 'Instalación de cámaras de vigilancia para identificar al personal que deja FOD y sancionarlo.',
+          D: 'Dejar que el viento y el tráfico aéreo eliminen el FOD naturalmente.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9824 y Doc 9137 (Airport Services Manual) Parte 9: la gestión efectiva de FOD requiere un enfoque SISTÉMICO, no reactivo. Componentes ' +
+          'esenciales: (1) CONTROL DE HERRAMIENTAS: shadow boards (tableros con siluetas de cada herramienta) e inventario obligatorio antes y después ' +
+          'de cada trabajo; herramienta faltante = alerta inmediata, (2) LIMPIEZA SISTEMÁTICA: barredoras mecánicas, barredoras magnéticas, personal ' +
+          'dedicado, (3) INSPECCIONES PERIÓDICAS: antes del primer vuelo, tras mantenimiento, tras eventos climáticos, (4) CULTURA DE REPORTE: todo ' +
+          'el personal (pilotos, rampa, handling) reporta FOD sin miedo a sanciones, (5) ANÁLISIS DE TENDENCIAS: categorizar FOD por origen ' +
+          '(mantenimiento, handling, pasajeros, ambiente) para atacar fuentes. La opción A es reactiva: solo detecta, no previene. La opción C es ' +
+          'punitiva y contraproducente: destruye cultura de reporte. La opción D es negligencia. El accidente del Concorde AF4590 (2000, París-CDG) ' +
+          'es el caso más famoso de FOD: una tira metálica dejada por un DC-10 de Continental Airlines en la pista perforó el tanque de combustible ' +
+          'del Concorde, causando incendio y 113 fatalidades. La industria implementó programas integrales de FOD tras este accidente.'
+      },
+      {
+        id: 'seg-s5-09',
+        enunciado:
+          'Un mecánico de línea termina un turno de mantenimiento nocturno y olvida una linterna dentro del compartimiento del tren de aterrizaje ' +
+          'principal de una aeronave. Al día siguiente, la aeronave despega normalmente. Durante el vuelo, al bajar el tren para el aterrizaje, la ' +
+          'linterna se desprende y daña cables hidráulicos, causando pérdida de presión en el sistema verde. Según las prácticas de control de ' +
+          'herramientas del Doc 9824, cuál sistema habría prevenido este incidente:',
+        opciones: {
+          A: 'Lista de verificación firmada al final del turno indicando "todas las herramientas retiradas".',
+          B: 'Shadow board con inventario obligatorio pre/post trabajo, sistema de etiquetado de herramientas personales, inspección de cierre del compartimiento por supervisor independiente (independent inspection), y procedimiento de búsqueda cuando falta una herramienta antes de liberar la aeronave.',
+          C: 'Depender de la memoria del mecánico para verificar que retiró todas sus herramientas.',
+          D: 'Inspección de la aeronave por el piloto antes del despegue.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9824 Cap. 7 (Tool Control): el control de herramientas es un sistema multicapa diseñado para prevenir que objetos queden olvidados ' +
+          'dentro de aeronaves. Componentes críticos: (1) SHADOW BOARD: cada herramienta tiene silueta marcada; al final del trabajo se verifica ' +
+          'visualmente que todas las siluetas estén cubiertas, (2) INVENTARIO OBLIGATORIO PRE/POST: lista firmada con cantidades exactas, (3) ' +
+          'ETIQUETADO PERSONAL: cada herramienta tiene identificación del dueño para rastreo, (4) INSPECCIÓN INDEPENDIENTE (independent inspection): ' +
+          'un supervisor diferente verifica que la aeronave esté libre de herramientas antes de liberarla al servicio, (5) PROCEDIMIENTO DE BÚSQUEDA ' +
+          'OBLIGATORIO: si falta una herramienta, la aeronave NO se libera hasta encontrarla o confirmar que no está instalada. La opción A es ' +
+          'insuficiente: firmar sin verificar físicamente es una violación común. La opción C es ingenua: la memoria humana falla bajo fatiga. La ' +
+          'opción D es insuficiente: el piloto no inspecciona compartimientos internos. Accidentes como el Vuelo 236 de Air Transat (2001, pérdida ' +
+          'de combustible por herramienta olvidada durante mantenimiento) y el Vuelo 2933 de LaMia (2016) demostraron que el tool control riguroso ' +
+          'es requisito de seguridad crítica, no formalismo administrativo.'
+      },
+      {
+        id: 'seg-s5-10',
+        enunciado:
+          'Minutos después de un incidente aéreo menor (salida de pista sin heridos), usuarios de redes sociales publican fotos y videos del evento, ' +
+          'algunos con información errónea (número incorrecto de víctimas, teorías conspirativas, críticas infundadas a la tripulación). El departamento ' +
+          'de comunicación de la aerolínea pide al Safety Manager orientación. Según las directrices modernas del PRE y la gestión de crisis en la era ' +
+          'digital, la estrategia CORRECTA es:',
+        opciones: {
+          A: 'No responder en redes sociales; esperar a que la noticia se calme por sí sola para no darle más atención.',
+          B: 'Eliminar activamente las publicaciones erróneas contactando a las plataformas (Twitter, Facebook, Instagram) para que las retiren.',
+          C: 'Respuesta inmediata proactiva con información verificada y precisa: reconocimiento público del evento en los primeros 30-60 minutos, actualización periódica de hechos confirmados, corrección específica de información errónea viralizada, canalización de familiares a línea de asistencia dedicada, y coordinación con portavoces oficiales en sitio.',
+          D: 'Publicar información especulativa rápidamente para ganar la narrativa antes que los medios, aunque no esté completamente verificada.'
+        },
+        respuesta_correcta: 'C',
+        explicacion_nzt:
+          'PRE moderno y guías IATA/OACI de comunicación de crisis digital: en la era de redes sociales, el "vacío informativo" se llena en MINUTOS ' +
+          'con especulación, desinformación y teorías conspirativas. Estrategia de oro: (1) VELOCIDAD: reconocer el evento en los primeros 30-60 ' +
+          'minutos (aunque sea con información limitada: "confirmamos incidente del vuelo X, estamos investigando, más información en breve"), ' +
+          '(2) PRECISIÓN: solo comunicar hechos VERIFICADOS; si no se sabe algo, decirlo explícitamente ("aún no tenemos confirmación del número de ' +
+          'pasajeros"), (3) CORRECCIÓN ACTIVA: monitorear redes 24/7 y corregir información errónea viralizada con hechos verificados, (4) CANALIZACIÓN: ' +
+          'dirigir familiares a línea de asistencia (FRC) en lugar de que llamen a medios, (5) COORDINACIÓN: portavoces oficiales en sitio con ' +
+          'mensajes consistentes con comunicaciones digitales. La opción A (silencio) garantiza que la narrativa la construyan terceros mal ' +
+          'informados. La opción B es impracticable: las plataformas no retiran contenido rápidamente, y la solicitud genera más publicidad negativa. ' +
+          'La opción D es catastrófica: publicar información incorrecta destruye la credibilidad permanentemente. Casos como el Vuelo 370 de Malaysia ' +
+          'Airlines (2014) demostraron que la comunicación deficiente en la era digital multiplica el daño reputacional y el trauma de familias.'
+      }
     ]
   }
 };
