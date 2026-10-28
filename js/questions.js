@@ -2358,6 +2358,278 @@ export const BANCO_NZT = {
           'International Airlines (2020, derribado por misil en Irán) demostró controversia cuando Irán no protegó adecuadamente la evidencia ni ' +
           'coordinó con Estados acreditados, violando el Anexo 13.'
       }
+    ],
+
+    /* SEMANA 10/10 — IOSA, accidentes paradigmáticos, incidentes históricos mercancías peligrosas, evolución cultural, integración SMS-ERP-BCP, auditoría final */
+    10: [
+      {
+        id: 'seg-s10-01',
+        enunciado:
+          'Una aerolínea se somete a la auditoría IOSA (IATA Operational Safety Audit) para obtener o renovar su certificación. Según los estándares ' +
+          'IOSA y el Doc 9859, cuál es el propósito fundamental de IOSA y cómo se relaciona con el SMS de la aerolínea:',
+        opciones: {
+          A: 'IOSA es una certificación opcional de marketing que no tiene relación con el SMS ni con la seguridad operacional real.',
+          B: 'IOSA es una auditoría estandarizada globalmente que evalúa los sistemas operacionales y de gestión de seguridad de la aerolínea contra más de 900 estándares y prácticas recomendadas (ISARPs), verificando que el SMS está implementado efectivamente, no solo documentado; la certificación IOSA es requisito para membresía IATA y es reconocida por autoridades aeronáuticas globales como indicador de madurez del SMS.',
+          C: 'IOSA reemplaza completamente al SMS; una aerolínea certificada IOSA no necesita implementar su propio SMS.',
+          D: 'IOSA solo evalúa operaciones de vuelo; no cubre mantenimiento, operaciones de tierra, carga o gestión de seguridad.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'IOSA (IATA Operational Safety Audit) y Doc 9859: IOSA es el estándar global de auditoría de seguridad operacional desarrollado por IATA ' +
+          'en 2003 tras accidentes que revelaron inconsistencias en auditorías nacionales. Características: (1) ESTANDARIZACIÓN GLOBAL: más de 900 ' +
+          'ISARPs (IATA Standards and Recommended Practices) aplicables uniformemente a todas las aerolíneas, independientemente del país, (2) ' +
+          'ALCANCE INTEGRAL: cubre 8 áreas operacionales (ORG - Organization and Management, FLT - Flight Operations, DSP - Operational Control/Flight ' +
+          'Dispatch, MNT - Maintenance, GRH - Ground Handling, CGO - Cargo, CAB - Cabin Operations, SEC - Security), (3) VERIFICACIÓN DE IMPLEMENTACIÓN: ' +
+          'no solo revisa documentación sino que verifica que los procedimientos están implementados en operaciones reales (observaciones de línea, ' +
+          'entrevistas, revisión de registros), (4) RECONOCIMIENTO GLOBAL: certificación IOSA es requisito para membresía IATA, reconocida por ' +
+          'autoridades aeronáuticas (FAA, EASA, etc.) como indicador de madurez del SMS, (5) RENOVACIÓN CADA 2 AÑOS: auditoría recurrente para ' +
+          'mantener certificación. La opción A es falsa: IOSA es riguroso y tiene impacto real en seguridad. La opción C es incorrecta: IOSA evalúa ' +
+          'el SMS, no lo reemplaza. La opción D es falsa: IOSA cubre TODAS las áreas operacionales. Estadísticas IATA muestran que aerolíneas IOSA ' +
+          'tienen tasas de accidentes 3-4 veces menores que no-IOSA. IOSA es el benchmarking global más importante de madurez SMS.'
+      },
+      {
+        id: 'seg-s10-02',
+        enunciado:
+          'El Safety Manager de una aerolínea quiere evaluar la madurez del SMS de su organización usando un modelo de madurez reconocido internacionalmente. ' +
+          'Según el Doc 9859 y frameworks de madurez SMS (como el de ICAO SM ICG - Safety Management International Collaborative Group), cuáles son ' +
+          'los niveles típicos de madurez y sus características:',
+        opciones: {
+          A: 'Solo hay dos niveles: "cumple" o "no cumple" con regulaciones; no hay grados intermedios de madurez.',
+          B: 'Los modelos de madurez típicamente definen 4-5 niveles progresivos: (1) Inicial/Ad-hoc (procesos reactivos, dependencia de héroes individuales), (2) Repetitivo (procesos básicos establecidos pero inconsistentes), (3) Definido (procesos documentados y estandarizados, SMS formal implementado), (4) Gestionado (medición con SPIs, gestión proactiva de riesgos, cultura justa establecida), (5) Optimizado (mejora continua, aprendizaje organizacional, resiliencia, Safety-II); cada nivel requiere desarrollo específico de capacidades.',
+          C: 'La madurez se mide exclusivamente por el número de accidentes: cero accidentes = madurez completa.',
+          D: 'Los modelos de madurez son teóricos y no aplicables a organizaciones reales; solo importan las auditorías regulatorias.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9859 y SM ICG (Safety Management International Collaborative Group - FAA, EASA, Transport Canada, etc.): los modelos de madurez SMS ' +
+          'proporcionan un marco para evaluar y desarrollar progresivamente las capacidades de seguridad de una organización. Niveles típicos: ' +
+          '(1) INICIAL/AD-HOC: procesos reactivos, dependencia de individuos específicos ("héroes"), sin documentación sistemática, cultura de culpa, ' +
+          '(2) REPETITIVO: procesos básicos establecidos pero aplicados inconsistentemente, documentación parcial, algunos reportes voluntarios, ' +
+          '(3) DEFINIDO: procesos documentados y estandarizados, SMS formal implementado con política, gestión de riesgos, garantía de seguridad, ' +
+          'promoción de seguridad; cultura justa en desarrollo, (4) GESTIONADO: medición sistemática con SPIs, gestión proactiva de riesgos (no solo ' +
+          'reactiva), análisis de tendencias, cultura justa establecida, reportes voluntarios robustos, (5) OPTIMIZADO: mejora continua sistemática, ' +
+          'aprendizaje organizacional de incidentes y cuasi-accidentes, resiliencia operacional, integración de Safety-II (estudiar qué sale bien, no ' +
+          'solo qué sale mal), innovación en seguridad. Cada nivel requiere desarrollo específico de capacidades (tecnológicas, humanas, organizacionales). ' +
+          'La opción A es simplista: madurez es un espectro, no binario. La opción C es falsa: cero accidentes puede ser suerte o ocultamiento, no ' +
+          'necesariamente madurez. La opción D es falsa: modelos de madurez son herramientas prácticas usadas globalmente. Aerolíneas líderes (Qantas, ' +
+          'Emirates, Lufthansa) están en nivel 4-5; aerolíneas en desarrollo típicamente en nivel 2-3.'
+      },
+      {
+        id: 'seg-s10-03',
+        enunciado:
+          'El accidente de Tenerife (1977, colisión de dos Boeing 747 de KLM y Pan Am en pista con niebla densa, 583 muertes) es considerado el ' +
+          'accidente más catastrófico de la historia de la aviación comercial. Según los análisis posteriores y el Doc 9683, cuáles fueron las ' +
+          'lecciones fundamentales que transformaron la seguridad operacional:',
+        opciones: {
+          A: 'El accidente fue causado exclusivamente por falla mecánica de los sistemas de navegación; no hubo factores humanos involucrados.',
+          B: 'Las lecciones fundamentales incluyeron: (1) desarrollo del CRM (Crew Resource Management) para mejorar comunicación en cabina y reducir jerarquía rígida que impidió al FO cuestionar al comandante, (2) estandarización de fraseología ATC en inglés (eliminación de ambigüedades como "takeoff" vs "departure"), (3) mejora de sistemas de iluminación de pistas y señalización, (4) desarrollo de sistemas de detección de incursiones en pista, (5) reconocimiento de que factores organizacionales y culturales (presión por puntualidad de KLM, cultura jerárquica holandesa) contribuyeron al accidente, no solo errores individuales.',
+          C: 'El accidente llevó a prohibir operaciones con niebla; todos los aeropuertos deben tener visibilidad mínima de 1 km.',
+          D: 'Solo resultó en mejoras técnicas de radar; no hubo cambios en procedimientos o entrenamiento de tripulaciones.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Accidente de Tenerife (27 marzo 1977) y Doc 9683: la colisión de KLM 4805 y Pan Am 1736 en el Aeropuerto de Los Rodeos (Tenerife) con ' +
+          '583 fatalidades transformó fundamentalmente la aviación. Lecciones clave: (1) CRM (CREW RESOURCE MANAGEMENT): el comandante de KLM, ' +
+          'Jacob Veldhuyzen van Zanten (entrenador jefe de KLM), inició despegue sin autorización clara; el FO y el ingeniero de vuelo detectaron el ' +
+          'error pero no lo cuestionaron asertivamente debido a jerarquía rígida y cultura de no contradecir al capitán. Esto llevó al desarrollo ' +
+          'del CRM por NASA/United Airlines en los 1980s, entrenamiento obligatorio en comunicación asertiva, trabajo en equipo, gestión de autoridad, ' +
+          '(2) FRASEOLOGÍA ESTÁNDAR: confusión entre "takeoff" (despegue) y "departure" (salida) contribuyó al malentendido; OACI estandarizó ' +
+          'fraseología en inglés con términos específicos, (3) INFRAESTRUCTURA: mejora de iluminación de pistas, señalización, sistemas de guía, ' +
+          '(4) DETECCIÓN DE INCURSIONES: desarrollo de sistemas como ASDE-X, RIM (Runway Incursion Monitoring), (5) FACTORES ORGANIZACIONALES: ' +
+          'presión de KLM por puntualidad (límites de tiempo de vuelo de tripulación), cultura jerárquica holandesa, fatiga, estrés por desvío a ' +
+          'Tenerife tras bomba en Gran Canaria. Tenerife demostró que accidentes son sistémicos, no solo errores individuales. El CRM es quizás el ' +
+          'avance más importante en seguridad de aviación desde la era jet, habiendo prevenido innumerables accidentes.'
+      },
+      {
+        id: 'seg-s10-04',
+        enunciado:
+          'El accidente del Vuelo 447 de Air France (2009, Airbus A330 sobre el Atlántico, 228 muertes) reveló problemas críticos en la interacción ' +
+          'humano-automatización. Según el informe final del BEA (Bureau d\'Enquêtes et d\'Analyses) y el Doc 9683, cuáles fueron las causas y ' +
+          'lecciones fundamentales:',
+        opciones: {
+          A: 'El accidente fue causado exclusivamente por falla mecánica de los motores; la tripulación no tuvo responsabilidad.',
+          B: 'Las causas incluyeron: (1) bloqueo de sondas Pitot por cristales de hielo causando pérdida de indicaciones de velocidad, (2) desconexión del piloto automático y auto-thrust, transfiriendo control manual a la tripulación, (3) respuesta inapropiada de la tripulación (pull-up sostenido causando pérdida aerodinámica - stall) a pesar de múltiples alertas, (4) falta de entrenamiento en vuelo manual a alta altitud y recuperación de stall, (5) confusión sobre modos de automatización y degradación de ley normal a ley alterna; las lecciones incluyeron entrenamiento obligatorio en recuperación de stall a alta altitud, mejora de sondas Pitot, y énfasis en mantener al piloto "in the loop" con automatización.',
+          C: 'El accidente demostró que el Airbus A330 es una aeronave inherentemente insegura; toda la flota fue retirada del servicio.',
+          D: 'Solo resultó en mejoras de sondas Pitot; no hubo cambios en entrenamiento o procedimientos.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Vuelo 447 de Air France (1 junio 2009) e informe BEA 2012: el accidente del A330 sobre el Atlántico reveló problemas críticos en la ' +
+          'interacción humano-automatización. Secuencia causal: (1) BLOQUEO DE SONDAS PITOT: cristales de hielo en alta altitud bloquearon las ' +
+          'sondas Thales, causando indicaciones inconsistentes de velocidad, (2) DESCONEXIÓN DE AUTOMATIZACIÓN: el sistema de protección de vuelo ' +
+          'se desconectó, transfiriendo control manual a la tripulación en ley alterna (protecciones reducidas), (3) RESPUESTA INAPROPIADA: el FO ' +
+          '(Bonin) aplicó pull-up sostenido (nariz arriba) causando ángulo de ataque excesivo y pérdida aerodinámica (stall), a pesar de alertas ' +
+          'de stall y buffet; el comandante (Dubois) regresó a cabina tarde y no diagnosticó correctamente la situación, (4) FALTA DE ENTRENAMIENTO: ' +
+          'la tripulación no había sido entrenada en recuperación de stall a alta altitud (FL350+) ni en vuelo manual sin automatización, (5) ' +
+          'CONFUSIÓN DE MODOS: falta de comprensión de la degradación de ley normal a ley alterna y sus implicaciones. Lecciones: (a) entrenamiento ' +
+          'obligatorio en recuperación de stall a alta altitud, (b) reemplazo de sondas Thales por Goodrich, (c) énfasis en mantener al piloto ' +
+          '"in the loop" con automatización, (d) mejora de alertas de stall, (e) reconocimiento de que automatización puede causar degradación de ' +
+          'habilidades manuales (automation complacency). El accidente AF447 transformó el entrenamiento de pilotos y la filosofía de automatización.'
+      },
+      {
+        id: 'seg-s10-05',
+        enunciado:
+          'El accidente del Vuelo 111 de ValuJet (1996, McDonnell Douglas DC-9 en los Everglades de Florida, 110 muertes) fue causado por fuego en ' +
+          'bodega de carga. Según el informe de la NTSB y el Doc 9284, cuáles fueron las causas y cómo transformó las regulaciones de mercancías ' +
+          'peligrosas:',
+        opciones: {
+          A: 'El accidente fue causado por sabotaje terrorista; no tuvo relación con mercancías peligrosas.',
+          B: 'Las causas incluyeron: (1) generadores de oxígeno químicos (oxygen generators) activados accidentalmente en bodega de carga, (2) los generadores eran mercancía peligrosa Clase 5.1 (oxidante) pero fueron declarados incorrectamente como "material de la compañía" (COMAT) sin DGD, (3) falta de segregación de los generadores de materiales combustibles, (4) falta de sistemas de detección y extinción de fuego en bodega clase D; las lecciones incluyeron: regulación estricta de generadores de oxígeno, mejora de sistemas de detección/extinción de fuego en bodegas, fortalecimiento de requisitos de declaración y segregación de mercancías peligrosas, y reconocimiento de que subcontratación de mantenimiento sin supervisión adecuada es riesgo crítico.',
+          C: 'El accidente llevó a prohibir completamente el transporte de generadores de oxígeno en aviación comercial.',
+          D: 'Solo resultó en mejoras de extintores; no hubo cambios en regulaciones de mercancías peligrosas.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Vuelo 111 de ValuJet (11 mayo 1996) e informe NTSB: el fuego en bodega de carga del DC-9 que causó 110 muertes transformó las regulaciones ' +
+          'de mercancías peligrosas. Secuencia causal: (1) GENERADORES DE OXÍGENO: generadores químicos (usados para máscaras de oxígeno de pasajeros) ' +
+          'estaban siendo transportados como carga de retorno tras mantenimiento; estos generadores producen oxígeno mediante reacción química ' +
+          'exotérmica (temperaturas >500°C), (2) DECLARACIÓN INCORRECTA: los generadores fueron declarados como "COMAT - Material de la Compañía" ' +
+          'sin DGD (Declaración de Mercancías Peligrosas), evadiendo requisitos de mercancías peligrosas, (3) ACTIVACIÓN ACCIDENTAL: los generadores ' +
+          'se activaron (posiblemente por impacto o manipulación), generando calor intenso, (4) FALTA DE SEGREGACIÓN: los generadores estaban cerca ' +
+          'de materiales combustibles (neumáticos, equipaje), (5) BODEGA CLASE D: la bodega era Clase D (sin detección/extinción de fuego activa, ' +
+          'solo supresión por limitación de oxígeno), insuficiente para fuego de oxidantes. Lecciones: (a) regulación estricta de generadores de ' +
+          'oxígeno (ahora requieren DGD completa, embalaje específico, segregación), (b) mejora de sistemas de detección y extinción de fuego en ' +
+          'bodegas (FAA requirió sistemas de detección y extinción en todas las bodegas de aeronaves de pasajeros), (c) fortalecimiento de requisitos ' +
+          'de declaración, (d) supervisión de subcontratistas: ValuJet subcontrató mantenimiento a SabreTech sin supervisión adecuada; la FAA ' +
+          'fortaleció requisitos de supervisión de contratistas. ValuJet 111 demostró que mercancías peligrosas mal declaradas pueden causar ' +
+          'catástrofes y llevó a revisiones completas del Doc 9284.'
+      },
+      {
+        id: 'seg-s10-06',
+        enunciado:
+          'El accidente del Vuelo 6 de UPS Airlines (2010, Boeing 747-400F carguero en Dubai, 2 pilotos muertos) fue causado por fuego de carga de ' +
+          'baterías de litio. Según el informe de la GCAA (General Civil Aviation Authority de UAE) y el Doc 9284, cuáles fueron las causas y cómo ' +
+          'transformó las regulaciones de baterías de litio:',
+        opciones: {
+          A: 'El accidente fue causado por falla mecánica de los motores; no tuvo relación con la carga.',
+          B: 'Las causas incluyeron: (1) fuego iniciado por baterías de litio iónico en carga (posiblemente en thermal runaway), (2) el fuego se propagó rápidamente en bodega principal, (3) los sistemas de extinción de fuego (Halon) fueron insuficientes para fuego de litio (el litio reacciona con Halon y continúa ardiendo), (4) el humo tóxico llenó la cabina, incapacitando a los pilotos, (5) falta de procedimientos específicos para fuego de baterías de litio; las lecciones incluyeron: restricciones severas al transporte de baterías de litio (prohibición de baterías de litio como carga en aviones de pasajeros, límites estrictos en cargueros), desarrollo de sistemas de contención de fuego de litio, mejora de mascarillas de oxígeno para tripulaciones de carga, y reconocimiento de que fuego de litio es fundamentalmente diferente a fuego convencional.',
+          C: 'El accidente llevó a prohibir completamente el transporte de baterías de litio en cualquier tipo de aeronave.',
+          D: 'Solo resultó en mejoras de extintores; no hubo cambios en regulaciones de baterías de litio.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Vuelo 6 de UPS Airlines (3 septiembre 2010) e informe GCAA: el fuego de baterías de litio en el 747-400F que causó 2 muertes transformó ' +
+          'las regulaciones de baterías de litio. Secuencia causal: (1) FUEGO DE LITIO: fuego inició en bodega principal, probablemente por baterías ' +
+          'de litio iónico en thermal runaway (reacción química auto-sostenida que genera calor intenso y gases tóxicos), (2) PROPAGACIÓN RÁPIDA: ' +
+          'el fuego se propagó rápidamente a través de la carga, (3) EXTINCIÓN INSUFICIENTE: los sistemas de Halon fueron insuficientes porque el ' +
+          'litio reacciona con Halon y continúa ardiendo (el litio es metal alcalino que arde incluso sin oxígeno externo), (4) HUMO TÓXICO: gases ' +
+          'tóxicos (fluoruro de hidrógeno, monóxido de carbono) llenaron la cabina, incapacitando a los pilotos que no pudieron aterrizar, (5) FALTA ' +
+          'DE PROCEDIMIENTOS: no había procedimientos específicos para fuego de baterías de litio. Lecciones: (a) RESTRICCIONES SEVERAS: OACI prohibió ' +
+          'baterías de litio como carga en aviones de pasajeros (2016), límites estrictos en cargueros (State of Charge ≤30%, embalaje específico), ' +
+          '(b) SISTEMAS DE CONTENCIÓN: desarrollo de bolsas de contención de fuego de litio (Fire Containment Covers), (c) MEJORA DE MASCARILLAS: ' +
+          'mascarillas de oxígeno con protección contra gases tóxicos para tripulaciones de carga, (d) RECONOCIMIENTO: fuego de litio es ' +
+          'fundamentalmente diferente a fuego convencional (no se extingue con métodos tradicionales). El accidente UPS 6 llevó a revisiones ' +
+          'completas del Doc 9284 y regulaciones IATA DGR sobre baterías de litio.'
+      },
+      {
+        id: 'seg-s10-07',
+        enunciado:
+          'La evolución de la cultura de seguridad en aviación ha pasado por varias fases históricas. Según el Doc 9859 y la literatura de factores ' +
+          'humanos, cuál es la secuencia correcta de evolución cultural:',
+        opciones: {
+          A: 'La cultura de seguridad siempre ha sido la misma desde los inicios de la aviación; no ha evolucionado significativamente.',
+          B: 'La evolución típica es: (1) Era técnica (1950s-1970s): enfoque en mejoras técnicas (motores, estructuras, navegación), accidentes atribuidos a fallas mecánicas, (2) Era de factores humanos (1970s-1990s): reconocimiento de que ~70% de accidentes involucran error humano, desarrollo de CRM, enfoque en entrenamiento y selección de tripulaciones, (3) Era organizacional/SMS (1990s-presente): reconocimiento de que errores humanos son síntomas de fallas sistémicas, desarrollo de SMS, cultura justa, gestión proactiva de riesgos, (4) Era de resiliencia/Safety-II (presente-futuro): enfoque en qué sale bien, no solo qué sale mal, resiliencia operacional, aprendizaje continuo, adaptación.',
+          C: 'La evolución fue: blame culture → más blame culture → aún más blame culture; no hay alternativas.',
+          D: 'La cultura de seguridad evolucionó de enfoques organizacionales a enfoques técnicos; la tendencia es revertir a mejoras mecánicas.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9859 y literatura de factores humanos (Reason, Hollnagel, Dekker): la evolución de la cultura de seguridad en aviación sigue una ' +
+          'secuencia reconocible: (1) ERA TÉCNICA (1950s-1970s): aviación en era jet, enfoque en mejoras técnicas (motores más confiables, estructuras ' +
+          'más fuertes, sistemas de navegación), accidentes atribuidos a fallas mecánicas, "el piloto no puede equivocarse si el avión funciona", ' +
+          '(2) ERA DE FACTORES HUMANOS (1970s-1990s): accidentes como Tenerife (1977) revelaron que ~70% de accidentes involucran error humano, ' +
+          'desarrollo de CRM (Crew Resource Management) por NASA/United Airlines, enfoque en entrenamiento, selección, comunicación en cabina, pero ' +
+          'aún con tendencia a culpar al operador ("pilot error"), (3) ERA ORGANIZACIONAL/SMS (1990s-presente): modelo Swiss Cheese de Reason (1990) ' +
+          'reveló que errores humanos son síntomas de fallas sistémicas (organizacionales, de diseño, de supervisión), desarrollo de SMS (Safety ' +
+          'Management Systems), cultura justa (Just Culture), gestión proactiva de riesgos, OACI Anexo 19 (2013) hizo SMS obligatorio globalmente, ' +
+          '(4) ERA DE RESILIENCIA/SAFETY-II (presente-futuro): Erik Hollnagel y otros proponen Safety-II (estudiar qué sale bien, no solo qué sale ' +
+          'mal), resiliencia operacional (capacidad de adaptarse y recuperarse), aprendizaje continuo, adaptación a complejidad. Cada era NO reemplaza ' +
+          'la anterior sino que la integra: mejoras técnicas + factores humanos + SMS + resiliencia. La opción A es falsa: evolución es dramática. ' +
+          'La opción C es caricatura. La opción D es invertida. Esta evolución ha reducido la tasa de accidentes de ~1 por 100,000 vuelos (1950s) ' +
+          'a ~0.1 por millón de vuelos (2020s), haciendo de la aviación el modo de transporte más seguro.'
+      },
+      {
+        id: 'seg-s10-08',
+        enunciado:
+          'El concepto de "Resilience Engineering" (Ingeniería de Resiliencia) y Safety-II representa el estado del arte en gestión de seguridad ' +
+          'operacional. Según Hollnagel, Woods y Leveson, y el Doc 9859, cuál es la diferencia fundamental entre Safety-I y Safety-II:',
+        opciones: {
+          A: 'Safety-I y Safety-II son esencialmente lo mismo con diferentes nombres; no hay diferencia real.',
+          B: 'Safety-I (enfoque tradicional) pregunta "¿Qué salió mal?" y busca culpables de fallos, accidentes e incidentes; se enfoca en eliminar errores y desviaciones. Safety-II (enfoque moderno) pregunta "¿Qué salió bien y por qué?" y estudia cómo los operadores se adaptan exitosamente a condiciones complejas y variables; reconoce que el desempeño exitoso y el fallido tienen las mismas causas (variabilidad del desempeño), y que la seguridad emerge de la capacidad de adaptación y resiliencia del sistema, no de la ausencia de fallos.',
+          C: 'Safety-I es para organizaciones maduras; Safety-II es para organizaciones en desarrollo.',
+          D: 'Safety-I se enfoca en factores humanos; Safety-II se enfoca exclusivamente en factores técnicos.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Resilience Engineering (Hollnagel, Woods, Leveson, Nemeth) y Doc 9859: Safety-I vs Safety-II representan paradigmas fundamentalmente ' +
+          'diferentes: SAFETY-I (enfoque tradicional, dominante desde 1950s): (1) Pregunta "¿Qué salió mal?", (2) Busca causas de fallos, accidentes, ' +
+          'incidentes, (3) Asume que fallos son causados por desviaciones de procedimientos normales, (4) Objetivo: eliminar errores y desviaciones, ' +
+          '(5) Modelo causal lineal (cadena de eventos), (6) Enfoque reactivo (analizar después del evento), SAFETY-II (enfoque moderno, emergente ' +
+          'desde 2010s): (1) Pregunta "¿Qué salió bien y por qué?", (2) Estudia desempeño exitoso en condiciones complejas, (3) Reconoce que desempeño ' +
+          'exitoso y fallido tienen las MISMAS CAUSAS (variabilidad normal del desempeño humano y organizacional), (4) Objetivo: mejorar capacidad de ' +
+          'adaptación y resiliencia, (5) Modelo causal sistémico (redes de interacciones), (6) Enfoque proactivo (estudiar operaciones normales). ' +
+          'Diferencia clave: Safety-I ve al humano como fuente de error a controlar; Safety-II ve al humano como fuente de resiliencia a potenciar. ' +
+          'La opción A es falsa: son paradigmáticamente diferentes. La opción C es incorrecta: Safety-II es para organizaciones maduras que ya tienen ' +
+          'Safety-I sólido. La opción D es falsa: ambos integran factores humanos y técnicos. Safety-II está transformando la aviación: organizaciones ' +
+          'como Qantas, Emirates, y la FAA están adoptando enfoques Safety-II para mejorar resiliencia operacional.'
+      },
+      {
+        id: 'seg-s10-09',
+        enunciado:
+          'Una aerolínea quiere integrar completamente su SMS (Safety Management System), ERP (Emergency Response Plan) y BCP (Business Continuity ' +
+          'Plan) en un sistema coherente de gestión de crisis. Según el Doc 9859 y las mejores prácticas de gestión de crisis, cuál es la arquitectura ' +
+          'CORRECTA de integración:',
+        opciones: {
+          A: 'SMS, ERP y BCP deben ser sistemas completamente independientes sin coordinación; cada uno tiene su propio equipo y procedimientos.',
+          B: 'La arquitectura integrada debe incluir: (1) SMS como sistema de gestión proactiva de riesgos que previene crisis, (2) ERP como respuesta inmediata a emergencias (salvar vidas, proteger evidencia), activado cuando ocurre un evento adverso, (3) BCP como continuidad del negocio durante y después de la crisis, (4) Centro de Operaciones de Emergencia (COE) que coordina los tres sistemas durante una crisis, con roles claros (Director de Crisis, Safety Manager, Communications, Family Assistance), (5) activación secuencial: SMS detecta/previene → si falla, ERP responde → BCP mantiene operaciones, (6) lecciones aprendidas de ERP y BCP alimentan mejoras al SMS para prevenir futuras crisis.',
+          C: 'Solo el SMS es necesario; ERP y BCP son redundantes y pueden eliminarse para simplificar.',
+          D: 'ERP es el único sistema importante; SMS y BCP son secundarios y opcionales.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9859 y mejores prácticas de gestión de crisis (IATA, ICAO): SMS, ERP y BCP son sistemas COMPLEMENTARIOS que deben integrarse ' +
+          'coherentemente: (1) SMS (SAFETY MANAGEMENT SYSTEM): sistema de gestión PROACTIVA de riesgos operacionales; objetivo es PREVENIR accidentes ' +
+          'e incidentes mediante identificación de peligros, evaluación de riesgos, implementación de controles, monitoreo con SPIs, cultura justa; ' +
+          'es la primera línea de defensa, (2) ERP (EMERGENCY RESPONSE PLAN): plan de respuesta INMEDIATA a emergencias cuando el SMS no pudo prevenir ' +
+          'el evento; objetivo es SALVAR VIDAS, proteger evidencia, coordinar con autoridades, asistir a familias; se activa cuando ocurre accidente, ' +
+          'incidente grave, o crisis, (3) BCP (BUSINESS CONTINUITY PLAN): plan de CONTINUIDAD del negocio durante y después de la crisis; objetivo es ' +
+          'mantener operaciones críticas, proteger activos, recuperar rentabilidad, reconstruir reputación, (4) COE (CENTRO DE OPERACIONES DE ' +
+          'EMERGENCIA): estructura que COORDINA los tres sistemas durante crisis, con roles claros: Director de Crisis (decisión final), Safety ' +
+          'Manager (aspectos técnicos de seguridad), Communications (medios, redes sociales), Family Assistance (asistencia a familias), Legal ' +
+          '(aspectos legales), (5) ACTIVACIÓN SECUENCIAL: SMS detecta/previene → si falla, ERP responde → BCP mantiene operaciones, (6) CICLO DE ' +
+          'APRENDIZAJE: lecciones de ERP y BCP alimentan mejoras al SMS para prevenir futuras crisis. La opción A es peligrosa: falta de coordinación ' +
+          'causa caos en crisis. Las opciones C y D son falsas: los tres sistemas son necesarios y complementarios. La integración SMS-ERP-BCP es ' +
+          'característica de organizaciones maduras (nivel 4-5 de madurez).'
+      },
+      {
+        id: 'seg-s10-10',
+        enunciado:
+          'Una aerolínea se somete a una auditoría integral de madurez de su sistema de gestión de seguridad (SMS + ERP + BCP). Según frameworks ' +
+          'de auditoría (como ICAO USOAP, IOSA, y modelos de madurez SM ICG), cuáles son los indicadores CLAVE de una organización en nivel de ' +
+          'madurez AVANZADO (nivel 4-5):',
+        opciones: {
+          A: 'Solo importa el número de accidentes: cero accidentes en los últimos 5 años = madurez completa.',
+          B: 'Indicadores clave de madurez avanzada incluyen: (1) SMS: SPIs proactivos (leading indicators) monitoreados sistemáticamente, gestión de riesgos integrada en decisiones operacionales y comerciales, cultura justa establecida con alto volumen de reportes voluntarios, análisis de tendencias y acciones correctivas proactivas, (2) ERP: simulacros anuales full-scale con evaluación independiente, lecciones aprendidas documentadas e implementadas, coordinación probada con autoridades externas, (3) BCP: plan probado y actualizado, continuidad de operaciones críticas demostrada en simulacros, recuperación reputacional planificada, (4) Integración: COE funcional con roles claros, lecciones de ERP/BCP alimentan mejoras al SMS, benchmarking con mejores prácticas globales, certificación IOSA vigente, (5) Cultura: aprendizaje organizacional continuo, resiliencia operacional, innovación en seguridad.',
+          C: 'Solo importa tener documentación completa; si los manuales están actualizados, la organización es madura independientemente de la implementación real.',
+          D: 'La madurez se mide exclusivamente por el tamaño de la flota y los ingresos; aerolíneas grandes son automáticamente maduras.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'ICAO USOAP (Universal Safety Oversight Audit Programme), IOSA, y SM ICG: los indicadores de madurez avanzada (nivel 4-5) van MÁS ALLÁ de ' +
+          'cumplimiento regulatorio básico: (1) SMS MADURO: SPIs PROACTIVOS (leading indicators como completitud de auditorías, tasa de reportes ' +
+          'voluntarios, cumplimiento de entrenamiento) monitoreados sistemáticamente, no solo reactivos (accidentes, incidentes); gestión de riesgos ' +
+          'INTEGRADA en decisiones operacionales Y comerciales (no solo decisiones técnicas); CULTURA JUSTA establecida con alto volumen de reportes ' +
+          'voluntarios (indicador de confianza); análisis de TENDENCIAS con acciones correctivas proactivas, no solo reactivas, (2) ERP PROBADO: ' +
+          'simulacros anuales FULL-SCALE con evaluación independiente (no solo ejercicios de mesa), lecciones aprendidas DOCUMENTADAS e IMPLEMENTADAS ' +
+          '(no solo identificadas), coordinación PROBADA con autoridades externas (bomberos, hospitales, policía), (3) BCP FUNCIONAL: plan PROBADO ' +
+          'y ACTUALIZADO, continuidad de operaciones críticas DEMOSTRADA en simulacros, recuperación reputacional PLANIFICADA, (4) INTEGRACIÓN: COE ' +
+          'FUNCIONAL con roles claros y probados, lecciones de ERP/BCP ALIMENTAN mejoras al SMS (ciclo de aprendizaje cerrado), BENCHMARKING con ' +
+          'mejores prácticas globales (IOSA, IATA, ICAO), (5) CULTURA AVANZADA: APRENDIZAJE ORGANIZACIONAL continuo, RESILIENCIA operacional ' +
+          '(capacidad de adaptarse y recuperarse), INNOVACIÓN en seguridad (adopción de Safety-II, nuevas tecnologías). La opción A es simplista: ' +
+          'cero accidentes puede ser suerte o ocultamiento. La opción C es falsa: documentación sin implementación es "paper SMS". La opción D es ' +
+          'falsa: tamaño no garantiza madurez (aerolíneas grandes han tenido accidentes catastróficos). Organizaciones nivel 4-5 (Qantas, Emirates, ' +
+          'Lufthansa, Singapore Airlines) demuestran estos indicadores consistentemente.'
+      }
     ]
   }
 };
