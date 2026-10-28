@@ -1823,6 +1823,278 @@ export const BANCO_NZT = {
           'de Malaysia Airlines (2014, Malasia lideró con Australia, China, EE.UU., Reino Unido), Vuelo 447 de Air France (2009, Brasil lideró con ' +
           'Francia, EE.UU.). El Anexo 13 protege la independencia de la investigación del proceso legal/punitivo para fomentar transparencia.'
       }
+    ],
+
+    /* SEMANA 8/10 — HEMS offshore, UAVs/drones, HFACS, just culture vs blame culture, EBT, material radiactivo médico, dry ice, 12 factores sucios, SHELL mantenimiento, ciberataques */
+    8: [
+      {
+        id: 'seg-s8-01',
+        enunciado:
+          'Una empresa opera helicópteros HEMS (Helicopter Emergency Medical Services) en plataformas petroleras offshore del Mar del Norte. Las ' +
+          'condiciones incluyen: vuelos nocturnos sobre agua, operaciones en helidecks de plataformas con espacio limitado, condiciones meteorológicas ' +
+          'adversas frecuentes, y alta presión por tiempos de respuesta médica. Según el Doc 9859 y las guías específicas de HEMS (ICAO Doc 10075), ' +
+          'cuáles son los riesgos operacionales CRÍTICOS y las mitigaciones obligatorias:',
+        opciones: {
+          A: 'Los riesgos son similares a operaciones de helicóptero convencionales; no requieren mitigaciones especiales.',
+          B: 'Riesgos críticos incluyen: (1) vuelo sobre agua sin flotación adecuada (ditching), (2) operaciones en helidecks con obstáculos y turbulencia, (3) fatiga por turnos nocturnos y alta demanda, (4) presión por tiempos de respuesta médica que puede comprometer decisiones de seguridad; mitigaciones obligatorias: certificación de flotación de emergencia (EFS), entrenamiento específico en helidecks, límites estrictos de fatiga, política de "no-go" sin presión comercial, y equipos de supervivencia en agua fría.',
+          C: 'El único riesgo crítico es el mantenimiento; si los helicópteros están bien mantenidos, no hay otros riesgos significativos.',
+          D: 'Los riesgos se mitigan exclusivamente con seguros de responsabilidad civil elevados.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9859 y ICAO Doc 10075 (Helicopter Offshore Operations): las operaciones HEMS offshore tienen riesgos ÚNICOS y CRÍTICOS que requieren ' +
+          'mitigaciones especializadas: (1) VUELO SOBRE AGUA: ditching (aterrizaje forzoso en agua) requiere flotación de emergencia certificada ' +
+          '(Emergency Flotation System, EFS), trajes de supervivencia, balsas salvavidas, entrenamiento de escape submarino (HUET - Helicopter Underwater ' +
+          'Escape Training), (2) HELIDECKS: espacio limitado, obstáculos (grúas, antenas), turbulencia por estructura de plataforma, iluminación nocturna ' +
+          'específica, entrenamiento de aproximación a helidecks, (3) FATIGA: turnos nocturnos, alta demanda cognitiva, límites estrictos de tiempo ' +
+          'de vuelo y descanso, programas FRMS específicos para HEMS, (4) PRESIÓN COMERCIAL/MÉDICA: urgencia médica puede inducir decisiones riesgosas; ' +
+          'política explícita de "safety first, no-go authority" del piloto sin consecuencias por cancelar misión, (5) AGUA FRÍA: hipotermia rápida ' +
+          'en Mar del Norte requiere trajes de inmersión y tiempos de rescate críticos. La opción A es falsa: HEMS offshore es una de las operaciones ' +
+          'más riesgosas en aviación. La opción C es reduccionista: mantenimiento es crítico pero no único riesgo. La opción D es insuficiente: ' +
+          'seguros no previenen accidentes. Accidentes como el Vuelo 241 de Bond Super Puma (2009, Mar del Norte, 16 muertos) demostraron que ' +
+          'mitigaciones específicas son obligatorias, no opcionales.'
+      },
+      {
+        id: 'seg-s8-02',
+        enunciado:
+          'Un aeropuerto internacional quiere integrar operaciones de drones (UAVs/UAS - Unmanned Aircraft Systems) para inspección de pistas, ' +
+          'control de fauna y entrega de carga ligera dentro del perímetro aeroportuario. Según el Doc 9859 y las guías de OACI sobre UAS (Doc 10019), ' +
+          'cuál es el enfoque CORRECTO para integrar drones en espacio aéreo controlado:',
+        opciones: {
+          A: 'Los drones pueden operar libremente dentro del perímetro aeroportuario sin coordinación con ATC porque son pequeños.',
+          B: 'Integración requiere: (1) evaluación de riesgos específica de cada operación de drone, (2) coordinación obligatoria con ATC (torre de control) para cada vuelo, (3) sistemas de detección y evitación (detect-and-avoid) o restricciones geográficas (geofencing), (4) operadores certificados con licencias específicas de UAS, (5) procedimientos de emergencia para pérdida de enlace (lost link), y (6) segregación temporal o espacial de operaciones de drones respecto a aeronaves tripuladas.',
+          C: 'Los drones solo pueden operar de noche cuando no hay tráfico aéreo comercial.',
+          D: 'La integración de drones es responsabilidad exclusiva del fabricante del drone; el aeropuerto solo proporciona espacio.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9859 y ICAO Doc 10019 (Unmanned Aircraft Systems Traffic Management - UTM): la integración de drones en espacio aéreo controlado ' +
+          'requiere un enfoque sistemático de gestión de riesgos: (1) EVALUACIÓN DE RIESGOS ESPECÍFICA (SORA - Specific Operations Risk Assessment): ' +
+          'cada operación (inspección de pista, control de fauna, entrega) tiene riesgos distintos que deben evaluarse individualmente, (2) COORDINACIÓN ' +
+          'ATC OBLIGATORIA: cada vuelo de drone requiere autorización de torre de control, con plan de vuelo, altitud máxima, área de operación, ' +
+          '(3) DETECT-AND-AVOID: sistemas tecnológicos que detectan aeronaves tripuladas y permiten evasión, o geofencing (restricciones geográficas ' +
+          'programadas) que impiden que el drone entre en zonas prohibidas, (4) CERTIFICACIÓN: operadores con licencias específicas de UAS (no licencia ' +
+          'de piloto comercial estándar), (5) PROCEDIMIENTOS LOST LINK: protocolo para pérdida de enlace de control (drone aterriza automáticamente, ' +
+          'regresa a base, o mantiene posición), (6) SEGREGACIÓN: separación temporal (drones operan cuando no hay tráfico) o espacial (zonas ' +
+          'designadas exclusivas para drones). La opción A es peligrosa: drones sin coordinación causan incursiones de pista y colisiones. La opción C ' +
+          'es insuficiente: operación nocturna no elimina riesgos. La opción D es falsa: el operador del aeropuerto es responsable de la seguridad ' +
+          'operacional en su espacio aéreo. Incidentes como las interrupciones en Gatwick (2018, 36 horas de cierre por drones no autorizados) ' +
+          'demostraron que integración requiere gestión activa, no permisividad.'
+      },
+      {
+        id: 'seg-s8-03',
+        enunciado:
+          'El Safety Manager de una aerolínea investiga un incidente donde un primer oficial no siguió el procedimiento de aproximación estabilizada ' +
+          'y descendió por debajo de los mínimos sin referencia visual, causando una aproximación frustrada de emergencia. Usando el modelo HFACS ' +
+          '(Human Factors Analysis and Classification System) del Doc 9683, el análisis revela: (1) el FO estaba fatigado por turno nocturno previo, ' +
+          '(2) el comandante no monitoreó activamente la aproximación, (3) la aerolínea tenía presión por puntualidad que incentivaba atajos, ' +
+          '(4) los procedimientos de aproximación estabilizada eran ambiguos. Según HFACS, la clasificación CORRECTA de estos factores es:',
+        opciones: {
+          A: 'Todos son errores activos del FO; los demás factores son irrelevantes.',
+          B: 'Fatiga del FO = condición del operador (Operator Condition, nivel 2); falta de monitoreo del comandante = error de supervisión (Supervisory Failure, nivel 3); presión por puntualidad = influencia organizacional (Organizational Influence, nivel 4); procedimientos ambiguos = falla organizacional de recursos/procedimientos (nivel 4); el error del FO es solo la manifestación final de fallas sistémicas en múltiples niveles.',
+          C: 'Solo el comandante es responsable por no supervisar; el FO y la organización no tienen responsabilidad.',
+          D: 'HFACS no aplica a incidentes sin consecuencias; solo se usa para accidentes con víctimas.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9683 y modelo HFACS (Shappell & Wiegmann, basado en Reason): HFACS clasifica el error humano en CUATRO NIVELES jerárquicos que reflejan ' +
+          'el modelo Swiss Cheese: (1) ACTOS INSEGUROS DE OPERADORES (Unsafe Acts, nivel 1): errores (slips, lapses, mistakes) y violaciones del ' +
+          'personal de primera línea (FO descendiendo bajo mínimos), (2) PRECONDICIONES PARA ACTOS INSEGUROS (Preconditions, nivel 2): condiciones ' +
+          'del operador (fatiga, estrés), factores ambientales (iluminación, ruido), factores de equipo (comunicación deficiente), (3) SUPERVISIÓN ' +
+          'INADECUADA (Supervisory Failures, nivel 3): falta de supervisión, supervisión inapropiada, fallas en corregir problemas conocidos, ' +
+          'violaciones de supervisión (comandante no monitorea), (4) INFLUENCIAS ORGANIZACIONALES (Organizational Influences, nivel 4): gestión ' +
+          'de recursos (procedimientos ambiguos), clima organizacional (presión por puntualidad), procesos organizacionales (cultura, políticas). ' +
+          'HFACS demuestra que el error del FO (nivel 1) es solo la manifestación final de fallas en niveles superiores (fatiga, supervisión, ' +
+          'organización). La opción A es reduccionista: culpa solo al operador de primera línea. La opción C es falsa: responsabilidad es compartida ' +
+          'en múltiples niveles. La opción D es falsa: HFACS aplica a incidentes y cuasi-accidentes, no solo accidentes. HFACS es estándar en ' +
+          'investigación de aviación (NTSB, BEA, AAIB) y ha revelado que >70% de accidentes tienen causas organizacionales, no solo errores individuales.'
+      },
+      {
+        id: 'seg-s8-04',
+        enunciado:
+          'Una aerolínea está revisando su política de respuesta a errores de tripulaciones. El Director de Operaciones propone una política de "tolerancia ' +
+          'cero" donde cualquier error resulta en sanción disciplinaria. El Safety Manager argumenta que esto destruye la cultura de seguridad. Según ' +
+          'el concepto de Just Culture (Cultura Justa) del Doc 9859 y Doc 9683, cuál es la distinción CRÍTICA que debe hacer la organización:',
+        opciones: {
+          A: 'Todos los errores deben ser sancionados para sentar precedente y prevenir repetición.',
+          B: 'Ningún error debe ser sancionado; la impunidad total fomenta el aprendizaje.',
+          C: 'La organización debe distinguir claramente entre: (1) errores humanos honestos (slips, lapses, mistakes) que NO merecen sanción cuando son reportados voluntariamente, (2) conducta de riesgo (risk-taking behavior) que requiere coaching y reentrenamiento pero no necesariamente sanción punitiva, y (3) conducta inaceptable (reckless behavior, violaciones intencionales, negligencia grave) que SÍ merece sanción disciplinaria; esta distinción protege el reporte voluntario mientras mantiene responsabilidad individual.',
+          D: 'Solo los errores con consecuencias (accidentes) deben ser sancionados; errores sin consecuencias se ignoran.'
+        },
+        respuesta_correcta: 'C',
+        explicacion_nzt:
+          'Doc 9859 Cap. 3 y Doc 9683 (Just Culture): la Cultura Justa distingue TRES categorías de conducta con respuestas organizacionales ' +
+          'diferentes: (1) ERRORES HUMANOS HONESTOS (Human Error): slips (errores de ejecución), lapses (olvidos), mistakes (errores de juicio) que ' +
+          'ocurren a pesar de buena intención; NO merecen sanción cuando son reportados voluntariamente, requieren análisis de causa raíz y mejoras ' +
+          'sistémicas, (2) CONDUCTA DE RIESGO (At-Risk Behavior): desviaciones de procedimiento sin intención de dañar, a menudo por percepción de ' +
+          'que el atajo es más eficiente; requiere coaching, reentrenamiento, y revisión de procedimientos (¿por qué el personal percibe el atajo ' +
+          'como mejor?), (3) CONDUCTA INACEPTABLE (Reckless Behavior): violaciones intencionales, negligencia grave, imprudencia deliberada; SÍ ' +
+          'merece sanción disciplinaria (suspensión, terminación, acción legal). La opción A (tolerancia cero) destruye cultura de reporte: el ' +
+          'personal oculta errores por miedo, y el sistema pierde información preventiva crítica. La opción B (impunidad total) es negligencia: ' +
+          'conducta inaceptable debe tener consecuencias. La opción D es falsa: errores sin consecuencias son oportunidades de aprendizaje proactivo. ' +
+          'La Cultura Justa es el pilar del SMS moderno: sin ella, los reportes voluntarios desaparecen. El accidente del Vuelo 1455 de Southwest ' +
+          'Airlines (2000) demostró que cultura punitiva oculta violaciones rutinarias que eventualmente causan accidentes.'
+      },
+      {
+        id: 'seg-s8-05',
+        enunciado:
+          'Una aerolínea está migrando de un programa de entrenamiento basado en maniobras (Maneuvers-Based Training) a un programa de Entrenamiento ' +
+          'Basado en Evidencia (EBT - Evidence-Based Training) según las guías de OACI (Doc 9995). El Director de Entrenamiento pregunta cuál es la ' +
+          'diferencia fundamental. Según el Doc 9995 y Doc 9683, el EBT se caracteriza por:',
+        opciones: {
+          A: 'EBT es simplemente un nuevo nombre para el entrenamiento tradicional de maniobras; no hay diferencia real.',
+          B: 'EBT se enfoca exclusivamente en escenarios de emergencia raros y catastróficos, ignorando operaciones normales.',
+          C: 'EBT utiliza datos de operaciones reales (LOSA, reportes de incidentes, análisis de tendencias) para diseñar escenarios de entrenamiento que desarrollan competencias específicas (no solo habilidades técnicas) como gestión de amenazas y errores (TEM), conciencia situacional, toma de decisiones y trabajo en equipo, con evaluación continua de desempeño en lugar de chequeos binarios de aprobado/reprobado.',
+          D: 'EBT elimina el entrenamiento en simulador y lo reemplaza con entrenamiento en línea exclusivamente.'
+        },
+        respuesta_correcta: 'C',
+        explicacion_nzt:
+          'Doc 9995 (Manual of Evidence-Based Training) y Doc 9683: EBT es una revolución en entrenamiento aeronáutico que difiere fundamentalmente ' +
+          'del entrenamiento basado en maniobras: (1) BASADO EN EVIDENCIA: utiliza datos de operaciones reales (LOSA, reportes voluntarios, análisis ' +
+          'de incidentes, FOQA - Flight Operations Quality Assurance) para identificar amenazas y errores recurrentes, diseñando escenarios que ' +
+          'reflejan la realidad operacional, (2) DESARROLLO DE COMPETENCIAS: no solo habilidades técnicas (volar la aeronave) sino competencias ' +
+          'no-técnicas (TEM, conciencia situacional, toma de decisiones, trabajo en equipo, comunicación, liderazgo), (3) EVALUACIÓN CONTINUA: en ' +
+          'lugar de chequeos binarios (aprobado/reprobado), evalúa desempeño en un espectro con feedback formativo, identificando fortalezas y áreas ' +
+          'de mejora, (4) ESCENARIOS REALISTAS: combina operaciones normales con amenazas y errores, no solo emergencias raras. La opción A es falsa: ' +
+          'EBT es paradigmáticamente diferente. La opción B es incorrecta: EBT incluye operaciones normales Y emergencias. La opción D es falsa: EBT ' +
+          'usa simulador intensivamente, no lo elimina. EBT surgió tras evidencia de que el entrenamiento tradicional de maniobras no preparaba ' +
+          'adecuadamente para la complejidad operacional real. Aerolíneas pioneras (Lufthansa, Qantas, Emirates) demostraron que EBT reduce errores ' +
+          'operacionales en 30-40% comparado con entrenamiento tradicional.'
+      },
+      {
+        id: 'seg-s8-06',
+        enunciado:
+          'Un hospital solicita transporte aéreo urgente de radiofármacos (material radiactivo médico) para diagnóstico PET (Tomografía por Emisión de ' +
+          'Positrones): UN 2915 (Radioactive material, Type A package, Fluor-18, actividad 20 GBq). Según el Doc 9284 y las regulaciones de transporte ' +
+          'de material radiactivo, cuáles son los requisitos específicos para este envío:',
+        opciones: {
+          A: 'El material radiactivo médico está completamente prohibido en aviación comercial; debe transportarse por carretera exclusivamente.',
+          B: 'Requiere: (1) embalaje Type A certificado que contenga la radiación en condiciones normales y de accidente, (2) etiquetado específico RADIOACTIVE con categoría (I-WHITE, II-YELLOW, III-YELLOW según nivel de radiación en superficie), (3) índice de transporte (TI) calculado, (4) DGD completa con actividad en Becquerels, (5) NOTOC al comandante, (6) segregación de pasajeros y tripulación según tablas de distancia (mínimo 1-3 metros dependiendo del TI), (7) manipulación por personal entrenado en protección radiológica.',
+          C: 'Solo requiere etiquetado de Clase 7 y DGD; no necesita segregación porque la actividad es baja.',
+          D: 'Puede transportarse en equipaje de mano del médico que lo acompaña sin declaración especial.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9284-AN/905 Cap. 10 (Radioactive Material) y regulaciones IAEA (International Atomic Energy Agency): el transporte de material ' +
+          'radiactivo médico (radiofármacos para PET, SPECT, terapia) tiene requisitos específicos rigurosos: (1) EMBALAJE TYPE A: certificado para ' +
+          'contener radiación en condiciones normales Y de accidente (pruebas de caída, perforación, fuego, inmersión), (2) ETIQUETADO ESPECÍFICO: ' +
+          'rombo RADIOACTIVE con categoría según nivel de radiación en superficie (I-WHITE: <0.005 mSv/h, II-YELLOW: 0.005-0.5 mSv/h, III-YELLOW: ' +
+          '0.5-2 mSv/h), (3) ÍNDICE DE TRANSPORTE (TI): medida de radiación a 1 metro del bulto, usado para calcular segregación, (4) DGD COMPLETA: ' +
+          'con isótopo específico (Fluor-18), actividad en Becquerels (20 GBq), tipo de embalaje, (5) NOTOC: notificación al comandante con ubicación ' +
+          'exacta, (6) SEGREGACIÓN: distancia mínima de pasajeros y tripulación según tabla (típicamente 1-3 metros para TI bajo), (7) PERSONAL ' +
+          'ENTRENADO: manipulación por personal con entrenamiento en protección radiológica. La opción A es falsa: radiofármacos son esenciales para ' +
+          'medicina moderna y se transportan diariamente por vía aérea. La opción C es peligrosa: segregación es obligatoria incluso para actividades ' +
+          'bajas. La opción D es ilegal: material radiactivo NUNCA en equipaje de mano sin declaración. El Fluor-18 tiene vida media corta (110 min), ' +
+          'por lo que el transporte aéreo rápido es crítico para su utilidad médica.'
+      },
+      {
+        id: 'seg-s8-07',
+        enunciado:
+          'Un expedidor prepara un envío de vacunas COVID-19 que requieren transporte a -70°C usando hielo seco (dry ice, UN 1845, Clase 9) como ' +
+          'refrigerante. El envío contiene 50 kg de hielo seco en un contenedor aislado. Según el Doc 9284, cuáles son los requisitos específicos ' +
+          'para transporte de hielo seco:',
+        opciones: {
+          A: 'El hielo seco no es mercancía peligrosa; puede transportarse sin restricciones.',
+          B: 'El hielo seco es Clase 9 (misceláneo) porque sublima a CO2 que puede desplazar oxígeno en espacios cerrados causando asfixia; requiere: (1) embalaje que permita ventilación (no hermético) para evitar acumulación de presión, (2) marcado "Dry Ice" o "Carbon Dioxide, Solid" con peso neto, (3) NOTOC al comandante con ubicación y cantidad, (4) límites de cantidad por bodega según tipo de aeronave (típicamente 200-500 kg en bodega de pasajeros, más en carguero), (5) segregación de animales vivos (AVI) porque el CO2 es tóxico para ellos.',
+          C: 'El hielo seco es Clase 2.2 (gas no inflamable) y requiere todas las etiquetas de gas comprimido.',
+          D: 'Solo requiere etiquetado si excede 100 kg; cantidades menores están exentas.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9284-AN/905 y regulaciones específicas: el hielo seco (CO2 sólido, UN 1845) es clasificado como Clase 9 (miscellaneous dangerous ' +
+          'goods) porque su peligro principal es la SUBlimación a gas CO2 que puede: (1) DESPLAZAR OXÍGENO en espacios cerrados (bodega de aeronave) ' +
+          'causando asfixia al personal, (2) GENERAR PRESIÓN en embalajes herméticos causando explosión. Requisitos específicos: (1) EMBALAJE VENTILADO: ' +
+          'NUNCA hermético; debe permitir escape de gas CO2 para evitar acumulación de presión, (2) MARCADO ESPECÍFICO: "Dry Ice" o "Carbon Dioxide, ' +
+          'Solid" con peso neto en kg, (3) NOTOC OBLIGATORIO: notificación al comandante con ubicación exacta y cantidad total de hielo seco en la ' +
+          'aeronave, (4) LÍMITES DE CANTIDAD: varían según tipo de aeronave y ventilación de bodega (típicamente 200-500 kg en bodega de pasajeros, ' +
+          'hasta 1000 kg en carguero con ventilación adecuada), (5) SEGREGACIÓN DE AVI: animales vivos (Animal Vivant) deben estar separados del ' +
+          'hielo seco porque el CO2 es tóxico para ellos incluso en concentraciones bajas. La opción A es falsa: hielo seco SÍ es mercancía peligrosa. ' +
+          'La opción C es incorrecta: es Clase 9, no Clase 2.2. La opción D es falsa: no hay exención por cantidad; todos los envíos requieren NOTOC. ' +
+          'Incidentes como el Vuelo 8509 de Korean Air (1999, carga de hielo seco sin ventilación adecuada causó acumulación de CO2) demostraron que ' +
+          'gestión adecuada es crítica.'
+      },
+      {
+        id: 'seg-s8-08',
+        enunciado:
+          'Un técnico de mantenimiento de línea está trabajando en una inspección nocturna de una aeronave bajo presión de tiempo (el vuelo debe ' +
+          'partir en 2 horas). Comete un error al instalar un componente (conector invertido) que es detectado antes de la liberación. Según los ' +
+          '"12 Factores Sucios" (Dirty Dozen) del Doc 9824, cuál combinación de factores es MÁS probable que haya contribuido a este error:',
+        opciones: {
+          A: 'Falta de conocimiento + Falta de trabajo en equipo + Normas confusas.',
+          B: 'Presión + Fatiga + Complacencia + Falta de asertividad (si alguien vio el error pero no lo cuestionó).',
+          C: 'Falta de recursos + Falta de comunicación + Conciencia situacional excesiva.',
+          D: 'Exceso de confianza + Falta de liderazgo + Normas claras.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9824-AN/450 Cap. 4 (The Dirty Dozen - 12 Factores Humanos que causan errores de mantenimiento): los 12 factores son: (1) Falta de ' +
+          'comunicación, (2) Complacencia, (3) Falta de conocimiento, (4) Falta de trabajo en equipo, (5) Fatiga, (6) Falta de recursos, (7) Presión, ' +
+          '(8) Falta de asertividad, (9) Estrés, (10) Falta de conciencia situacional, (11) Normas confusas, (12) Normas destructivas. En el ' +
+          'escenario descrito (inspección nocturna, presión de tiempo, error de instalación), la combinación MÁS probable es: (1) PRESIÓN: tiempo ' +
+          'limitado induce atajos y reduce verificación, (2) FATIGA: trabajo nocturno degrada vigilancia y memoria procedural, (3) COMPLACENCIA: ' +
+          'tarea rutinaria subestimada por experiencia, (4) FALTA DE ASERTIVIDAD: si otro técnico vio el error pero no lo cuestionó por jerarquía ' +
+          'o cultura. La opción A es menos probable: falta de conocimiento no aplica si el técnico sabía cómo hacer la tarea. La opción C es ' +
+          'inconsistente: "conciencia situacional excesiva" no existe como factor de riesgo. La opción D es contradictoria: "normas claras" no es ' +
+          'factor de riesgo. Los 12 factores sucios son la base de programas de factores humanos en mantenimiento (HFAM - Human Factors in Aircraft ' +
+          'Maintenance) y han prevenido miles de errores mediante entrenamiento específico y rediseño de procedimientos.'
+      },
+      {
+        id: 'seg-s8-09',
+        enunciado:
+          'Un taller de mantenimiento (MRO) experimenta un incidente donde un técnico instala incorrectamente un componente hidráulico porque: ' +
+          '(1) el manual AMM tenía un diagrama confuso, (2) la herramienta de torque estaba descalibrada, (3) el supervisor estaba atendiendo ' +
+          'múltiples tareas simultáneamente y no verificó el trabajo, (4) el técnico estaba en su hora 10 de un turno de 12 horas. Usando el ' +
+          'modelo SHELL aplicado a mantenimiento del Doc 9824, cuál es el análisis CORRECTO de las interfaces fallidas:',
+        opciones: {
+          A: 'Solo hay falla en la interfaz Liveware-Liveware (técnico-supervisor); los demás factores son irrelevantes.',
+          B: 'Múltiples interfaces SHELL fallidas: (1) Liveware-Software: manual AMM con diagrama confuso (soporte lógico deficiente), (2) Liveware-Hardware: herramienta de torque descalibrada (equipo físico defectuoso), (3) Liveware-Liveware: supervisor sobrecargado no verifica (falla de supervisión), (4) Liveware-Environment (interno): técnico fatigado en hora 10 de turno (condición humana); este análisis multicapa revela que el error NO es solo del técnico sino de múltiples fallas sistémicas.',
+          C: 'Solo hay falla en Liveware-Hardware (herramienta descalibrada); si la herramienta hubiera estado bien, no habría ocurrido el error.',
+          D: 'El modelo SHELL no aplica a mantenimiento; solo se usa para operaciones de vuelo.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 9824-AN/450 Cap. 3 (SHELL Model applied to maintenance): el modelo SHELL (Software, Hardware, Environment, Liveware) es igualmente ' +
+          'aplicable a mantenimiento que a operaciones de vuelo. En este caso, CUATRO interfaces fallaron simultáneamente: (1) LIVEWARE-SOFTWARE ' +
+          '(L-S): el técnico (Liveware) interactúa con el manual AMM (Software - procedimientos, diagramas, documentación); diagrama confuso es ' +
+          'falla de Software que induce error humano, (2) LIVEWARE-HARDWARE (L-H): el técnico usa herramienta de torque (Hardware); herramienta ' +
+          'descalibrada es falla de Hardware que causa torque incorrecto, (3) LIVEWARE-LIVEWARE (L-L): técnico y supervisor (ambos Liveware); ' +
+          'supervisor sobrecargado no verifica trabajo es falla de supervisión, (4) LIVEWARE-ENVIRONMENT (L-E): técnico (Liveware) en entorno interno ' +
+          '(Environment - condiciones humanas); fatiga en hora 10 es condición ambiental que degrada desempeño. El análisis SHELL multicapa revela ' +
+          'que el error del técnico es solo la manifestación final de fallas sistémicas en múltiples interfaces. La opción A es reduccionista: ' +
+          'culpa solo al supervisor. La opción C es simplista: culpa solo a la herramienta. La opción D es falsa: SHELL aplica a TODAS las ' +
+          'operaciones aeronáuticas incluyendo mantenimiento. El modelo SHELL es fundamental en investigación de incidentes de mantenimiento y ha ' +
+          'revelado que >80% de errores tienen causas multicapa, no individuales.'
+      },
+      {
+        id: 'seg-s8-10',
+        enunciado:
+          'Una aerolínea sufre un ciberataque que compromete sus sistemas de despacho de vuelos (flight planning), causando que múltiples vuelos ' +
+          'salgan con planes de vuelo incorrectos (rutas, combustible, alternos). El PRE debe incluir un plan de contingencia específico para ' +
+          'ciberataques. Según las guías modernas de OACI sobre ciberseguridad aeronáutica (Doc 10115) y el PRE, cuáles son los elementos CRÍTICOS ' +
+          'del plan de contingencia:',
+        opciones: {
+          A: 'Solo requiere antivirus actualizado y firewalls; no necesita plan de contingencia específico.',
+          B: 'Plan de contingencia incluye: (1) detección temprana mediante monitoreo continuo de anomalías en sistemas críticos, (2) aislamiento inmediato de sistemas comprometidos para prevenir propagación, (3) activación de procedimientos manuales de respaldo (backup procedures) para despacho de vuelos sin sistemas automatizados, (4) comunicación coordinada con autoridades de ciberseguridad nacional y aviación civil, (5) análisis forense para identificar vector de ataque y vulnerabilidades, (6) recuperación gradual con validación de integridad de datos, (7) lecciones aprendidas y fortalecimiento de defensas.',
+          C: 'El plan es responsabilidad exclusiva del departamento de TI; operaciones de vuelo no necesita involucrarse.',
+          D: 'Solo se activa después de que el ataque cause un accidente; antes es innecesario.'
+        },
+        respuesta_correcta: 'B',
+        explicacion_nzt:
+          'Doc 10115 (Cybersecurity in Aviation) y PRE moderno: los ciberataques a sistemas aeronáuticos son una amenaza emergente crítica tras ' +
+          'incidentes como el ataque a Ukraine International Airlines (2020) y múltiples intentos a aerolíneas globales. El plan de contingencia ' +
+          'debe incluir: (1) DETECCIÓN TEMPRANA: monitoreo continuo de anomalías (tráfico inusual, accesos no autorizados, comportamiento anómalo ' +
+          'de sistemas), (2) AISLAMIENTO INMEDIATO: segmentación de red para prevenir propagación del ataque a otros sistemas críticos (control de ' +
+          'tráfico aéreo, sistemas de aeronave), (3) PROCEDIMIENTOS MANUALES DE RESPALDO: capacidad de despachar vuelos sin sistemas automatizados ' +
+          '(cálculos manuales de combustible, planes de vuelo en papel, coordinación verbal con ATC), (4) COMUNICACIÓN COORDINADA: con autoridades ' +
+          'de ciberseguridad nacional (CERT - Computer Emergency Response Team), autoridad aeronáutica, y posiblemente agencias de inteligencia si ' +
+          'hay sospecha de ataque estatal, (5) ANÁLISIS FORENSE: identificar vector de ataque (phishing, malware, insider threat), vulnerabilidades ' +
+          'explotadas, (6) RECUPERACIÓN GRADUAL: restauración de sistemas con validación de integridad de datos (verificar que planes de vuelo, ' +
+          'datos de aeronavegabilidad no fueron alterados), (7) LECCIONES APRENDIDAS: fortalecer defensas, actualizar procedimientos, entrenamiento ' +
+          'específico en ciberseguridad para personal operativo. La opción A es insuficiente: antivirus/firewalls son prevención, no contingencia. ' +
+          'La opción C es falsa: operaciones de vuelo DEBE involucrarse porque es responsable de la seguridad operacional. La opción D es negligente: ' +
+          'esperar un accidente es inaceptable. El ciberataque al Aeropuerto de Bruselas (2016) y a múltiples aerolíneas (2020-2023) demostró que ' +
+          'ciberseguridad es ahora parte integral del SMS.'
+      }
     ]
   }
 };
