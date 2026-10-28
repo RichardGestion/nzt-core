@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NZT-CORE // Sistema Avanzado de Evaluación Cognitiva</title>
+  <meta name="description" content="Panel de control intelectual NZT-48. Evaluación cognitiva de nivel Ivy League.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ═══ CAPAS AMBIENTALES (HUD NZT) ═══ -->
+  <div class="fx-grid" aria-hidden="true"></div>
+  <div class="fx-scan" aria-hidden="true"></div>
+  <div class="fx-vignette" aria-hidden="true"></div>
+  <div id="synapse-flash" aria-hidden="true"></div>
+
+  <main id="app">
+
+    <!-- ══════════════════════════════════════════════
+         MÓDULO A :: ACCESO — INYECCIÓN DE CÓDIGO NZT
+         ══════════════════════════════════════════════ -->
+    <section id="view-login" class="view is-active" aria-label="Acceso al sistema">
+      <div class="login-wrap">
+        <header class="login-head">
+          <div class="brand-mark">NZT<span>//</span>CORE</div>
+          <p class="brand-sub">SISTEMA DE EVALUACIÓN INTELECTUAL COGNITIVA · v4.8.0</p>
+          <p class="tagline">«Percepción hiperaguda. Cero distracción.»</p>
+        </header>
+
+        <form id="login-form" class="panel login-panel" autocomplete="off" novalidate>
+          <label class="field-label" for="access-code">INYECCIÓN DE CÓDIGO DE ACCESO NZT</label>
+          <input id="access-code" name="accessCode" type="text"
+                 maxlength="19" placeholder="XXXX-XXXX-XXXX-XXXX"
+                 spellcheck="false" autofocus
+                 aria-describedby="login-error">
+          <p class="hint">FORMATO: 16 CARACTERES ALFANUMÉRICOS · CUALQUIER CLAVE ACTIVA EL PROTOCOLO</p>
+          <button id="login-btn" class="btn btn-gold" type="submit">
+            <span class="btn-label">INYECTAR NZT-48</span>
+            <span class="btn-hint">[ENTER]</span>
+          </button>
+          <p id="login-error" class="login-error" role="alert" aria-live="polite"></p>
+        </form>
+
+        <pre id="login-console" class="console" aria-live="polite"></pre>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════
+         MÓDULO B :: DASHBOARD — CAPACIDAD CEREBRAL
+         ══════════════════════════════════════════════ -->
+    <section id="view-dashboard" class="view" aria-label="Panel de capacidad cerebral">
+
+      <header class="topbar">
+        <div class="brand-sm">NZT<span>//</span>CORE</div>
+        <div class="top-meta">
+          <span id="hud-clock" class="mono"></span>
+          <span class="sep">·</span>
+          <span id="hud-week" class="mono"></span>
+        </div>
+        <div class="top-user">
+          <span id="hud-user" class="mono"></span>
+          <button id="logout-btn" class="btn-mini" type="button">EXPULSAR</button>
+        </div>
+      </header>
+
+      <div class="gauge-block">
+        <div class="gauge">
+          <svg viewBox="0 0 200 200" role="img" aria-label="Medidor de capacidad cerebral">
+            <defs>
+              <linearGradient id="gaugeGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#00f2fe"/>
+                <stop offset="100%" stop-color="#f5af19"/>
+              </linearGradient>
+            </defs>
+            <circle class="gauge-track" cx="100" cy="100" r="88"/>
+            <circle class="gauge-ring"  cx="100" cy="100" r="88"/>
+            <circle class="gauge-orbit" cx="100" cy="100" r="97"/>
+          </svg>
+          <div class="gauge-core">
+            <span id="gauge-value" class="gauge-value mono">0%</span>
+            <span class="gauge-label">USO CEREBRAL ACTIVO</span>
+          </div>
+        </div>
+        <div class="gauge-stats mono" id="gauge-stats"></div>
+      </div>
+
+      <!-- Laboratorio temporal: permite simular el paso de semanas sin esperar -->
+      <aside class="sim-panel mono" id="sim-panel">
+        <span class="sim-title">⏱ SIMULACIÓN TEMPORAL (PRUEBAS)</span>
+        <span>DESPLAZAMIENTO: +<b id="sim-offset">0</b> SEM</span>
+        <div class="sim-actions">
+          <button id="sim-plus"  class="btn-mini" type="button">+1 SEMANA</button>
+          <button id="sim-reset" class="btn-mini danger" type="button">RESET TOTAL</button>
+        </div>
+      </aside>
+
+      <h2 class="section-title">LÓBULOS DE CONOCIMIENTO <span class="mono muted">// 19 REDES ACTIVAS</span></h2>
+      <div id="lobule-grid" class="lobule-grid"></div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════
+         MÓDULO C :: SIMULADOR DE TRIVIA — MODO ENFOQUE
+         ══════════════════════════════════════════════ -->
+    <section id="view-trivia" class="view" aria-label="Simulador de trivia">
+      <div id="trivia-root"></div>
+    </section>
+
+  </main>
+
+  <div id="toast-region" class="toast-region" role="status" aria-live="polite"></div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

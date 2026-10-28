@@ -1,0 +1,10 @@
+
+### `.gitignore` (raíz del proyecto)
+```gitignore
+# NZT-CORE es 100% vanilla: sin node_modules ni build.
+# Solo se ignoran artefactos de SO/editor.
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
