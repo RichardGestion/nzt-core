@@ -31,7 +31,8 @@ export const AREAS = Object.freeze([
   { id: 'funciones',    icono: 'ƒ', nombre: 'Funciones y Dependencia',       ref: 'Stewart · Modelado / Inyectividad',              color: '#98f5e1' },
   { id: 'trigonometria',icono: '∿', nombre: 'Trigonometría',                 ref: 'Identidades · Fourier Elemental',                color: '#ffd166' },
   { id: 'geometria',    icono: '⬢', nombre: 'Geometría Espacial',            ref: 'Stewart · Volúmenes en ℝ³',                      color: '#f4a261' },
-  { id: 'logica',       icono: '⊨', nombre: 'Lógica y Razonamiento',         ref: 'Copi · Introducción a la Lógica',                color: '#e9c46a' }
+  { id: 'logica',       icono: '⊨', nombre: 'Lógica y Razonamiento',         ref: 'Copi · Introducción a la Lógica',                color: '#e9c46a' },
+  { id: 'seguridad_aero', icono: '✈', nombre: 'Seguridad Operacional Aeronáutica', ref: 'OACI · Doc 9284 / 9683 / 9824 / 9859 · Anexo 19', color: '#00b4d8' }
 ]);
 
 /** Mapa rápido id → área */

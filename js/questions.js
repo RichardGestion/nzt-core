@@ -6,9 +6,9 @@
        [semana]: [ { id, enunciado, opciones, correcta, explicacion_nzt }, ×10 ]
      }
 
-   ▶ PUNTO DE INYECCIÓN: cuando el usuario solicite un bloque
-     semanal (ej: "Física Semana 2"), se reemplaza la entrada
-     fisica[2] con el array de 10 preguntas del JSON generado.
+   ▶ PUNTO DE INYECCIÓN: cuando se solicite un bloque semanal
+     (ej: "Física Semana 2"), se añade la entrada fisica[2] con
+     el array de 10 preguntas del JSON generado.
    ════════════════════════════════════════════════════════════ */
 
 export const BANCO_NZT = {
@@ -30,7 +30,7 @@ export const BANCO_NZT = {
         },
         correcta: 'A',
         explicacion_nzt:
-          'Sears & Zemansky (Cap. 5, dinámica de partículas): velocidad constante ⇒ aceleración nula ⇒ fuerza neta neta cero. ' +
+          'Sears & Zemansky (Cap. 5, dinámica de partículas): velocidad constante ⇒ aceleración nula ⇒ fuerza neta cero. ' +
           'Descomponiendo el peso: mg·senθ tira hacia abajo del plano y la fricción cinética μk·N = μk·mg·cosθ se opone. ' +
           'Igualando: mg·senθ = μk·mg·cosθ ⇒ μk = tan θ. Es el método estándar de equilibrio dinámico del texto.'
       },
@@ -51,7 +51,7 @@ export const BANCO_NZT = {
           '½mv² = ½kx² ⇒ x = v·√(m/k) = 6·√(2/200) = 6·0.1 = 0.60 m. El teorema trabajo-energía evita resolver la dinámica transitoria.'
       }
     ]
-    // ⚠️ SEMANAS 2–10 PENDIENTES DE INYECCIÓN (bloque JSON)
+    // ⚠ SEMANAS 2–10 PENDIENTES DE INYECCIÓN (bloque JSON)
   },
 
   /* ────────────── LÓGICA Y RAZONAMIENTO ────────────── */
@@ -89,13 +89,12 @@ export const BANCO_NZT = {
         correcta: 'D',
         explicacion_nzt:
           'Copi (reglas del silogismo categórico): el término mayor «escritores» NO está distribuido en la premisa mayor ' +
-          '(predicado de una afirmativa universal), pero SÍ queda distribuido en la conclusión «algunos poetas son escritores» ' +
-          '(al convertirse mentalmente a «algunos escritores son poetas» viola... en rigor, el término distribuido en conclusión ' +
-          'sin estarlo en premisa configura un ilícito del término mayor). El medio «novelistas» sí está distribuido en la mayor.'
+          '(predicado de una afirmativa universal), pero queda distribuido al convertir la conclusión, configurando un ' +
+          'ilícito del término mayor. El medio «novelistas» sí está distribuido en la premisa mayor, descartando las otras falacias.'
       }
     ]
-    // ⚠️ SEMANAS 2–10 PENDIENTES DE INYECCIÓN (bloque JSON)
-  }
+    // ⚠ SEMANAS 2–10 PENDIENTES DE INYECCIÓN (bloque JSON)
+  },
 
   /* ══════════════════════════════════════════════════════════
      ÁREAS PENDIENTES DE CARGA (se activan al inyectar datos):
@@ -104,4 +103,220 @@ export const BANCO_NZT = {
      python_medio, python_avanzado, algebra, calc_dif, calc_int,
      funciones, trigonometria, geometria
      ══════════════════════════════════════════════════════════ */
+
+  /* ────────────── SEGURIDAD OPERACIONAL AERONÁUTICA ────────────── */
+  seguridad_aero: {
+    /* SEMANA 1/10 — Fundamentos SMS, SHELL, mercancías peligrosas, Dirty Dozen, PRE y segregación */
+    1: [
+      {
+        id: 'seg-s1-01',
+        enunciado:
+          'Durante la auditoría trimestral del SMS, el Director de Operaciones de una aerolínea ordena al Safety Manager "suavizar" los reportes de incidentes menores reportados por la tripulación, ' +
+          'con la intención de que el indicador SPI de tasa de reportes voluntarios no se eleve ante la Autoridad Aeronáutica Nacional. ' +
+          'El Safety Manager cuestiona la instrucción. Según el Doc 9859 (4ª ed., Cap. 3) del SMS, el principio fundamental que se viola es:',
+        opciones: {
+          A: 'Garantía de Seguridad (Safety Assurance) y sus SPIs cuantitativos.',
+          B: 'Política de Seguridad No Punitiva y Cultura Justa (Just Culture).',
+          C: 'Gestión del Cambio Organizacional según el Anexo 19.',
+          D: 'Promoción de la Seguridad Operacional (Safety Promotion).'
+        },
+        correcta: 'B',
+        explicacion_nzt:
+          'Doc 9859 Cap. 3: la Política de Seguridad Operacional debe garantizar una Cultura Justa donde el personal pueda reportar incidentes, ' +
+          'errores y condiciones inseguras sin temor a represalias disciplinarias por errores involuntarios. Presionar al Safety Manager para "suavizar" ' +
+          'reportes es una violación estructural del SMS: suprime el flujo de información preventiva que alimenta la gestión proactiva de riesgos. ' +
+          'La Cultura Justa distingue claramente entre conducta inaceptable (imprudencia deliberada) y errores humanos honestos. La opción A (Safety Assurance) ' +
+          'es un componente diferente; la C y D son otros pilares del SMS que no abordan la protección del reportante.'
+      },
+      {
+        id: 'seg-s1-02',
+        enunciado:
+          'Un técnico AMT comete un error al aplicar torque a pernos críticos durante una inspección C. El análisis posterior revela que la tarjeta de trabajo (Job Card) ' +
+          'estaba impresa con tipografía de 8 puntos y el manual electrónico AMM tenía un bug que mostraba el valor incorrecto de torque. ' +
+          'La iluminación del hangar y la capacitación del técnico eran correctas. Según el modelo SHELL del Doc 9683-AN/950, la interfaz fallida primaria es:',
+        opciones: {
+          A: 'Liveware - Hardware (L-H).',
+          B: 'Liveware - Software (L-S).',
+          C: 'Liveware - Liveware (L-L).',
+          D: 'Liveware - Environment (L-E).'
+        },
+        correcta: 'B',
+        explicacion_nzt:
+          'Doc 9683-AN/950 Cap. 3: en el modelo SHELL, "Software" NO se refiere únicamente a programas informáticos, sino a TODO el soporte lógico ' +
+          'que guía la operación: procedimientos, manuales (AMM, IPC), tarjetas de trabajo (Job Cards), listas de verificación, simbología, bases de datos ' +
+          'y documentación regulatoria. La tipografía ilegible y el bug del manual electrónico son fallas del componente Software. Como el error ocurrió ' +
+          'en la interfaz entre el técnico (Liveware central) y los procedimientos (Software), la clasificación correcta es L-S. Descartamos L-H ' +
+          '(no falló la herramienta física), L-L (no hubo falla en comunicación con otro humano) y L-E (el hangar era adecuado).'
+      },
+      {
+        id: 'seg-s1-03',
+        enunciado:
+          'Un expedidor declara un bulto que contiene 6 baterías de litio iónico de 120 Wh cada una, embaladas CON el equipo (UN 3481, Instrucción de Empaque PI 967), ' +
+          'para transporte en avión de pasajeros. El bulto lleva la etiqueta "Baterías de litio en cumplimiento con la Sección II de PI 967". ' +
+          'Según la enmienda vigente del Doc 9284-AN/905:',
+        opciones: {
+          A: 'Se debe reclasificar como Clase 9 plena (Sección I de PI 967), porque Sección II limita a 5 baterías o 2 equipos por bulto y además el watt-hora supera el tope de 100 Wh por celda.',
+          B: 'La declaración es correcta: 6 baterías de 120 Wh entran cómodamente en los límites de Sección II.',
+          C: 'Debe transportarse solo en avión de carga, pero manteniendo la declaración de Sección II.',
+          D: 'Se permite en avión de pasajeros con marca "Cargo Aircraft Only" adicional sobre la etiqueta original.'
+        },
+        correcta: 'A',
+        explicacion_nzt:
+          'Doc 9284-AN/905, Instrucción PI 967 Sección II establece DOS condiciones simultáneas para baterías con equipo: (1) máximo 5 baterías de litio ' +
+          'o 2 equipos por bulto, y (2) cada batería ≤100 Wh para transporte en avión de pasajeros. El bulto viola ambos criterios: tiene 6 baterías ' +
+          '(excede el límite de cantidad) y cada una es de 120 Wh (excede el tope de energía para Sección II en pasajeros). Por tanto, debe reclasificarse ' +
+          'como mercancía peligrosa Clase 9 plena bajo Sección I de PI 967, con todos sus requisitos: declaración de expedidor (DGD), etiqueta Clase 9, ' +
+          'embalaje certificado UN y notificación al piloto (NOTOC). Esta reclasificación previene incendios en bodega que han causado pérdidas catastróficas ' +
+          '(UPS Airlines Vuelo 6, Asiana Airlines Vuelo 991).'
+      },
+      {
+        id: 'seg-s1-04',
+        enunciado:
+          'Tras un turno nocturno ininterrumpido de 12 horas en el hangar, un mecánico omite instalar un seguro de alambre (safety wire) en una tuerca crítica del ' +
+          'tren de aterrizaje principal. Al día siguiente, durante la inspección pre-vuelo, se detecta la tuerca aflojada antes del despegue. ' +
+          'Según la taxonomía de los "12 factores sucios" (Dirty Dozen) del Doc 9824-AN/450, la combinación PRIMARIA de factores humanos en este incidente es:',
+        opciones: {
+          A: 'Fatiga + Complacencia + Presión.',
+          B: 'Complacencia + Presión + Falta de Conocimiento.',
+          C: 'Falta de Trabajo en Equipo + Fatiga + Normas Confusas.',
+          D: 'Normas Confusas + Falta de Recursos + Falta de Asertividad.'
+        },
+        correcta: 'A',
+        explicacion_nzt:
+          'Doc 9824-AN/450 Cap. 4: la tríada Fatiga + Complacencia + Presión es la combinación estadísticamente más frecuente en incidentes de mantenimiento ' +
+          'por turnos nocturnos prolongados. (1) Fatiga: turno de 12h degrada la vigilancia sostenida y la memoria procedural. (2) Complacencia: el técnico, ' +
+          'por experiencia, subestima la tarea rutinaria de asegurar alambres. (3) Presión: el contexto operacional de cumplir tiempos de devolución de ' +
+          'aeronave (TAT) induce atajos. "Falta de Conocimiento" no aplica porque el técnico sabía cómo hacer la tarea. "Falta de Trabajo en Equipo" no es ' +
+          'primaria porque el error fue individual durante la ejecución. "Normas Confusas" tampoco, ya que el procedimiento era claro. Esta tríada es el ' +
+          'caballo de batalla de los programas FRMS (Fatigue Risk Management System) modernos.'
+      },
+      {
+        id: 'seg-s1-05',
+        enunciado:
+          'Una aeronave sufre una salida de pista (runway excursion) con múltiples víctimas fatales y heridos en un aeropuerto internacional. ' +
+          'El Director de Crisis de la aerolínea activa el Centro de Operaciones de Emergencia (COE) según el Plan de Respuesta ante Emergencias (PRE). ' +
+          'Según las directrices del Doc 9859 Cap. 11 y el Anexo 19, la PRIMERA prioridad estratégica en la fase INMEDIATA del PRE es:',
+        opciones: {
+          A: 'Salvaguardar la evidencia del accidente para la investigación técnica de la Junta.',
+          B: 'Salvaguardar vidas y proteger al personal de primera respuesta.',
+          C: 'Coordinar con los medios de comunicación la versión oficial del siniestro.',
+          D: 'Notificar al Estado de Matrícula y al Estado del Operador vía NOTAM urgente.'
+        },
+        correcta: 'B',
+        explicacion_nzt:
+          'Doc 9859 Cap. 11 y los lineamientos del PRE establecen cuatro objetivos estratégicos jerarquizados: (1) Salvar vidas, (2) Coordinación efectiva ' +
+          'con SSEI (Servicio de Salvamento y Extinción de Incendios), (3) Control de información y medios, (4) Transición a la normalidad. En la fase ' +
+          'INMEDIATA del PRE, la protección de víctimas sobrevivientes y del personal de primera respuesta (SSEI, médicos, paramédicos) es el objetivo ' +
+          'estratégico prioritario y excluyente. La evidencia (opción A) es una prioridad secundaria que no debe interferir con las labores de rescate. ' +
+          'La comunicación con medios (opción C) es prioritaria pero subordinada a la protección de vidas. La notificación a Estados (opción D) es ' +
+          'obligatoria bajo el Anexo 13, pero no compite con la protección inmediata de vidas humanas.'
+      },
+      {
+        id: 'seg-s1-06',
+        enunciado:
+          'El Safety Manager de una aerolínea clasifica un riesgo operacional en la matriz 5×5 del Doc 9859 con severidad "Catastrófica (5)" y probabilidad "Remota (2)", ' +
+          'obteniendo un índice de riesgo 10. Según el principio ALARP (As Low As Reasonably Practicable) consagrado en el Anexo 19 y el Doc 9859, el nivel de ' +
+          'tolerabilidad y la acción requerida son:',
+        opciones: {
+          A: 'Intolerable — requiere mitigación inmediata independientemente del análisis costo-beneficio.',
+          B: 'Tolerable bajo condiciones específicas, manteniendo controles activos.',
+          C: 'Aceptable sin requerir mitigación adicional.',
+          D: 'Revisable trimestralmente según el ciclo de garantía de seguridad (Safety Assurance).'
+        },
+        correcta: 'A',
+        explicacion_nzt:
+          'Doc 9859 Cap. 5: la matriz de riesgo OACI define tres bandas de tolerabilidad. La severidad "Catastrófica" (pérdida de la aeronave, ' +
+          'múltiples fatalidades) combinada con cualquier probabilidad ≥ Remota (2) ubica el riesgo en la zona INTOLERABLE, donde NO aplica el principio ' +
+          'ALARP: el riesgo debe mitigarse obligatoriamente antes de permitir la operación, sin importar el análisis costo-beneficio. ALARP solo es ' +
+          'invocable en la zona TOLERABLE, donde la mitigación se balancea con la razonabilidad práctica. Un índice 10 con severidad 5 significa ' +
+          'que, aunque el evento sea remoto, la consecuencia catastrófica hace inaceptable operar sin controles adicionales (diseño redundante, ' +
+          'formación específica, limitaciones operativas). Esta rigurosidad es lo que distingue a la aviación de otras industrias de riesgo.'
+      },
+      {
+        id: 'seg-s1-07',
+        enunciado:
+          'Un vuelo opera con sobrepeso de 800 kg porque: (1) el software de carga calculó erróneamente el peso, (2) el agente de rampa no verificó ' +
+          'físicamente el manifiesto, (3) el despachador firmó el Loadsheet sin revisar los valores, y (4) el comandante aceptó el documento sin cuestionar. ' +
+          'Una auditoría interna posterior identifica el fallo sin que hubiera consecuencias operativas. Según el modelo de James Reason del Doc 9683, esta secuencia se clasifica como:',
+        opciones: {
+          A: 'Violación activa individual del piloto al mando.',
+          B: 'Error de interfaz Liveware-Liveware entre despachador y comandante.',
+          C: 'Riesgo tolerable que no requiere intervención del SMS al no haber consecuencias.',
+          D: 'Falla latente organizacional con múltiples agujeros alineados en capas defensivas (modelo Swiss Cheese).'
+        },
+        correcta: 'D',
+        explicacion_nzt:
+          'Doc 9683 Cap. 2: el modelo Swiss Cheese de James Reason describe el accidente (o cuasi-accidente) como la alineación casual de "agujeros" ' +
+          'en múltiples capas defensivas del sistema. En este caso hay cuatro capas fallidas: software (capa tecnológica), agente de rampa (capa operacional), ' +
+          'despachador (capa de supervisión) y comandante (capa de decisión final). El hecho de que NO hubo consecuencias es suerte estadística, no mitigación ' +
+          'efectiva. Reason distingue entre fallas activas (errores de operadores de primera línea) y fallas latentes (decisiones organizacionales y de diseño ' +
+          'que permanecen dormidas hasta que se alinean). Este caso es típicamente latente: revela fallas en procedimientos, capacitación, cultura de ' +
+          'cuestionamiento y diseño del software. El SMS exige tratar estos eventos con la misma seriedad que un accidente consumado.'
+      },
+      {
+        id: 'seg-s1-08',
+        enunciado:
+          'Un mecánico experimentado libera al servicio una aeronave tras reemplazar un componente LRU (Line Replaceable Unit), pero omite asentar ' +
+          'su firma en el Logbook técnico porque "lo hace después cuando haya tiempo". La práctica es conocida por el supervisor de línea y ' +
+          'no se corrige. Al día siguiente, la aeronave opera sin que se detecte la omisión documental. Según la taxonomía de violaciones del Doc 9824, este caso se clasifica como:',
+        opciones: {
+          A: 'Violación excepcional por falta de tiempo en turno.',
+          B: 'Violación rutinaria (Routine Violation) tolerada por la cultura organizacional.',
+          C: 'Error de desempeño (slip) bajo presión.',
+          D: 'Error basado en reglas (rule-based mistake).'
+        },
+        correcta: 'B',
+        explicacion_nzt:
+          'Doc 9824-AN/450 Cap. 5: las violaciones se clasifican en rutinarias (habituales, culturalmente aceptadas) y excepcionales (una sola vez ' +
+          'bajo circunstancias muy especiales). Cuando el supervisor CONOCE la práctica y no la corrige, la organización NORMALIZA la desviación, ' +
+          'convirtiéndola en violación rutinaria. Esto genera una falla latente sistémica mucho más peligrosa que un error individual: el sistema ' +
+          'tolera tácitamente el atajo documental. Distinguimos de "slip" (error de ejecución no intencional): aquí la omisión es deliberada. ' +
+          'Distinguimos de "rule-based mistake" (aplicar una regla incorrecta): aquí se sabe cuál es la regla pero se ignora. La cultura organizacional ' +
+          'que tolera violaciones rutinarias es el caldo de cultivo de accidentes catastróficos, como demostró el accidente de Air Midwest Vuelo 5281.'
+      },
+      {
+        id: 'seg-s1-09',
+        enunciado:
+          'Tras un accidente aéreo con víctimas extranjeras en el territorio de un Estado contratante, familiares de distintas nacionalidades ' +
+          'solicitan información urgente sobre el paradero de sus seres queridos. Según el Anexo 9 (Facilitación) y la estructura del PRE alineado al SMS, ' +
+          'la coordinación de asistencia familiar debe ser:',
+        opciones: {
+          A: 'Asignada exclusivamente al operador aéreo afectado, sin intervención estatal.',
+          B: 'Centralizada por la aerolínea a través de su call center corporativo global.',
+          C: 'Coordinada por el FRC (Family Assistance Coordinator) del Estado del Suceso, en colaboración con el Estado del Operador, el Estado de Matrícula y el Estado de Diseño, según el Anexo 9 Cap. 8.',
+          D: 'Derivada completamente a las embajadas de los países de origen, sin rol del Estado del Suceso.'
+        },
+        correcta: 'C',
+        explicacion_nzt:
+          'Anexo 9 Cap. 8 (Facilitación — Asistencia a víctimas de accidentes aeronáuticos y sus familias): establece que el Estado del Suceso debe ' +
+          'designar un FRC (Family Assistance Coordinator) que coordine la asistencia con el Estado del Operador, el Estado de Matrícula, el Estado ' +
+          'de Diseño y el Estado de Fabricación, según corresponda. El PRE de la aerolínea complementa pero NO sustituye la responsabilidad primaria ' +
+          'estatal. La coordinación multiestatal es esencial porque: (1) las víctimas pueden ser de múltiples nacionalidades, (2) la investigación ' +
+          'técnica involucra varios Estados bajo el Anexo 13, y (3) la asistencia incluye aspectos legales, consulares, psicológicos y logísticos ' +
+          'que exceden la capacidad unilateral de cualquier operador. Este marco surgió tras las lecciones aprendidas del accidente del Vuelo 111 ' +
+          'de Swissair (1998) y se consolidó tras el Vuelo 370 de Malaysia Airlines (2014).'
+      },
+      {
+        id: 'seg-s1-10',
+        enunciado:
+          'Un operador de carga aérea recibe para el mismo vuelo dos bultos: uno Clase 5.1 (oxidante, UN 1479, perclorato de potasio) y otro Clase 3 ' +
+          '(líquido inflamable, UN 1263, pintura). Ambos están correctamente embalados en embalajes UN, marcados y etiquetados. ' +
+          'Según la tabla de segregación del Doc 9284-AN/905, la acción obligatoria es:',
+        opciones: {
+          A: 'Segregación obligatoria: no pueden cargarse en el mismo ULD ni en ULDs adyacentes, manteniendo distancia mínima en bodega.',
+          B: 'Se pueden cargar en el mismo ULD sin segregación al ser bultos individuales correctamente embalados.',
+          C: 'Solo se requiere segregación si el avión es de pasajeros; en carguero no hay restricción.',
+          D: 'Requieren al menos 1 metro de separación horizontal dentro del mismo ULD.'
+        },
+        correcta: 'A',
+        explicacion_nzt:
+          'Doc 9284-AN/905 Tabla de Segregación 7-2-1: la incompatibilidad entre Clase 5.1 (oxidante) y Clase 3 (inflamable) requiere segregación de ' +
+          'máximo nivel. La mezcla de oxidantes con inflamables puede producir ignición espontánea, reacciones violentas o explosiones que han causado ' +
+          'accidentes catastróficos en aviación (Vuelo 111 de ValuJet, 1996: fuego en bodega por generadores de oxígeno mal segregados). El correcto ' +
+          'embalaje UN NO exime de la segregación: el embalaje previene fugas, pero no reacciones químicas entre sustancias incompatibles en caso de ' +
+          'fuga simultánea. La segregación obligatoria implica: (1) no compartir ULD, (2) no ubicar en ULDs adyacentes, y (3) mantener distancia ' +
+          'mínima especificada en bodega (típicamente 3 metros para esta combinación). La opción D (1 metro) es insuficiente según la tabla oficial.'
+      }
+    ]
+  }
 };
